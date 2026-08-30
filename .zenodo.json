@@ -19,6 +19,8 @@
     "auditability",
     "trustworthy AI"
   ],
+  "version": "1.0.0",
+  "license": "cc-by-nc-nd-4.0",
   "upload_type": "software",
   "language": "eng",
   "access_right": "open",
