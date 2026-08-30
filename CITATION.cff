@@ -3,6 +3,7 @@ message: "If you use DSG Spacetime in research, evaluation, or engineering work,
 title: "DSG Spacetime"
 type: software
 version: "1.0.0"
+doi: "10.5281/zenodo.22172533"
 license: "CC-BY-NC-ND-4.0"
 abstract: >-
   DSG Spacetime is customer-hosted governance infrastructure for AI agents.
