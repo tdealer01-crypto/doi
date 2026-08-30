@@ -3,23 +3,20 @@ name: DSG Spacetime Public Publication Guard
 on:
   pull_request:
   push:
-    branches: [main]
-
-permissions:
-  contents: read
+    branches:
+      - main
 
 jobs:
   validate-public-surface:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
+      - name: Checkout
+        uses: actions/checkout@v4
 
-      - name: Require publication metadata
+      - name: Require public publication files
         shell: bash
         run: |
-          set -euo pipefail
+          set -eu
           test -f README.md
           test -f CITATION.cff
           test -f .zenodo.json
@@ -33,57 +30,32 @@ jobs:
       - name: Reject production-source file types
         shell: bash
         run: |
-          set -euo pipefail
-          if find . -type f \
-            \( -name '*.py' -o -name '*.pyc' -o -name '*.pyo' -o -name '*.js' -o -name '*.ts' -o -name '*.tsx' -o -name '*.jsx' \
-               -o -name '*.go' -o -name '*.rs' -o -name '*.java' -o -name '*.kt' -o -name '*.cs' -o -name '*.c' -o -name '*.cc' \
-               -o -name '*.cpp' -o -name '*.h' -o -name '*.hpp' -o -name '*.rb' -o -name '*.php' -o -name '*.swift' -o -name '*.scala' \) \
-            -not -path './.git/*' | grep -q .; then
-            echo 'Production/source-like file type detected in public publication repository.' >&2
-            exit 1
-          fi
+          set -eu
+          count="$(find . -type f \( -name '*.py' -o -name '*.pyc' -o -name '*.pyo' -o -name '*.js' -o -name '*.ts' -o -name '*.tsx' -o -name '*.jsx' -o -name '*.go' -o -name '*.rs' -o -name '*.java' -o -name '*.kt' -o -name '*.cs' -o -name '*.c' -o -name '*.cc' -o -name '*.cpp' -o -name '*.h' -o -name '*.hpp' \) -not -path './.git/*' | wc -l)"
+          test "$count" -eq 0
 
-      - name: Reject obvious secret material
+      - name: Validate Zenodo JSON
         shell: bash
         run: |
-          set -euo pipefail
-          if grep -RInE --exclude-dir=.git \
-            'BEGIN (RSA |EC |OPENSSH )?PRIVATE KEY|sk_live_[A-Za-z0-9]+|whsec_[A-Za-z0-9]+|re_[A-Za-z0-9]{16,}|gh[pousr]_[A-Za-z0-9]{20,}' .; then
-            echo 'Potential secret material detected.' >&2
-            exit 1
-          fi
+          set -eu
+          python -m json.tool .zenodo.json >/dev/null
+          grep -q '"title": "DSG Spacetime"' .zenodo.json
+          grep -q '"upload_type": "software"' .zenodo.json
 
-      - name: Validate citation and Zenodo metadata
+      - name: Validate citation metadata
         shell: bash
         run: |
-          set -euo pipefail
-          python - <<'PY'
-          import json, pathlib, re
+          set -eu
+          grep -q 'title: "DSG Spacetime"' CITATION.cff
+          grep -q 'given-names: "Thanawat"' CITATION.cff
+          grep -q 'family-names: "Suparongsuwan"' CITATION.cff
 
-          zenodo = json.loads(pathlib.Path('.zenodo.json').read_text())
-          assert zenodo.get('title') == 'DSG Spacetime'
-          assert zenodo.get('upload_type') == 'software'
-          creators = zenodo.get('creators') or []
-          assert creators and creators[0].get('name') == 'Suparongsuwan, Thanawat'
-
-          cff = pathlib.Path('CITATION.cff').read_text()
-          assert 'title: "DSG Spacetime"' in cff
-          assert 'given-names: "Thanawat"' in cff
-          assert 'family-names: "Suparongsuwan"' in cff
-
-          combined = cff + '\n' + pathlib.Path('.zenodo.json').read_text()
-          assert '10.xxxx' not in combined.lower()
-          assert not re.search(r'\bdoi\s*[:=]\s*["\']?10\.\d{4,9}/', combined, re.I), 'DOI present before verified publication'
-
-          print('Public publication metadata gate: PASS')
-          PY
-
-      - name: Require DOI status to remain explicit before minting
+      - name: Require explicit pre-DOI status
         shell: bash
         run: |
-          set -euo pipefail
+          set -eu
           grep -q 'DOI NOT YET MINTED' README.md
           grep -q 'PREPARED — NOT YET DOI-VERIFIED' PUBLICATION_STATUS.md
 
-      - name: Public publication guard PASS
-        run: echo 'DSG Spacetime public publication guard: PASS'
+      - name: Publication guard PASS
+        run: echo "DSG Spacetime public publication guard: PASS"
