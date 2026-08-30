@@ -6,12 +6,17 @@ on:
     branches:
       - main
 
+permissions:
+  contents: read
+
 jobs:
   validate-public-surface:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: Checkout full history
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Require public publication files
         shell: bash
@@ -27,12 +32,34 @@ jobs:
           test -f docs/VERIFIED_EVIDENCE_REDACTED.md
           test -f docs/COMPLIANCE_SUPPORT_MATRIX.md
 
-      - name: Reject production-source file types
+      - name: Reject production-source and sensitive file types
         shell: bash
         run: |
           set -eu
-          count="$(find . -type f \( -name '*.py' -o -name '*.pyc' -o -name '*.pyo' -o -name '*.js' -o -name '*.ts' -o -name '*.tsx' -o -name '*.jsx' -o -name '*.go' -o -name '*.rs' -o -name '*.java' -o -name '*.kt' -o -name '*.cs' -o -name '*.c' -o -name '*.cc' -o -name '*.cpp' -o -name '*.h' -o -name '*.hpp' \) -not -path './.git/*' | wc -l)"
+          count="$(find . -type f \( -name '*.py' -o -name '*.pyc' -o -name '*.pyo' -o -name '*.js' -o -name '*.ts' -o -name '*.tsx' -o -name '*.jsx' -o -name '*.go' -o -name '*.rs' -o -name '*.java' -o -name '*.kt' -o -name '*.cs' -o -name '*.c' -o -name '*.cc' -o -name '*.cpp' -o -name '*.h' -o -name '*.hpp' -o -name '*.rb' -o -name '*.php' -o -name '*.swift' -o -name '*.scala' -o -name '.env' -o -name '.env.*' -o -name '*.pem' -o -name '*.key' -o -name '*.p12' -o -name '*.pfx' -o -name '*.jks' -o -name '*.tfstate' -o -name '*.tfstate.*' -o -name '*.sqlite' -o -name '*.sqlite3' -o -name '*.db' \) -not -path './.git/*' | wc -l)"
           test "$count" -eq 0
+
+      - name: Reject obvious secret material in current tree
+        shell: bash
+        run: |
+          set -eu
+          pattern='BEGIN (RSA |EC |OPENSSH )?PRIVATE KEY|sk_live_[A-Za-z0-9]+|whsec_[A-Za-z0-9]+|re_[A-Za-z0-9]{16,}|gh[pousr]_[A-Za-z0-9]{20,}'
+          if grep -RInE --exclude-dir=.git "$pattern" .; then
+            echo "Potential secret material detected in current tree." >&2
+            exit 1
+          fi
+
+      - name: Reject obvious secret material in repository history
+        shell: bash
+        run: |
+          set -eu
+          pattern='BEGIN (RSA |EC |OPENSSH )?PRIVATE KEY|sk_live_[A-Za-z0-9]+|whsec_[A-Za-z0-9]+|re_[A-Za-z0-9]{16,}|gh[pousr]_[A-Za-z0-9]{20,}'
+          for rev in $(git rev-list --all); do
+            if git grep -I -n -E "$pattern" "$rev" -- .; then
+              echo "Potential secret material detected in git history at $rev." >&2
+              exit 1
+            fi
+          done
 
       - name: Validate Zenodo JSON
         shell: bash
@@ -41,6 +68,7 @@ jobs:
           python -m json.tool .zenodo.json >/dev/null
           grep -q '"title": "DSG Spacetime"' .zenodo.json
           grep -q '"upload_type": "software"' .zenodo.json
+          grep -q '"name": "Suparongsuwan, Thanawat"' .zenodo.json
 
       - name: Validate citation metadata
         shell: bash
@@ -56,7 +84,12 @@ jobs:
           set -eu
           grep -q 'DOI NOT YET MINTED' README.md
           grep -q 'PREPARED — NOT YET DOI-VERIFIED' PUBLICATION_STATUS.md
+          if grep -RInE --exclude-dir=.git '10\.[0-9]{4,9}/[-._;()/:A-Za-z0-9]+' .; then
+            echo "A DOI-like identifier is present before verified publication." >&2
+            exit 1
+          fi
 
       - name: Publication guard PASS
+        shell: bash
         run: |
           echo "DSG Spacetime public publication guard: PASS"
