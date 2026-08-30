@@ -25,6 +25,7 @@ jobs:
           test -f README.md
           test -f CITATION.cff
           test -f .zenodo.json
+          test -f LICENSE.md
           test -f SECURITY.md
           test -f PUBLICATION_STATUS.md
           test -f docs/ARCHITECTURE.md
@@ -69,6 +70,8 @@ jobs:
           grep -q '"title": "DSG Spacetime"' .zenodo.json
           grep -q '"upload_type": "software"' .zenodo.json
           grep -q '"name": "Suparongsuwan, Thanawat"' .zenodo.json
+          grep -q '"version": "1.0.0"' .zenodo.json
+          grep -q '"license": "cc-by-nc-nd-4.0"' .zenodo.json
 
       - name: Validate citation metadata
         shell: bash
@@ -77,6 +80,9 @@ jobs:
           grep -q 'title: "DSG Spacetime"' CITATION.cff
           grep -q 'given-names: "Thanawat"' CITATION.cff
           grep -q 'family-names: "Suparongsuwan"' CITATION.cff
+          grep -q 'version: "1.0.0"' CITATION.cff
+          grep -q 'license: "CC-BY-NC-ND-4.0"' CITATION.cff
+          grep -q 'CC-BY-NC-ND-4.0' LICENSE.md
 
       - name: Require explicit pre-DOI status
         shell: bash
