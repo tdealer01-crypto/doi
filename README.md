@@ -35,15 +35,23 @@ DSG Spacetime
 
 The design goal is **maximum autonomy inside provable boundaries**.
 
+## Public release version
+
+The first public archival release is prepared as **DSG Spacetime 1.0.0**, with intended GitHub tag **`v1.0.0`**.
+
+The version identifies the sanitized public publication/citation package. It is not a claim that the private production runtime has been relicensed or published.
+
 ## DOI status
 
 **PREPARED — DOI NOT YET MINTED.**
 
-`CITATION.cff` and `.zenodo.json` are included for citation/archive preparation. A DOI will be recorded only after an approved Zenodo record is actually published and the DOI resolves.
+`CITATION.cff` and `.zenodo.json` are included for citation/archive preparation. A DOI will be recorded only after the `v1.0.0` release is actually processed by Zenodo and the resulting DOI resolves.
 
-## License status
+## License
 
-Public license/terms have **not yet been selected**. Repository visibility alone does not grant rights to proprietary DSG production implementation. The final public terms will be added before the first archival release.
+Unless a file states otherwise, material actually published in this repository is licensed under **Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)**. See `LICENSE.md`.
+
+This license applies only to material contained in this public repository. It does **not** license the private DSG Spacetime production implementation, DSG Fabric internals, production runtime binaries, undisclosed algorithms, private schemas, private tests, anti-bypass mechanisms, customer data, credentials, or other proprietary DSG material outside this repository.
 
 ## Public material in this repository
 
@@ -60,4 +68,4 @@ No production source is intentionally included.
 
 **PREPARED — not yet a DOI-verified archival release.**
 
-Before the first Zenodo publication, the release still requires explicit public terms/license, final creator metadata, a public semantic version, repository change-control review, and Zenodo record verification.
+Version and public terms are now selected. The remaining DOI path is: publication-guard verification → GitHub Release `v1.0.0` → Zenodo ingestion → archive inspection → DOI resolution verification → record the real DOI.
