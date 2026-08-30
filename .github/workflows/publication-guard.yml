@@ -1,0 +1,89 @@
+name: DSG Spacetime Public Publication Guard
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  validate-public-surface:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Require publication metadata
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -f README.md
+          test -f CITATION.cff
+          test -f .zenodo.json
+          test -f SECURITY.md
+          test -f PUBLICATION_STATUS.md
+          test -f docs/ARCHITECTURE.md
+          test -f docs/THREAT_MODEL_HIGH_LEVEL.md
+          test -f docs/VERIFIED_EVIDENCE_REDACTED.md
+          test -f docs/COMPLIANCE_SUPPORT_MATRIX.md
+
+      - name: Reject production-source file types
+        shell: bash
+        run: |
+          set -euo pipefail
+          if find . -type f \
+            \( -name '*.py' -o -name '*.pyc' -o -name '*.pyo' -o -name '*.js' -o -name '*.ts' -o -name '*.tsx' -o -name '*.jsx' \
+               -o -name '*.go' -o -name '*.rs' -o -name '*.java' -o -name '*.kt' -o -name '*.cs' -o -name '*.c' -o -name '*.cc' \
+               -o -name '*.cpp' -o -name '*.h' -o -name '*.hpp' -o -name '*.rb' -o -name '*.php' -o -name '*.swift' -o -name '*.scala' \) \
+            -not -path './.git/*' | grep -q .; then
+            echo 'Production/source-like file type detected in public publication repository.' >&2
+            exit 1
+          fi
+
+      - name: Reject obvious secret material
+        shell: bash
+        run: |
+          set -euo pipefail
+          if grep -RInE --exclude-dir=.git \
+            'BEGIN (RSA |EC |OPENSSH )?PRIVATE KEY|sk_live_[A-Za-z0-9]+|whsec_[A-Za-z0-9]+|re_[A-Za-z0-9]{16,}|gh[pousr]_[A-Za-z0-9]{20,}' .; then
+            echo 'Potential secret material detected.' >&2
+            exit 1
+          fi
+
+      - name: Validate citation and Zenodo metadata
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import json, pathlib, re
+
+          zenodo = json.loads(pathlib.Path('.zenodo.json').read_text())
+          assert zenodo.get('title') == 'DSG Spacetime'
+          assert zenodo.get('upload_type') == 'software'
+          creators = zenodo.get('creators') or []
+          assert creators and creators[0].get('name') == 'Suparongsuwan, Thanawat'
+
+          cff = pathlib.Path('CITATION.cff').read_text()
+          assert 'title: "DSG Spacetime"' in cff
+          assert 'given-names: "Thanawat"' in cff
+          assert 'family-names: "Suparongsuwan"' in cff
+
+          combined = cff + '\n' + pathlib.Path('.zenodo.json').read_text()
+          assert '10.xxxx' not in combined.lower()
+          assert not re.search(r'\bdoi\s*[:=]\s*["\']?10\.\d{4,9}/', combined, re.I), 'DOI present before verified publication'
+
+          print('Public publication metadata gate: PASS')
+          PY
+
+      - name: Require DOI status to remain explicit before minting
+        shell: bash
+        run: |
+          set -euo pipefail
+          grep -q 'DOI NOT YET MINTED' README.md
+          grep -q 'PREPARED — NOT YET DOI-VERIFIED' PUBLICATION_STATUS.md
+
+      - name: Public publication guard PASS
+        run: echo 'DSG Spacetime public publication guard: PASS'
