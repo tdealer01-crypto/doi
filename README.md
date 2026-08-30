@@ -50,6 +50,12 @@ The version identifies the sanitized public publication/citation package. It is 
 
 Use the version DOI when citing this exact archived release. Use the concept DOI when you want a citation that follows the DSG Spacetime record across future Zenodo versions.
 
+## Related and prior publications
+
+Earlier owner-supplied Zenodo publications that may form part of the research lineage are recorded separately in [`docs/RELATED_PUBLICATIONS.md`](docs/RELATED_PUBLICATIONS.md).
+
+Those records are not automatically treated as DSG Spacetime releases. Ambiguous or not-yet-directly-verified DOI relationships are explicitly marked as such.
+
 ## License
 
 Unless a file states otherwise, material actually published in this repository is licensed under **Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)**. See `LICENSE.md`.
@@ -63,6 +69,7 @@ This license applies only to material contained in this public repository. It do
 - high-level security/threat-model statements
 - redacted verification/evidence summaries
 - compliance-support mappings
+- related/prior-publication lineage notes
 - publication guard CI
 
 No production source is intentionally included.
