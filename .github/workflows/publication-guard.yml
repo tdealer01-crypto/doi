@@ -32,6 +32,7 @@ jobs:
           test -f docs/THREAT_MODEL_HIGH_LEVEL.md
           test -f docs/VERIFIED_EVIDENCE_REDACTED.md
           test -f docs/COMPLIANCE_SUPPORT_MATRIX.md
+          test -f docs/RELATED_PUBLICATIONS.md
 
       - name: Reject production-source and sensitive file types
         shell: bash
@@ -100,6 +101,7 @@ jobs:
           allowed = {
               '10.5281/zenodo.22172533',
               '10.5281/zenodo.22172532',
+              '10.5281/zenodo.18212854',
           }
           pattern = re.compile(r'10\.[0-9]{4,9}/[-._;()/:A-Za-z0-9]+')
           found = set()
@@ -112,10 +114,14 @@ jobs:
                   continue
               found.update(pattern.findall(text))
           unexpected = found - allowed
-          missing = allowed - found
+          required = {
+              '10.5281/zenodo.22172533',
+              '10.5281/zenodo.22172532',
+          }
+          missing = required - found
           assert not unexpected, f'unexpected DOI-like identifiers: {sorted(unexpected)}'
-          assert not missing, f'missing verified DOI identifiers: {sorted(missing)}'
-          print('Verified DOI gate: PASS')
+          assert not missing, f'missing verified DSG Spacetime DOI identifiers: {sorted(missing)}'
+          print('Verified DOI and prior-publication allowlist gate: PASS')
           PY
 
       - name: Publication guard PASS
