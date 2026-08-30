@@ -2,6 +2,8 @@ cff-version: 1.2.0
 message: "If you use DSG Spacetime in research, evaluation, or engineering work, please cite the archived release."
 title: "DSG Spacetime"
 type: software
+version: "1.0.0"
+license: "CC-BY-NC-ND-4.0"
 abstract: >-
   DSG Spacetime is customer-hosted governance infrastructure for AI agents.
   It provides node-to-node capability discovery and composition, plan-bound
