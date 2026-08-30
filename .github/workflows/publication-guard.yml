@@ -58,4 +58,5 @@ jobs:
           grep -q 'PREPARED — NOT YET DOI-VERIFIED' PUBLICATION_STATUS.md
 
       - name: Publication guard PASS
-        run: echo "DSG Spacetime public publication guard: PASS"
+        run: |
+          echo "DSG Spacetime public publication guard: PASS"
