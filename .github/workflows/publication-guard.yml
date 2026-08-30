@@ -81,19 +81,42 @@ jobs:
           grep -q 'given-names: "Thanawat"' CITATION.cff
           grep -q 'family-names: "Suparongsuwan"' CITATION.cff
           grep -q 'version: "1.0.0"' CITATION.cff
+          grep -q 'doi: "10.5281/zenodo.22172533"' CITATION.cff
           grep -q 'license: "CC-BY-NC-ND-4.0"' CITATION.cff
           grep -q 'CC-BY-NC-ND-4.0' LICENSE.md
 
-      - name: Require explicit pre-DOI status
+      - name: Require verified DOI state
         shell: bash
         run: |
           set -eu
-          grep -q 'DOI NOT YET MINTED' README.md
-          grep -q 'PREPARED — NOT YET DOI-VERIFIED' PUBLICATION_STATUS.md
-          if grep -RInE --exclude-dir=.git '10\.[0-9]{4,9}/[-._;()/:A-Za-z0-9]+' .; then
-            echo "A DOI-like identifier is present before verified publication." >&2
-            exit 1
-          fi
+          grep -q 'VERIFIED — Zenodo publication completed' README.md
+          grep -q '10.5281/zenodo.22172533' README.md
+          grep -q '10.5281/zenodo.22172532' README.md
+          grep -q 'VERIFIED — ZENODO DOI PUBLISHED' PUBLICATION_STATUS.md
+          grep -q '10.5281/zenodo.22172533' PUBLICATION_STATUS.md
+          grep -q '10.5281/zenodo.22172532' PUBLICATION_STATUS.md
+          python - <<'PY'
+          import pathlib, re
+          allowed = {
+              '10.5281/zenodo.22172533',
+              '10.5281/zenodo.22172532',
+          }
+          pattern = re.compile(r'10\.[0-9]{4,9}/[-._;()/:A-Za-z0-9]+')
+          found = set()
+          for path in pathlib.Path('.').rglob('*'):
+              if not path.is_file() or '.git' in path.parts:
+                  continue
+              try:
+                  text = path.read_text()
+              except UnicodeDecodeError:
+                  continue
+              found.update(pattern.findall(text))
+          unexpected = found - allowed
+          missing = allowed - found
+          assert not unexpected, f'unexpected DOI-like identifiers: {sorted(unexpected)}'
+          assert not missing, f'missing verified DOI identifiers: {sorted(missing)}'
+          print('Verified DOI gate: PASS')
+          PY
 
       - name: Publication guard PASS
         shell: bash

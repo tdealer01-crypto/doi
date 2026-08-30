@@ -37,15 +37,18 @@ The design goal is **maximum autonomy inside provable boundaries**.
 
 ## Public release version
 
-The first public archival release is prepared as **DSG Spacetime 1.0.0**, with intended GitHub tag **`v1.0.0`**.
+The first public archival release is **DSG Spacetime 1.0.0**, GitHub tag **`v1.0.0`**.
 
 The version identifies the sanitized public publication/citation package. It is not a claim that the private production runtime has been relicensed or published.
 
-## DOI status
+## DOI
 
-**PREPARED — DOI NOT YET MINTED.**
+**VERIFIED — Zenodo publication completed.**
 
-`CITATION.cff` and `.zenodo.json` are included for citation/archive preparation. A DOI will be recorded only after the `v1.0.0` release is actually processed by Zenodo and the resulting DOI resolves.
+- Version 1.0.0 DOI: **10.5281/zenodo.22172533**
+- Concept DOI (all versions): **10.5281/zenodo.22172532**
+
+Use the version DOI when citing this exact archived release. Use the concept DOI when you want a citation that follows the DSG Spacetime record across future Zenodo versions.
 
 ## License
 
@@ -66,6 +69,4 @@ No production source is intentionally included.
 
 ## Current publication state
 
-**PREPARED — not yet a DOI-verified archival release.**
-
-Version and public terms are now selected. The remaining DOI path is: publication-guard verification → GitHub Release `v1.0.0` → Zenodo ingestion → archive inspection → DOI resolution verification → record the real DOI.
+**VERIFIED — public v1.0.0 archival release is published on Zenodo and DOI identifiers are recorded.**
