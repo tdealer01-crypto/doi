@@ -41,6 +41,20 @@ jobs:
           count="$(find . -type f \( -name '*.py' -o -name '*.pyc' -o -name '*.pyo' -o -name '*.js' -o -name '*.ts' -o -name '*.tsx' -o -name '*.jsx' -o -name '*.go' -o -name '*.rs' -o -name '*.java' -o -name '*.kt' -o -name '*.cs' -o -name '*.c' -o -name '*.cc' -o -name '*.cpp' -o -name '*.h' -o -name '*.hpp' -o -name '*.rb' -o -name '*.php' -o -name '*.swift' -o -name '*.scala' -o -name '.env' -o -name '.env.*' -o -name '*.pem' -o -name '*.key' -o -name '*.p12' -o -name '*.pfx' -o -name '*.jks' -o -name '*.tfstate' -o -name '*.tfstate.*' -o -name '*.sqlite' -o -name '*.sqlite3' -o -name '*.db' \) -not -path './.git/*' | wc -l)"
           test "$count" -eq 0
 
+      - name: Reject production-source and sensitive file types in repository history
+        shell: bash
+        run: |
+          set -eu
+          forbidden='(^|/)(\.env($|\.)|[^/]+\.(py|pyc|pyo|js|ts|tsx|jsx|go|rs|java|kt|cs|c|cc|cpp|h|hpp|rb|php|swift|scala|pem|key|p12|pfx|jks|tfstate|sqlite|sqlite3|db)$|[^/]+\.tfstate\.)'
+          for rev in $(git rev-list --all); do
+            matches="$(git ls-tree -r --name-only "$rev" | grep -E "$forbidden" || true)"
+            if [ -n "$matches" ]; then
+              echo "Forbidden production-source/sensitive file path detected in git history at $rev:" >&2
+              printf '%s\n' "$matches" >&2
+              exit 1
+            fi
+          done
+
       - name: Reject obvious secret material in current tree
         shell: bash
         run: |
