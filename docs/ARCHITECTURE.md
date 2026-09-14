@@ -54,6 +54,14 @@ DSG Spacetime is designed for customer-hosted/BYOC operation. Existing provider 
 
 Execution occurs through approved capability/adaptor boundaries rather than unrestricted model-to-API access.
 
+## Governed browser capability
+
+A browser can be exposed as another governed capability boundary rather than as unrestricted model authority. An approved browser mission is validated and bound to the execution context before web interaction occurs.
+
+At the public level, Browser App follows the same composition rule as other DSG Spacetime capabilities: AI may propose what to do, but the execution path remains constrained by capability scope, authorization, approval requirements, and evidence.
+
+Browser content is treated as untrusted input. The browser capability does not implicitly grant access to unrelated credentials, systems, Nodes, or Routes. Implementation details of browser mission compilation and defensive controls remain private.
+
 ## Evidence and proof
 
 Execution produces durable evidence intended to support later verification. Public claims are limited to the scopes actually proven by execution or CI evidence; static code existence alone is not treated as proof of production behavior.

@@ -33,6 +33,7 @@ jobs:
           test -f docs/VERIFIED_EVIDENCE_REDACTED.md
           test -f docs/COMPLIANCE_SUPPORT_MATRIX.md
           test -f docs/RELATED_PUBLICATIONS.md
+          test -f docs/BROWSER_APP_PUBLIC_OVERVIEW.md
 
       - name: Reject production-source and sensitive file types
         shell: bash
@@ -62,6 +63,16 @@ jobs:
               exit 1
             fi
           done
+
+      - name: Reject private-document classification markers
+        shell: bash
+        run: |
+          set -eu
+          pattern='DSG-CONFIDENTIAL|CUSTOMER-CONFIDENTIAL|CLASSIFICATION: RESTRICTED'
+          if grep -RInE --exclude-dir=.git --exclude=publication-guard.yml "$pattern" .; then
+            echo "Private-document classification material detected on public surface." >&2
+            exit 1
+          fi
 
       - name: Validate Zenodo JSON
         shell: bash
