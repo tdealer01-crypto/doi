@@ -28,12 +28,23 @@ jobs:
           test -f LICENSE.md
           test -f SECURITY.md
           test -f PUBLICATION_STATUS.md
+          test -f docs/AI_AGENT_SYSTEM_OVERVIEW.md
           test -f docs/ARCHITECTURE.md
           test -f docs/THREAT_MODEL_HIGH_LEVEL.md
           test -f docs/VERIFIED_EVIDENCE_REDACTED.md
           test -f docs/COMPLIANCE_SUPPORT_MATRIX.md
           test -f docs/RELATED_PUBLICATIONS.md
-          test -f docs/BROWSER_APP_PUBLIC_OVERVIEW.md
+          test ! -f docs/BROWSER_APP_PUBLIC_OVERVIEW.md
+
+      - name: Require whole-system publication scope
+        shell: bash
+        run: |
+          set -eu
+          grep -q 'AI Agent System' README.md
+          grep -q 'Automation Spacetime' docs/AI_AGENT_SYSTEM_OVERVIEW.md
+          grep -q 'Governance Spacetime' docs/AI_AGENT_SYSTEM_OVERVIEW.md
+          grep -q 'Core Spin' docs/AI_AGENT_SYSTEM_OVERVIEW.md
+          grep -q 'Individual capabilities' README.md
 
       - name: Reject production-source and sensitive file types
         shell: bash
@@ -84,6 +95,7 @@ jobs:
           grep -q '"name": "Suparongsuwan, Thanawat"' .zenodo.json
           grep -q '"version": "1.1.0"' .zenodo.json
           grep -q '"license": "cc-by-nc-nd-4.0"' .zenodo.json
+          grep -q '"AI orchestration"' .zenodo.json
 
       - name: Validate citation metadata
         shell: bash
@@ -95,6 +107,7 @@ jobs:
           grep -q 'version: "1.1.0"' CITATION.cff
           grep -q 'doi: "10.5281/zenodo.22172532"' CITATION.cff
           grep -q 'license: "CC-BY-NC-ND-4.0"' CITATION.cff
+          grep -q 'AI orchestration' CITATION.cff
           grep -q 'CC-BY-NC-ND-4.0' LICENSE.md
 
       - name: Require verified DOI state
@@ -104,7 +117,7 @@ jobs:
           grep -q 'v1.1.0 status: PREPARED' README.md
           grep -q '10.5281/zenodo.22172533' README.md
           grep -q '10.5281/zenodo.22172532' README.md
-          grep -q 'PREPARED — DSG SPACETIME v1.1.0 RELEASE' PUBLICATION_STATUS.md
+          grep -q 'PREPARED — DSG SPACETIME v1.1.0 AI AGENT SYSTEM RELEASE' PUBLICATION_STATUS.md
           grep -q '10.5281/zenodo.22172533' PUBLICATION_STATUS.md
           grep -q '10.5281/zenodo.22172532' PUBLICATION_STATUS.md
           python - <<'PY'
