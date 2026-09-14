@@ -1,73 +1,108 @@
-# DSG Spacetime — Public Architecture Overview
+# DSG Spacetime — Public AI Agent System Architecture
 
-## Product model
+## Scope
 
-DSG Spacetime provides a governed environment in which AI agents can discover capabilities, compose systems, execute through customer-controlled infrastructure, and produce verifiable evidence.
+This document describes the DSG AI Agent System at a conceptual, publication-safe level. It is intentionally about the **whole agent system**, not one browser, cloud, database, model or provider integration.
 
-The public architecture is intentionally described at a conceptual level:
+## System model
 
 ```text
-Intent / AI agent
-       |
-       v
-   Discovery
-       |
-       v
-   Composition
-       |
-       v
-   Bound Plan
-       |
-       v
-Governance / Entitlement / Approval
-       |
-       v
-   Route Execution
-       |
-       v
- Evidence -> Verification / Proof
+Goal / User Intent
+        |
+        v
+AI Agent / Reasoning Layer
+        |
+        v
+Automation Spacetime
+        |
+        v
+Core Spin
+        |
+        v
+Governance Spacetime
+        |
+        v
+Nodes + Governed Routes
+        |
+        v
+Execution Adapters
+        |
+        v
+Customer / Provider Systems
+        |
+        v
+Evidence -> Verification -> Proof
+        |
+        +------ verified state/result ------> Core Spin
 ```
+
+## AI Agent / Reasoning Layer
+
+The AI layer interprets goals, inspects available context and proposes plans or next actions. It may select among approved capabilities, but its proposal does not grant execution authority.
+
+The architecture separates **reasoning authority** from **execution authority**. A more capable model can improve planning without automatically receiving broader permissions.
+
+## Automation Spacetime
+
+Automation Spacetime represents how a goal progresses through work. At the public level this includes sequencing, parallel work, agent assignment, handoff, retry/resume behavior and checkpoints.
+
+Automation decides **how work should proceed**. It does not decide that a side effect is authorized merely because the workflow requests it.
+
+## Governance Spacetime
+
+Governance Spacetime evaluates whether an exact requested action is allowed in the current context. Publicly described inputs may include identity/context, capability and Route scope, entitlement where applicable, required approval, policy conditions and evidence requirements.
+
+Missing required authorization is expected to block execution rather than silently downgrade the control.
+
+## Core Spin
+
+Core Spin is the stateful control loop connecting AI reasoning, automation, governance, execution results and the next decision round.
+
+Conceptually, Core Spin carries goal/job state, prior verified outcomes and continuation status so the system can continue, pause for approval, retry within allowed bounds, block, or complete. Core Spin is orchestration state; it is not a bypass around Governance Spacetime.
 
 ## Nodes
 
-A Node represents an approved capability boundary. Examples include source-control systems, cloud services, databases, AI/model providers, enterprise applications, monitoring systems, and internal customer APIs.
+A Node is an approved capability boundary. Examples include source control, cloud infrastructure, databases, AI/model providers, browsers, payment systems, enterprise applications, monitoring systems and internal customer APIs.
 
-A Node describes what an agent may discover or request; it does not by itself authorize execution.
+A Node defines what capability exists. Existence alone does not authorize its use.
 
 ## Routes
 
-A Route represents an authorized capability path between Nodes. Route use is subject to the deployment context and governance requirements defined for the requested operation.
+A Route is a governed capability path between Nodes. It binds a requested operation to the governance requirements that apply before execution.
 
-## AI composition
+## Execution adapters
 
-AI is expected to propose and compose systems dynamically. A proposal remains untrusted until it is bound to the required execution context. Composition does not grant permission by itself.
+Approved actions execute through configured customer-owned or provider adapters rather than unrestricted model-to-provider access. Existing systems remain authoritative for their own data and side effects.
 
-## Governance
-
-Before execution, DSG Spacetime evaluates the required authorization boundary for the requested Route. Publicly described boundary inputs include identity/context, approved capability scope, commercial entitlement where applicable, required approval, policy requirements, and evidence availability.
-
-The private implementation of those controls is intentionally not published in this repository.
-
-## Execution
-
-DSG Spacetime is designed for customer-hosted/BYOC operation. Existing provider and enterprise systems remain in their own infrastructure. DSG Spacetime is not required to become a central SaaS control plane.
-
-Execution occurs through approved capability/adaptor boundaries rather than unrestricted model-to-API access.
-
-## Governed browser capability
-
-A browser can be exposed as another governed capability boundary rather than as unrestricted model authority. An approved browser mission is validated and bound to the execution context before web interaction occurs.
-
-At the public level, Browser App follows the same composition rule as other DSG Spacetime capabilities: AI may propose what to do, but the execution path remains constrained by capability scope, authorization, approval requirements, and evidence.
-
-Browser content is treated as untrusted input. The browser capability does not implicitly grant access to unrelated credentials, systems, Nodes, or Routes. Implementation details of browser mission compilation and defensive controls remain private.
+A browser, shell, source-control API, cloud API, database or payment integration is an execution capability inside this layer — not the control architecture itself.
 
 ## Evidence and proof
 
-Execution produces durable evidence intended to support later verification. Public claims are limited to the scopes actually proven by execution or CI evidence; static code existence alone is not treated as proof of production behavior.
+Material execution produces durable evidence within the supported scope. Verified results are fed back into the control loop rather than relying on an AI assertion that an action succeeded.
+
+Proof is verification material derived from execution evidence and governed context. Public proof may be redacted to protect customer and implementation details while preserving the claim boundary.
+
+## AI-first lifecycle
+
+```text
+intent
+  -> discover approved capabilities
+  -> compose proposed work
+  -> bind execution context
+  -> authorize exact Routes/actions
+  -> execute through approved adapters
+  -> record evidence
+  -> verify result
+  -> update Core Spin state
+  -> continue / wait for approval / block / complete
+```
 
 ## Design objective
 
 **Maximum autonomy inside provable boundaries.**
 
-Agents do not need to trust one another merely because they collaborate. They operate inside a world where capability, authorization, execution, and evidence can be checked against explicit boundaries.
+The system is designed so AI agents can reason and operate continuously without equating intelligence, orchestration or persistence with permission.
+
+## Public/private boundary
+
+This document intentionally omits production source, proprietary policy algorithms, solver internals, private schemas, prompt/instruction internals, credential handling internals, anti-bypass implementation, detailed deployment topology and private test mechanics.

@@ -1,6 +1,6 @@
 # Publication Status
 
-Status: **PREPARED — DSG SPACETIME v1.1.0 RELEASE**
+Status: **PREPARED — DSG SPACETIME v1.1.0 AI AGENT SYSTEM RELEASE**
 
 Release candidate: **DSG Spacetime v1.1.0**
 
@@ -15,9 +15,21 @@ This public repository is the sanitized publication/citation surface for DSG Spa
 
 ## v1.1.0 release scope
 
-The v1.1.0 public package adds the implementation-safe Browser App capability overview plus corresponding high-level architecture, threat-model, and redacted verification updates.
+The v1.1.0 public package documents the **DSG AI Agent System as a whole** at an implementation-safe level.
 
-It does not contain production source code, private governance algorithms, internal policy rules, private tests, secrets, credentials, customer data, sensitive deployment topology, or private repository history.
+The public scope covers the relationship between:
+
+- AI Agent / reasoning,
+- Automation Spacetime,
+- Core Spin,
+- Governance Spacetime,
+- Nodes and governed Routes,
+- approved execution adapters/capabilities,
+- durable evidence, verification and proof.
+
+Individual tools such as browser automation, source control, cloud APIs, databases, models or payment systems are treated as capabilities within the architecture, not as the release subject by themselves.
+
+The publication does not contain production source code, private governance algorithms, internal policy rules, private prompts, private tests, secrets, credentials, customer data, sensitive deployment topology or private repository history.
 
 ## v1.1.0 DOI state
 
@@ -27,9 +39,9 @@ The GitHub/Zenodo release is being prepared. **No v1.1.0 version DOI is claimed 
 
 ## Release acceptance
 
-Before v1.1.0 is published:
+Before v1.1.0 is described as published:
 
-1. public publication guard passes on the exact release-prep commit;
+1. public publication guard passes on the exact AI-Agent-System release-prep commit;
 2. GitHub Release `v1.1.0` is created from that commit;
 3. Zenodo ingestion is verified from the public record/API;
 4. only the DOI actually returned by Zenodo is recorded as the v1.1.0 version DOI.

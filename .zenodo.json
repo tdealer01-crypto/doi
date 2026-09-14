@@ -1,6 +1,6 @@
 {
   "title": "DSG Spacetime",
-  "description": "DSG Spacetime is customer-hosted governance infrastructure for AI agents. It provides node-to-node capability discovery and composition, plan-bound execution, deployment-bound commercial entitlements, fail-closed governance, governed browser-workflow capabilities, and verifiable evidence while allowing existing customer systems to remain in their own infrastructure.",
+  "description": "DSG Spacetime is a customer-hosted governed AI-agent system that separates reasoning and workflow orchestration from execution authority. It combines AI planning, Automation Spacetime for workflow coordination, Core Spin for stateful continuation, Governance Spacetime for exact-action authorization, node-to-node capabilities, governed execution, and verifiable evidence/proof while allowing customer systems to remain in their own infrastructure.",
   "creators": [
     {
       "name": "Suparongsuwan, Thanawat",
@@ -12,14 +12,17 @@
     "AI agents",
     "AI governance",
     "agentic AI",
+    "AI orchestration",
+    "multi-agent systems",
+    "stateful agent loop",
+    "workflow orchestration",
     "Model Context Protocol",
     "node-to-node architecture",
+    "governed execution",
     "fail-closed execution",
     "verifiable evidence",
     "auditability",
-    "trustworthy AI",
-    "governed browser automation",
-    "browser workflow governance"
+    "trustworthy AI"
   ],
   "version": "1.1.0",
   "license": "cc-by-nc-nd-4.0",
