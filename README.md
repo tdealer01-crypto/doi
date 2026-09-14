@@ -4,48 +4,74 @@ This repository is the public citation and archival surface for **DSG Spacetime*
 
 > **Let AI build the system. Not just the code.**
 
-DSG Spacetime is customer-hosted governance infrastructure for AI agents. It provides a Node-to-Node (N2N) model in which agents can discover approved capabilities, compose systems, execute within bounded authority, and produce verifiable evidence without requiring a central DSG SaaS control plane.
+DSG Spacetime is a customer-hosted governed AI-agent system. It separates AI reasoning and workflow composition from execution authority, so agents can operate with high autonomy while exact actions remain bounded by explicit capabilities, approvals, policy and verifiable evidence.
 
 ## Publication boundary
 
-This repository intentionally contains **public-safe material only**. It does **not** contain the proprietary DSG Spacetime production implementation, private algorithms, solver internals, policy/security internals, private tests, secrets, credentials, customer data, or sensitive deployment details.
+This repository intentionally contains **public-safe material only**. It does **not** contain the proprietary production implementation, private algorithms, solver internals, policy/security internals, private tests, secrets, credentials, customer data, or sensitive deployment details.
 
 The production runtime remains in a separate private repository and is not mirrored here.
 
-## Public architecture
+## DSG AI Agent System
 
-DSG Spacetime can be understood as six public concepts:
+The v1.1.0 publication describes the **AI agent system as a whole**, not any single tool or browser capability.
 
 ```text
-DSG Spacetime
-├── Nodes
-├── Routes
-├── Governance
-├── Execution
-├── Evidence
-└── Proof
+Goal / User Intent
+        |
+        v
+AI Agent / Reasoning
+        |
+        v
+Automation Spacetime
+(workflow / handoff / retry / resume / checkpoint)
+        |
+        v
+Core Spin
+(stateful control loop)
+        |
+        v
+Governance Spacetime
+(exact-action authorization)
+        |
+        v
+Nodes + Governed Routes
+        |
+        v
+Execution Adapters / Customer Infrastructure
+        |
+        v
+Evidence -> Verification -> Proof
+        |
+        +------ verified result/state ------> next Core Spin round
 ```
 
-- **Node** — an approved capability boundary, such as a source-control service, cloud platform, database, AI model, enterprise system, or internal API.
-- **Route** — an authorized capability path between Nodes.
-- **Governance** — identity, entitlement, policy, approval, and evidence requirements that bound execution.
-- **Execution** — customer-hosted action through approved adapters/capabilities.
-- **Evidence** — durable records of what actually executed.
-- **Proof** — verification material derived from execution evidence.
+- **AI Agent / Reasoning** — proposes plans and next actions; proposal is not permission.
+- **Automation Spacetime** — describes how work progresses across steps, agents, parallel work, handoffs, retry/resume and checkpoints at the orchestration level.
+- **Governance Spacetime** — determines whether an exact requested action is authorized for the current identity, capability, Route, approval and policy context.
+- **Core Spin** — the stateful control loop between reasoning, automation and governance. It carries job/session progress and verified results into the next round without gaining authority to bypass governance.
+- **Node** — an approved capability boundary such as source control, cloud infrastructure, databases, models, browsers, payment systems or enterprise services.
+- **Route** — a governed capability path between Nodes.
+- **Execution** — an authorized action carried out through approved customer-owned/provider adapters.
+- **Evidence / Proof** — durable records and verification material showing what actually executed.
 
-The design goal is **maximum autonomy inside provable boundaries**.
+The operating principle is **maximum autonomy inside provable boundaries**.
 
-## Browser App capability in v1.1.0
+See [`docs/AI_AGENT_SYSTEM_OVERVIEW.md`](docs/AI_AGENT_SYSTEM_OVERVIEW.md) and [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md).
 
-The v1.1.0 publication candidate documents **Browser App**, a governed browser-workflow capability that represents approved web work as a bounded mission and routes execution through DSG Spacetime governance and evidence boundaries.
+## AI-first lifecycle
 
-This update is intentionally implementation-safe. It does not publish the private compiler, policy logic, security controls, deployment topology, secret handling, or production source. See [`docs/BROWSER_APP_PUBLIC_OVERVIEW.md`](docs/BROWSER_APP_PUBLIC_OVERVIEW.md).
+```text
+discover -> compose -> bind -> authorize -> execute -> evidence -> verify -> continue/complete
+```
 
-The archived v1.0.0 DOI remains immutable. The v1.1.0 GitHub/Zenodo release is being prepared; no v1.1.0 version DOI is claimed until Zenodo publishes it.
+The AI can reason, plan and select the next step. Automation can coordinate multi-step work. Neither layer self-authorizes side effects. Governance remains the execution boundary, while Core Spin uses verified results to continue, pause for approval, block, or complete the goal.
+
+Individual capabilities — browser operation, source control, cloud, database, model, payment or enterprise integrations — are Nodes/tools inside this architecture. They are **not** the architecture itself.
 
 ## Public release version
 
-The next public archival release is **DSG Spacetime 1.1.0**, prepared from the sanitized public publication/citation surface. The existing **v1.0.0** archive remains immutable.
+The next public archival release is **DSG Spacetime 1.1.0**, representing the public-safe architecture and evidence boundary of the DSG AI Agent System. The existing **v1.0.0** archive remains immutable.
 
 Versioning here identifies sanitized publication/citation packages. It is not a claim that the private production runtime has been relicensed or published.
 
@@ -72,7 +98,7 @@ This license applies only to material contained in this public repository. It do
 
 ## Public material in this repository
 
-- architecture-level documentation
+- AI-agent system architecture at a conceptual level
 - citation and Zenodo metadata
 - high-level security/threat-model statements
 - redacted verification/evidence summaries
@@ -84,4 +110,4 @@ No production source is intentionally included.
 
 ## Current publication state
 
-**PREPARED — public v1.1.0 release metadata is ready; Zenodo version DOI is not yet claimed. v1.0.0 remains VERIFIED and archived.**
+**PREPARED — public v1.1.0 AI Agent System release metadata is ready; Zenodo version DOI is not yet claimed. v1.0.0 remains VERIFIED and archived.**
