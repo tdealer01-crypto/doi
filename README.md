@@ -35,28 +35,28 @@ DSG Spacetime
 
 The design goal is **maximum autonomy inside provable boundaries**.
 
-## Post-v1.0.0 capability update
+## Browser App capability in v1.1.0
 
-The public working tree now documents **Browser App**, a governed browser-workflow capability that represents approved web work as a bounded mission and routes execution through DSG Spacetime governance and evidence boundaries.
+The v1.1.0 publication candidate documents **Browser App**, a governed browser-workflow capability that represents approved web work as a bounded mission and routes execution through DSG Spacetime governance and evidence boundaries.
 
 This update is intentionally implementation-safe. It does not publish the private compiler, policy logic, security controls, deployment topology, secret handling, or production source. See [`docs/BROWSER_APP_PUBLIC_OVERVIEW.md`](docs/BROWSER_APP_PUBLIC_OVERVIEW.md).
 
-The archived v1.0.0 DOI remains immutable; this newer documentation is not represented as part of that archived snapshot until a future Zenodo version is published.
+The archived v1.0.0 DOI remains immutable. The v1.1.0 GitHub/Zenodo release is being prepared; no v1.1.0 version DOI is claimed until Zenodo publishes it.
 
 ## Public release version
 
-The first public archival release is **DSG Spacetime 1.0.0**, GitHub tag **`v1.0.0`**.
+The next public archival release is **DSG Spacetime 1.1.0**, prepared from the sanitized public publication/citation surface. The existing **v1.0.0** archive remains immutable.
 
-The version identifies the sanitized public publication/citation package. It is not a claim that the private production runtime has been relicensed or published.
+Versioning here identifies sanitized publication/citation packages. It is not a claim that the private production runtime has been relicensed or published.
 
 ## DOI
 
-**VERIFIED — Zenodo publication completed.**
+**v1.1.0 status: PREPARED — exact version DOI pending Zenodo publication.**
 
-- Version 1.0.0 DOI: **10.5281/zenodo.22172533**
+- Existing v1.0.0 DOI: **10.5281/zenodo.22172533**
 - Concept DOI (all versions): **10.5281/zenodo.22172532**
 
-Use the version DOI when citing this exact archived release. Use the concept DOI when you want a citation that follows the DSG Spacetime record across future Zenodo versions.
+Use the concept DOI for the DSG Spacetime record while v1.1.0 is being published. The exact v1.1.0 DOI will be recorded only after Zenodo returns it.
 
 ## Related and prior publications
 
@@ -84,4 +84,4 @@ No production source is intentionally included.
 
 ## Current publication state
 
-**VERIFIED — public v1.0.0 archival release is published on Zenodo and DOI identifiers are recorded.**
+**PREPARED — public v1.1.0 release metadata is ready; Zenodo version DOI is not yet claimed. v1.0.0 remains VERIFIED and archived.**

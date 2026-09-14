@@ -2,9 +2,9 @@
 
 ## Publication status
 
-This page is a **post-v1.0.0 public capability update**. It is not part of the immutable DSG Spacetime v1.0.0 Zenodo snapshot identified by DOI `10.5281/zenodo.22172533`.
+This page is included in the **DSG Spacetime v1.1.0 public release candidate**. The prior v1.0.0 Zenodo snapshot identified by DOI `10.5281/zenodo.22172533` remains immutable.
 
-A future Zenodo version may archive this capability after a separate publication review. Until then, the v1.0.0 version DOI continues to identify only the previously archived release.
+The exact v1.1.0 version DOI is intentionally left unclaimed until Zenodo publishes the new record. The concept DOI continues to identify DSG Spacetime across versions.
 
 ## What Browser App adds
 
@@ -58,8 +58,8 @@ Provider deployment and live web-task claims remain separate evidence scopes. Th
 
 - DSG Spacetime v1.0.0 remains archived at DOI `10.5281/zenodo.22172533`.
 - Concept DOI `10.5281/zenodo.22172532` continues to identify the DSG Spacetime record across versions.
-- This page documents a newer public-safe capability description on the repository's working branch.
-- A new version DOI must be minted before this update is described as an archived Zenodo release.
+- This page is part of the v1.1.0 public release candidate.
+- The exact v1.1.0 version DOI must be returned by Zenodo before this candidate is described as an archived Zenodo release.
 
 ## Intellectual-property boundary
 

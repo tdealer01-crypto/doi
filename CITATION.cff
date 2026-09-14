@@ -1,16 +1,16 @@
 cff-version: 1.2.0
-message: "If you use DSG Spacetime in research, evaluation, or engineering work, please cite the archived release."
+message: "If you use DSG Spacetime in research, evaluation, or engineering work, please cite this record. See PUBLICATION_STATUS.md for the exact version DOI."
 title: "DSG Spacetime"
 type: software
-version: "1.0.0"
-doi: "10.5281/zenodo.22172533"
+version: "1.1.0"
+doi: "10.5281/zenodo.22172532"
 license: "CC-BY-NC-ND-4.0"
 abstract: >-
   DSG Spacetime is customer-hosted governance infrastructure for AI agents.
   It provides node-to-node capability discovery and composition, plan-bound
   execution, deployment-bound commercial entitlements, fail-closed governance,
-  and verifiable evidence while allowing existing customer systems to remain
-  in their own infrastructure.
+  governed browser-workflow capabilities, and verifiable evidence while allowing
+  existing customer systems to remain in their own infrastructure.
 authors:
   - given-names: "Thanawat"
     family-names: "Suparongsuwan"
@@ -25,5 +25,6 @@ keywords:
   - verifiable evidence
   - auditability
   - trustworthy AI
+  - governed browser automation
 repository-code: "https://github.com/tdealer01-crypto/doi"
 url: "https://dsg.pics"
