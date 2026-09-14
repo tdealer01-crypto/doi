@@ -1,17 +1,21 @@
 # Publication Status
 
-Status: **PREPARED — DSG SPACETIME v1.1.0 AI AGENT SYSTEM RELEASE**
+Status: **VERIFIED — DSG SPACETIME v1.1.0 AI AGENT SYSTEM DOI PUBLISHED**
 
-Release candidate: **DSG Spacetime v1.1.0**
+Release: **DSG Spacetime v1.1.0**
 
 This public repository is the sanitized publication/citation surface for DSG Spacetime. It is separate from the private production implementation.
 
-## Existing verified archive
+## Verified publication evidence
 
-- DSG Spacetime v1.0.0 is already published on Zenodo.
-- v1.0.0 version DOI: **10.5281/zenodo.22172533**
-- concept DOI across versions: **10.5281/zenodo.22172532**
-- the existing v1.0.0 archive is immutable and is not rewritten by this release preparation.
+- GitHub Release `v1.1.0` is published, not draft/prerelease.
+- release target commit: `a6f10c88d474ee289e9be1e9158d575fd76d3220`.
+- that commit passed the public publication guard on `main`.
+- Zenodo ingested the release as **DSG Spacetime**, version **1.1.0**.
+- v1.1.0 version DOI: **10.5281/zenodo.22755320**.
+- concept DOI across versions: **10.5281/zenodo.22172532**.
+- previous v1.0.0 version DOI remains **10.5281/zenodo.22172533**.
+- public repository license remains **CC BY-NC-ND 4.0** (`CC-BY-NC-ND-4.0`).
 
 ## v1.1.0 release scope
 
@@ -27,25 +31,18 @@ The public scope covers the relationship between:
 - approved execution adapters/capabilities,
 - durable evidence, verification and proof.
 
-Individual tools such as browser automation, source control, cloud APIs, databases, models or payment systems are treated as capabilities within the architecture, not as the release subject by themselves.
+Individual tools such as browser automation, source control, cloud APIs, databases, models or payment systems are capabilities within the architecture, not the release subject by themselves.
 
 The publication does not contain production source code, private governance algorithms, internal policy rules, private prompts, private tests, secrets, credentials, customer data, sensitive deployment topology or private repository history.
 
-## v1.1.0 DOI state
+## Citation guidance
 
-The GitHub/Zenodo release is being prepared. **No v1.1.0 version DOI is claimed yet.**
+Use **10.5281/zenodo.22755320** to cite the exact v1.1.0 AI Agent System archival release.
 
-`CITATION.cff` uses the stable concept DOI `10.5281/zenodo.22172532` until Zenodo publishes the exact v1.1.0 version DOI. After publication, the exact returned DOI must be verified and recorded in a follow-up update.
+Use **10.5281/zenodo.22172532** to cite the DSG Spacetime concept across versions.
 
-## Release acceptance
-
-Before v1.1.0 is described as published:
-
-1. public publication guard passes on the exact AI-Agent-System release-prep commit;
-2. GitHub Release `v1.1.0` is created from that commit;
-3. Zenodo ingestion is verified from the public record/API;
-4. only the DOI actually returned by Zenodo is recorded as the v1.1.0 version DOI.
+Use **10.5281/zenodo.22172533** only when citing the previous v1.0.0 archival release.
 
 ## Boundary
 
-This release packages only sanitized public documentation/citation material under the repository's existing public license. It does not publish or relicense private DSG implementation or confidential know-how.
+This verification is for the sanitized public publication/citation package. It does not publish, relicense or expose private DSG implementation, private algorithms, prompts, secrets, customer data or private repository history.

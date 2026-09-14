@@ -71,18 +71,19 @@ Individual capabilities — browser operation, source control, cloud, database, 
 
 ## Public release version
 
-The next public archival release is **DSG Spacetime 1.1.0**, representing the public-safe architecture and evidence boundary of the DSG AI Agent System. The existing **v1.0.0** archive remains immutable.
+The current public archival release is **DSG Spacetime 1.1.0**, representing the public-safe architecture and evidence boundary of the DSG AI Agent System. The existing **v1.0.0** archive remains immutable.
 
 Versioning here identifies sanitized publication/citation packages. It is not a claim that the private production runtime has been relicensed or published.
 
 ## DOI
 
-**v1.1.0 status: PREPARED — exact version DOI pending Zenodo publication.**
+**VERIFIED — Zenodo publication for v1.1.0 completed.**
 
-- Existing v1.0.0 DOI: **10.5281/zenodo.22172533**
+- Version 1.1.0 DOI: **10.5281/zenodo.22755320**
+- Previous v1.0.0 DOI: **10.5281/zenodo.22172533**
 - Concept DOI (all versions): **10.5281/zenodo.22172532**
 
-Use the concept DOI for the DSG Spacetime record while v1.1.0 is being published. The exact v1.1.0 DOI will be recorded only after Zenodo returns it.
+Use **10.5281/zenodo.22755320** when citing the exact DSG Spacetime v1.1.0 AI Agent System release. Use the concept DOI when citing the DSG Spacetime record across versions.
 
 ## Related and prior publications
 
@@ -110,4 +111,4 @@ No production source is intentionally included.
 
 ## Current publication state
 
-**PREPARED — public v1.1.0 AI Agent System release metadata is ready; Zenodo version DOI is not yet claimed. v1.0.0 remains VERIFIED and archived.**
+**VERIFIED — public v1.1.0 AI Agent System archival release is published on Zenodo and the version DOI is recorded. v1.0.0 remains VERIFIED and archived.**

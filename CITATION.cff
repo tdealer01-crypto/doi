@@ -1,9 +1,9 @@
 cff-version: 1.2.0
-message: "If you use DSG Spacetime in research, evaluation, or engineering work, please cite this record. See PUBLICATION_STATUS.md for the exact version DOI."
+message: "If you use DSG Spacetime in research, evaluation, or engineering work, please cite the archived v1.1.0 release."
 title: "DSG Spacetime"
 type: software
 version: "1.1.0"
-doi: "10.5281/zenodo.22172532"
+doi: "10.5281/zenodo.22755320"
 license: "CC-BY-NC-ND-4.0"
 abstract: >-
   DSG Spacetime is a customer-hosted governed AI-agent system that separates
