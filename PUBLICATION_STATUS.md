@@ -1,35 +1,39 @@
 # Publication Status
 
-Status: **VERIFIED — ZENODO DOI PUBLISHED**
+Status: **PREPARED — DSG SPACETIME v1.1.0 RELEASE**
 
-Release: **DSG Spacetime v1.0.0**
+Release candidate: **DSG Spacetime v1.1.0**
 
-This public repository is the sanitized publication/citation surface for DSG Spacetime. It is separate from the private production repository.
+This public repository is the sanitized publication/citation surface for DSG Spacetime. It is separate from the private production implementation.
 
-## Verified publication evidence
+## Existing verified archive
 
-- GitHub Release `v1.0.0` exists and is published, not draft/prerelease
-- release tag `v1.0.0` points to commit `391497675a9e5485b9eef4b8069ae728704b86e5`
-- that commit passed the public publication guard on `main`
-- Zenodo ingested the release as **DSG Spacetime**, version **1.0.0**, software/open record
-- Zenodo displayed and registered the version DOI **10.5281/zenodo.22172533**
-- Zenodo displayed the concept DOI for all versions **10.5281/zenodo.22172532**
-- public repository license remains **CC BY-NC-ND 4.0** (`CC-BY-NC-ND-4.0`)
-- the license applies only to material actually published in this public repository and does not license private DSG production implementation or undisclosed proprietary material
-- current public tree/history publication guard continues to reject production-source/sensitive file types and obvious secret patterns
+- DSG Spacetime v1.0.0 is already published on Zenodo.
+- v1.0.0 version DOI: **10.5281/zenodo.22172533**
+- concept DOI across versions: **10.5281/zenodo.22172532**
+- the existing v1.0.0 archive is immutable and is not rewritten by this release preparation.
 
-## Citation guidance
+## v1.1.0 release scope
 
-Use **10.5281/zenodo.22172533** to cite the exact `1.0.0` archival release.
+The v1.1.0 public package adds the implementation-safe Browser App capability overview plus corresponding high-level architecture, threat-model, and redacted verification updates.
 
-Use **10.5281/zenodo.22172532** to cite the DSG Spacetime Zenodo concept across all versions.
+It does not contain production source code, private governance algorithms, internal policy rules, private tests, secrets, credentials, customer data, sensitive deployment topology, or private repository history.
+
+## v1.1.0 DOI state
+
+The GitHub/Zenodo release is being prepared. **No v1.1.0 version DOI is claimed yet.**
+
+`CITATION.cff` uses the stable concept DOI `10.5281/zenodo.22172532` until Zenodo publishes the exact v1.1.0 version DOI. After publication, the exact returned DOI must be verified and recorded in a follow-up update.
+
+## Release acceptance
+
+Before v1.1.0 is published:
+
+1. public publication guard passes on the exact release-prep commit;
+2. GitHub Release `v1.1.0` is created from that commit;
+3. Zenodo ingestion is verified from the public record/API;
+4. only the DOI actually returned by Zenodo is recorded as the v1.1.0 version DOI.
 
 ## Boundary
 
-This verification is for the sanitized public publication/citation package. It does not publish, relicense, or expose the private DSG Spacetime production implementation, DSG Fabric internals, private algorithms, secrets, customer data, or private repository history.
-
-## Post-v1.0.0 working-tree update
-
-The repository working tree contains public-safe capability documentation added after the archived v1.0.0 release, including the governed Browser App overview.
-
-These post-release changes do **not** alter the meaning of DOI `10.5281/zenodo.22172533`; that DOI continues to identify the exact v1.0.0 archive. No newer DSG Spacetime version DOI is claimed here until a new Zenodo version is actually published and verified.
+This release packages only sanitized public documentation/citation material under the repository's existing public license. It does not publish or relicense private DSG implementation or confidential know-how.
