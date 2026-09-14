@@ -18,6 +18,12 @@ The private production test/release process has produced execution evidence for 
 - source-free Linux AMD64 customer packaging
 - rejection of customer/self-issued commercial trust material
 
+## Browser App verification scope — 2026-09-14
+
+A private production change added a governed Browser App surface for bounded web missions. The associated private runtime CI and source-free packaging smoke checks passed for the integrated change.
+
+This public statement verifies the source/CI/packaging scope only. It intentionally omits private workflow identifiers, implementation mechanics, security-control internals, and deployment topology. A provider deployment or live browser task is not inferred from these checks alone.
+
 ## Verified commerce acceptance scope
 
 A controlled owner-authorized LIVE payment acceptance exercise verified the real provider chain at a deliberately low test amount. The proof covered payment completion, seller-signed entitlement issuance, exact delivered-package runtime smoke, deployment-mismatch blocking, transactional delivery, durable fulfillment recording, duplicate-retry suppression, and physical mailbox receipt of the expected delivery artifacts.

@@ -27,3 +27,9 @@ Use **10.5281/zenodo.22172532** to cite the DSG Spacetime Zenodo concept across 
 ## Boundary
 
 This verification is for the sanitized public publication/citation package. It does not publish, relicense, or expose the private DSG Spacetime production implementation, DSG Fabric internals, private algorithms, secrets, customer data, or private repository history.
+
+## Post-v1.0.0 working-tree update
+
+The repository working tree contains public-safe capability documentation added after the archived v1.0.0 release, including the governed Browser App overview.
+
+These post-release changes do **not** alter the meaning of DOI `10.5281/zenodo.22172533`; that DOI continues to identify the exact v1.0.0 archive. No newer DSG Spacetime version DOI is claimed here until a new Zenodo version is actually published and verified.

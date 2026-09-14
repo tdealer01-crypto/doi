@@ -35,6 +35,14 @@ DSG Spacetime
 
 The design goal is **maximum autonomy inside provable boundaries**.
 
+## Post-v1.0.0 capability update
+
+The public working tree now documents **Browser App**, a governed browser-workflow capability that represents approved web work as a bounded mission and routes execution through DSG Spacetime governance and evidence boundaries.
+
+This update is intentionally implementation-safe. It does not publish the private compiler, policy logic, security controls, deployment topology, secret handling, or production source. See [`docs/BROWSER_APP_PUBLIC_OVERVIEW.md`](docs/BROWSER_APP_PUBLIC_OVERVIEW.md).
+
+The archived v1.0.0 DOI remains immutable; this newer documentation is not represented as part of that archived snapshot until a future Zenodo version is published.
+
 ## Public release version
 
 The first public archival release is **DSG Spacetime 1.0.0**, GitHub tag **`v1.0.0`**.

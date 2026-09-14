@@ -29,6 +29,10 @@ Commercial authorization material may be modified, replaced, or self-issued by a
 
 An agent may attempt to obtain unrestricted provider credentials or bypass the approved adapter/capability boundary. The architecture avoids direct unbounded model-to-provider credential use.
 
+### Untrusted web content and browser drift
+
+A governed browser may encounter hostile, misleading, or changed web content. Web content is treated as input rather than authorization. Browser work remains bounded by the approved capability/mission context, and higher-risk side effects must not be inferred as permitted merely because a page requests them.
+
 ### Evidence tampering
 
 A party may attempt to modify execution history after the fact. DSG Spacetime is designed to produce tamper-evident evidence suitable for later verification within the tested scope.
