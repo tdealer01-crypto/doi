@@ -63,3 +63,12 @@ Additional owner-controlled Google Drive provenance has now been preserved separ
 - Earliest DSG Harmonic Mean implementation artifact currently verified in that record: **2025-12-24T05:00:45.667Z**
 
 These are **provider-timestamped private-artifact records**, not automatically public prior-art dates. The evidence note intentionally separates artifact existence from public disclosure, patent filing, priority, novelty, and inventorship conclusions.
+
+
+## Historical THANAWAT / KAI lineage evidence
+
+Additional 2025 mobile/Termux and KAI lineage evidence is preserved in:
+
+- [THANAWAT / KAI Lineage Evidence — 2025](THANAWAT_KAI_LINEAGE_EVIDENCE_2025.md)
+
+This record includes externally timestamped public GitHub evidence from December 8, 2025, hashed uploaded snapshots, a same-day Termux demonstration video, and carefully bounded KAI-node / GEN12 lineage notes. Archive-local or media-container timestamps are explicitly distinguished from public/provider timestamps.
