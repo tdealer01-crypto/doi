@@ -157,3 +157,47 @@ Their exact SHA-256 values from the inspected snapshots are preserved here for c
 - Transfer Dock snapshots: `eba318a345cda6af53f27e61ef641b798cd3c74472af14c099810b14bf1dc381` (all three are byte-identical)
 - `tp_debug_info.txt`: `f815024a2f9dfb2b3643b40e244f9e5d90f659216840663f49e12579d3bf3552`
 - `test_sandbox_integration (1) (1).py`: `39ec240d23e9aab8e55579af34f61cce444f06d6f1729150d39fe7a53e495bfe`
+
+
+## Additional KAI spatial / sync lineage artifacts — preserved 2026-09-29
+
+### E-KAI-003 — Kai AirGrid 4D map / flight-path prototype
+
+- Uploaded artifact title: `โลก`
+- Exact uploaded PDF SHA-256: `ddccdec4e2235deb456e734ceb9ab81d70029c15721be97fd933b0ef664dfaca`
+- PDF title metadata: `โลก`
+- Embedded document content identifies the prototype as `Kai AirGrid 4D`.
+- The preserved code uses MapLibre, creates a map centered on Thailand, defines `addAircraft(lat, lon, altitude)`, and defines `drawFlightPath(coords)` using a GeoJSON `LineString`.
+- The sample route connects Suvarnabhumi and Chiang Mai and includes an aircraft marker with altitude.
+
+**Evidence status:** **HASHED SNAPSHOT / KAI SPATIAL-VISUALIZATION TECHNICAL ARTIFACT.**
+
+This supports a KAI-branded spatial/map prototype in the preserved snapshot. It does not establish the original creation date, public disclosure date, or a deterministic-governance implementation.
+
+### E-KAI-004 — Kai Master Node Google Drive sync configuration
+
+- Uploaded artifact title: `เอกสารไม่มีชื่อ`
+- Exact uploaded PDF SHA-256: `16ca6a8f10ccebcc034954e1b25e759121a7f74363adbcf8f05b6496c61eef49`
+- Preserved configuration values:
+  - `AUTO_SYNC_ENABLED=true`
+  - `SYNC_SOURCE=GoogleDrive`
+  - `SYNC_PATH=Kai_Master_Node`
+  - `SYNC_INTERVAL_HOURS=24`
+
+**Evidence status:** **HASHED SNAPSHOT / KAI MASTER-NODE OPERATIONS SUPPORTING ARTIFACT.**
+
+This supports a KAI Master Node synchronization configuration in the preserved snapshot. It does not establish the technical contents of the synchronized node or any Harmonic/UDG/Z3 functionality by itself.
+
+### E-KAI-005 — minimal Kai PDF snapshot
+
+- Uploaded artifact title: `Kai`
+- Exact uploaded PDF SHA-256: `4c8c0849f09d6c49b323e7e29d33af46792b3371fecc766002317f52552814f1`
+- Visible content: the word `Kai` and five empty bullet points.
+
+**Evidence status:** **HASHED SNAPSHOT / NAME-PROVENANCE ONLY.**
+
+This snapshot is not promoted to technical IP evidence because it contains no substantive architecture or implementation detail.
+
+### Other same-title blank PDFs
+
+Additional uploaded PDFs titled `เอกสารไม่มีชื่อ` were visually inspected and found blank. They are intentionally excluded from the technical evidence chain.
