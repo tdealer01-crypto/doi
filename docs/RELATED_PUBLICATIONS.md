@@ -53,3 +53,13 @@ For clarity, the verified DSG Spacetime archival identifiers remain:
 - DSG Spacetime concept DOI: **10.5281/zenodo.22172532**
 
 The related/prior publications above do not change the identity, versioning, license boundary, or DOI status of DSG Spacetime v1.0.0.
+
+## Provider-timestamped historical implementation evidence
+
+Additional owner-controlled Google Drive provenance has now been preserved separately:
+
+- [DSG Harmonic Mean — Provider-Timestamped Evidence](HARMONIC_MEAN_PROVIDER_EVIDENCE_2025.md)
+- Earliest KAI name/provenance anchor currently verified in that record: **2025-11-15T15:51:20.961Z**
+- Earliest DSG Harmonic Mean implementation artifact currently verified in that record: **2025-12-24T05:00:45.667Z**
+
+These are **provider-timestamped private-artifact records**, not automatically public prior-art dates. The evidence note intentionally separates artifact existence from public disclosure, patent filing, priority, novelty, and inventorship conclusions.
