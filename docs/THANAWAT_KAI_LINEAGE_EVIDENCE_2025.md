@@ -95,6 +95,8 @@ Visual inspection of representative frames shows:
 
 The MP4 container timestamp is not treated as independently immutable because media metadata can be edited. Its evidentiary value is strengthened by the separate public Git commits from the same date.
 
+Additional internal-consistency check: **2025-12-08T15:06:17Z equals 22:06:17 in UTC+07**, while the phone status bar visible in the inspected video frames shows approximately **22:05–22:06**. This consistency supports the media timeline but still does not convert container metadata into an immutable external timestamp.
+
 ## E-TH-005 — THANAWAT Protocol proposal / whitepaper snapshot
 
 Uploaded artifact title: `เอกสารไม่มีชื่อ`
