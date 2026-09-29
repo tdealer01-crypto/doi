@@ -81,3 +81,12 @@ Additional governance-design and snapshot evidence is preserved in:
 - [CCVS / UDG Snapshot Evidence — 2026](CCVS_UDG_SNAPSHOT_EVIDENCE_2026.md)
 
 This record deliberately distinguishes a CCVS architecture document, a non-production DSG pitch/demo prototype, and an alternate rendered UDG PDF snapshot. The browser demo is explicitly classified as prototype-only because its gate decisions and stamp are simulated in client-side JavaScript.
+
+
+## V146/V159 and workflow lineage evidence
+
+Additional implementation and continuity evidence is preserved in:
+
+- [DSG V146/V159 + Workflow Lineage Evidence](V146_V159_WORKFLOW_LINEAGE_EVIDENCE.md)
+
+This record includes a solver-less V159 gate, KAI loop engine, mobile Tasker/AutoInput actuator snapshot, later deterministic-execution workflow pack, exact-byte duplicate confirmation for the Makk-8 arbiter and Kai patent draft, and explicit exclusions for prototype/simulation/report artifacts that do not constitute production proof.
