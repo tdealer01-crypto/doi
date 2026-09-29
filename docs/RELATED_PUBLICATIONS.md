@@ -72,3 +72,12 @@ Additional 2025 mobile/Termux and KAI lineage evidence is preserved in:
 - [THANAWAT / KAI Lineage Evidence — 2025](THANAWAT_KAI_LINEAGE_EVIDENCE_2025.md)
 
 This record includes externally timestamped public GitHub evidence from December 8, 2025, hashed uploaded snapshots, a same-day Termux demonstration video, and carefully bounded KAI-node / GEN12 lineage notes. Archive-local or media-container timestamps are explicitly distinguished from public/provider timestamps.
+
+
+## CCVS and alternate UDG snapshot evidence
+
+Additional governance-design and snapshot evidence is preserved in:
+
+- [CCVS / UDG Snapshot Evidence — 2026](CCVS_UDG_SNAPSHOT_EVIDENCE_2026.md)
+
+This record deliberately distinguishes a CCVS architecture document, a non-production DSG pitch/demo prototype, and an alternate rendered UDG PDF snapshot. The browser demo is explicitly classified as prototype-only because its gate decisions and stamp are simulated in client-side JavaScript.
