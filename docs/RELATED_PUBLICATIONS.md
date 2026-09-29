@@ -90,3 +90,19 @@ Additional implementation and continuity evidence is preserved in:
 - [DSG V146/V159 + Workflow Lineage Evidence](V146_V159_WORKFLOW_LINEAGE_EVIDENCE.md)
 
 This record includes a solver-less V159 gate, KAI loop engine, mobile Tasker/AutoInput actuator snapshot, later deterministic-execution workflow pack, exact-byte duplicate confirmation for the Makk-8 arbiter and Kai patent draft, and explicit exclusions for prototype/simulation/report artifacts that do not constitute production proof.
+
+
+## Provider-revision KAI chronology
+
+Google Drive provider/revision evidence now establishes the following narrower chronology:
+
+- **2025-11-15T15:51:22.498Z** — first located KAI-name revision (`Kai`; name/provenance only)
+- **2025-11-21T16:29:40.645Z** — first revision of `Kai AirGrid 4D` already contains substantive map/flight-path implementation
+- **2025-11-22T09:02:44.508Z** — `ไคมา` project-root folder created
+- **2025-11-22T09:17:21.318Z** — earliest located substantive `Kai Gen12 node orchestration system` revision
+- **2025-11-22T09:19:59.086Z** — `master.jason` revision 1 in the project root contains the full Gen12 v12.0.0 configuration
+- **2025-11-28T04:40:23.658Z** — substantive `Kai Panel Combo (Minimal + Atlas)` revision
+
+Explicit `God Mode` and `GEN1–GEN11` artifacts remain **NOT VERIFIED** in the Drive audit. No predecessor generation mapping is inferred from the existence of the Gen12 label.
+
+See [THANAWAT / KAI Lineage Evidence — 2025](THANAWAT_KAI_LINEAGE_EVIDENCE_2025.md) for the provider-metadata and revision boundaries.
