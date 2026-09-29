@@ -104,3 +104,56 @@ It does **not** independently establish:
 - historical byte identity of each native Google Doc at its creation timestamp.
 
 For stronger evidence, preserve Google revision history where available, export immutable snapshots, hash those exports with SHA-256, and cross-link contemporaneous email, commercial offer, source-control commit, release, payment, or public-publication evidence.
+
+
+## Additional uploaded lineage artifacts — preserved 2026-09-29
+
+The following uploaded snapshots were inspected and hashed. Their hashes identify the exact snapshots inspected in this evidence session. Unless an independent provider timestamp is stated, the hash does **not** establish the artifact's original creation date.
+
+### E-KAI-002 — KaiFlow VoiceSync / Energy Pulse simulation builder
+
+- Uploaded artifact: `zip (1) (1) (1).py`
+- SHA-256: `c4321aba398071bc393c630d524796fc97ce053093c58330d23a9b340b7f7420`
+- The script creates a `KaiFlow_VoiceSync_AI` package and writes a `main.py` that runs a five-pulse real-time simulation loop.
+- The script packages that implementation as `KaiFlow_VoiceSync_AI.zip`.
+
+**Evidence status:** **HASHED SNAPSHOT / KAI-LINEAGE TECHNICAL ARTIFACT.**
+
+This supports the existence of a KAI-named simulation/voice-sync implementation artifact in the preserved snapshot. It does not establish an original creation date by itself.
+
+### E-MIV-001 — MIV-Core whitepaper template
+
+- Uploaded artifact: `WHITEPAPER (1) (1).md`
+- SHA-256: `46e131431106df15921ce9050a41a830cb9e6209f8b9d8c039c9092e247eeda4`
+- Title: `MIV-Core Whitepaper (Template)`
+- Architecture topics explicitly listed: MSS, Agents, Rewarder, Sandbox, Connectors.
+- Communication model topics: Pub/Sub, message formats, security.
+- Real-world integration topics: connectors, fail-safes, auditing.
+- Future-work line explicitly states: `Gen6: Self-Sustaining AI Economy`.
+
+**Evidence status:** **HASHED SNAPSHOT / MIV-LINEAGE DOCUMENT.**
+
+The document does **not** explicitly label itself as Gen5. The Gen6 future-work line shows that a Gen6 stage was contemplated, but this record does not infer an undocumented Gen5 generation number from that line alone.
+
+### E-OPS-001 — ThanawatAI-Termux n8n job orchestration
+
+- Uploaded artifact: `workflow_n8n (1) (1).json`
+- SHA-256: `5e43b6d8b5829edef3a4e4d7e3dafdaf619177b09fd4672de47c1cc65a453404`
+- Workflow name: `ThanawatAI-Termux-Webhook-CreateJob`
+- The workflow accepts a `run-job` webhook, prepares action/params/user fields, and forwards a job request to a device API endpoint.
+
+**Evidence status:** **HASHED SNAPSHOT / AGENT-ORCHESTRATION SUPPORTING ARTIFACT.**
+
+This is useful for continuity of the mobile/Termux execution lineage, but it does not by itself establish Harmonic Mean, UDG, Z3/SMT, or deterministic-governance behavior.
+
+## Uploaded artifacts intentionally not promoted to technical IP evidence
+
+- Three `Transfer Dock_Text_*.txt` snapshots contain only the same host string, `dsgharvapp-arnkgc8v.manus.space`; their filename timestamps are not treated as independent provider timestamps.
+- `tp_debug_info.txt` contains device touch-panel debug captures with internal timestamps beginning 2025-11-24. It is device diagnostic evidence, not evidence of KAI/DSG technical architecture.
+- `test_sandbox_integration (1) (1).py` only contains a trivial passing assertion and carries no relevant architecture claim.
+
+Their exact SHA-256 values from the inspected snapshots are preserved here for completeness:
+
+- Transfer Dock snapshots: `eba318a345cda6af53f27e61ef641b798cd3c74472af14c099810b14bf1dc381` (all three are byte-identical)
+- `tp_debug_info.txt`: `f815024a2f9dfb2b3643b40e244f9e5d90f659216840663f49e12579d3bf3552`
+- `test_sandbox_integration (1) (1).py`: `39ec240d23e9aab8e55579af34f61cce444f06d6f1729150d39fe7a53e495bfe`
