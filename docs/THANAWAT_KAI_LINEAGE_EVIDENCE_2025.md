@@ -211,3 +211,126 @@ Accordingly, this record supports the following narrower chronology:
 `early Kai node placeholder snapshot (archive-internal date only) → public THANAWAT Android/Termux decentralized AI node (GitHub, 2025-12-08) → later KAI panel / Gen12 integration snapshots`
 
 This is a provenance hypothesis supported by the preserved artifacts, not a legal finding that each stage is the same invention or that the sequence establishes novelty over all prior art.
+
+
+## Provider-timestamped KAI root and revision evidence — Google Drive
+
+This section records Google Drive provider metadata and revision history observed during a lineage audit. These timestamps are stronger than filename/internal dates because they are returned by the storage provider, but they still do not by themselves establish public disclosure, patent priority, novelty, or inventorship.
+
+### KAI-P01 — earliest KAI-name provider anchor located
+
+Google Drive file ID: `1Hgdy-jJ_6cA5NIq3lh_9ZfoQk0tgYECygCKUXngtOg0`
+
+- Title: `Kai`
+- Drive created time: **2025-11-15T15:51:20.961Z**
+- Revision 1 modified time: **2025-11-15T15:51:22.498Z**
+- Revision 1 content: the word `Kai` plus empty list markers.
+- Visibility observed on the file itself: not shared.
+
+**Evidence status:** **PROVIDER-TIMESTAMPED NAME / PROVENANCE ANCHOR ONLY.**
+
+This does not establish a generation number or technical capability.
+
+### KAI-P02 — Kai AirGrid 4D existed in revision 1
+
+Google Drive file ID: `1wytAPQ0evlplsIh3Mk54XBK4ZmC2EMkSLo6mfPTHGRg`
+
+- Title: `โลก`
+- Drive created time: **2025-11-21T16:29:38.883Z**
+- Revision 1 modified time: **2025-11-21T16:29:40.645Z**
+- Revision 1 already contains the substantive `Kai AirGrid 4D` implementation, including MapLibre map setup, an aircraft marker with altitude, and a flight-path GeoJSON LineString.
+- Visibility observed on the file itself: not shared.
+
+**Evidence status:** **PROVIDER-TIMESTAMPED PRIVATE TECHNICAL ARTIFACT.**
+
+This is stronger than relying on the later uploaded PDF snapshot because the first Drive revision already contains the technical content.
+
+### KAI-P03 — `ไคมา` project root
+
+Google Drive folder ID: `1kwArf6UbvmGS49_1Q3THhpBHXm9AALzt`
+
+- Folder title: `ไคมา`
+- Drive created time: **2025-11-22T09:02:44.508Z**
+- Observed permission state: anyone-with-link reader, with file discovery disabled.
+
+The folder contains a structured KAI project tree created shortly afterward:
+
+- `system` — 2025-11-22T09:12:27.318Z
+- `logs` — 2025-11-22T09:13:28.085Z
+- `backups` — 2025-11-22T09:13:49.896Z
+- `sandbox_nodes` — 2025-11-22T09:14:09.608Z
+- `trading` — 2025-11-22T09:14:37.362Z
+- `memory` — 2025-11-22T09:15:01.748Z
+- `simulation` — 2025-11-22T09:15:31.191Z
+- `agents` — 2025-11-22T09:15:53.835Z
+- `configs` — 2025-11-22T09:16:12.541Z
+
+**Evidence status:** **PROVIDER-TIMESTAMPED PROJECT-STRUCTURE ANCHOR.**
+
+Anyone-with-link visibility may be relevant to a legal public-accessibility analysis, but this record does not conclude that the folder constituted public prior art or that it was actually disseminated to the public at that time.
+
+### KAI-P04 — earliest substantive Kai Gen12 master-control revision located
+
+Google Drive file ID: `1TVKl3zPyB__R6vlMJ3Zhoo-tW2sQLjqiZEMJtu0AefQ`
+
+- Drive created time: **2025-11-22T09:17:16.654Z**
+- Revision 1 at **2025-11-22T09:17:16.968Z** is effectively blank.
+- Revision 2 at **2025-11-22T09:17:21.318Z** contains:
+  - `version: 12.0.0`
+  - description: `Master control file for Kai Gen12 node orchestration system`
+  - paths for configs, workflows, agents, simulation, memory, trading, sandbox nodes, backups, logs, and system
+  - Android main node and laptop runtime node
+  - `Old_PC_Archive` as legacy storage
+  - `auto_backup: true`
+  - `conflict_strategy: prefer_master`
+  - `allow_legacy_nodes: true`
+  - `auto_repair: true`
+
+**Evidence status:** **PROVIDER-REVISION-TIMESTAMPED PRIVATE GEN12 ORCHESTRATION ARTIFACT.**
+
+The evidentiary anchor for substantive Gen12 content is the revision-2 timestamp, not merely the earlier file creation timestamp.
+
+### KAI-P05 — `master.jason` inside the `ไคมา` root
+
+Google Drive file ID: `1xkdlS00nmSNHFECKdAGHhAUYHADzjwKuQzqVqya4dqs`
+
+- Drive created time: **2025-11-22T09:19:57.911Z**
+- Revision 1 modified time: **2025-11-22T09:19:59.086Z**
+- Revision 1 already contains the full `version: 12.0.0` Kai Gen12 orchestration configuration described above.
+
+**Evidence status:** **PROVIDER-REVISION-TIMESTAMPED GEN12 MASTER FILE IN PROJECT ROOT.**
+
+### KAI-P06 — Kai Panel / Atlas provider revision
+
+Google Drive file ID: `1hqSujKv3t3rIhUpNQ9TN6MwmD3LxoqSzTpRjyvEvVEg`
+
+- Drive created time: **2025-11-28T04:39:32.129Z**
+- Revision 1 at **2025-11-28T04:39:32.485Z** is effectively blank.
+- Revision 3 at **2025-11-28T04:40:23.658Z** contains `Kai Panel Combo (Minimal + Atlas)` HTML and UI logic.
+
+**Evidence status:** **PROVIDER-REVISION-TIMESTAMPED KAI UI / ORCHESTRATION SNAPSHOT.**
+
+Again, the substantive-content anchor is the revision timestamp, not the file creation time.
+
+## God Mode / GEN1–GEN11 search status
+
+**Status: NOT VERIFIED.**
+
+During this audit:
+
+- direct searches for `God`, `God Mode`, `GOD MODE`, `god_mode`, `Sensor-Memory-God`, and Thai equivalents did not locate a Google Drive artifact carrying that label;
+- searches for explicit `KAI GEN1` through `KAI GEN11`, `Generation 5`, `MIV-Core`, and related variants did not locate a pre-Gen12 provider-timestamped artifact with an explicit generation mapping;
+- a no-keyword sweep for Drive items created between **2025-11-15** and the creation of the `ไคมา` project root located only the `Kai` name anchor and `Kai AirGrid 4D` as relevant KAI artifacts;
+- broader 2025 searches before the 2025-11-15 KAI-name anchor using MIV, Meta, Infinity, Brain, Evolution, Generation, God, and Kai did not return a qualifying lineage artifact in this session;
+- placeholder files inside `backups`, `sandbox_nodes`, `memory`, and `agents` were inspected and contained no substantive historical generation mapping;
+- the currently located `MIV-Core (AI Generation 5 System)` Drive document has a provider creation date in **2026**, so it cannot by itself establish a 2025 Gen5 date.
+
+Therefore no GEN1→GEN11 sequence is inferred or back-filled. A later document calling itself Gen12 proves that the label existed by the provider timestamp above; it does **not** prove the contents or dates of eleven predecessor generations.
+
+## Revised provider-backed KAI chronology
+
+The currently verified provider-backed sequence is:
+
+`2025-11-15 KAI name anchor → 2025-11-21 Kai AirGrid 4D technical revision → 2025-11-22 ไคมา project root + system tree → 2025-11-22 substantive Kai Gen12 master revision → 2025-11-28 Kai Panel / Atlas revision → 2025-12-08 public THANAWAT Git evidence → 2025-12-24 DSG Harmonic Mean provider evidence → 2026-01-11 UDG defensive publication`
+
+This chronology is narrower than a claimed GEN1→GEN12 history and is intentionally limited to provider-backed artifacts actually located.
