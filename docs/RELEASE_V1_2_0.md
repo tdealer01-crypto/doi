@@ -21,7 +21,7 @@ Independent public E2E reproduction; arbitrary desktop mutations; Kaggle Qwen3-3
 
 ## Verify and cite
 
-Start with the reproduction protocol, compare the exact identifiers, then inspect the public provider records. The version DOI will be recorded in [publication status](../PUBLICATION_STATUS.md) only after verified Zenodo ingestion. Earlier archival records remain unchanged.
+Start with the reproduction protocol, compare the exact identifiers, then inspect the public provider records. Verified version DOI: [10.5281/zenodo.23796173](https://doi.org/10.5281/zenodo.23796173). [Verify the immutable archive bytes](VERIFY_RELEASE_V1_2_0.md); the post-publication receipt is in [publication status](../PUBLICATION_STATUS.md). Earlier archival records remain unchanged.
 
 ## Public announcement — English
 
