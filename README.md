@@ -90,9 +90,9 @@ Use **10.5281/zenodo.22755320** when citing the exact DSG Spacetime v1.1.0 AI Ag
 - [Research Priority & Evidence Matrix](docs/RESEARCH_PRIORITY_EVIDENCE_MATRIX.md): Zenodo DOI provenance, publication dates and proof limits.
 - [DSG-Agent-v0 Public Evidence Snapshot](docs/DSG_AGENT_V0_PUBLIC_EVIDENCE_20261030.md): historical Qwen3-8B evaluation, authenticated control-plane tests, observed BLOCKED cases and missing E2E acceptance.
 - [Machine-readable Evidence Manifest](docs/evidence/DSG_AGENT_V0_PUBLIC_EVIDENCE_20261030.json): dated result fields and direct public Zenodo API references.
-- [NVIDIA Production Empirical Evidence and Ed25519 Signature Scope](docs/DSG_NVIDIA_PRODUCTION_PUBLIC_PROOF_20261030.md): post-promotion exact-digest read-only Workroom E2E, Memory evidence, signature-verification status, reproducibility and exclusions.: dated result fields and direct public Zenodo API references.
+- [NVIDIA Production Empirical Evidence and Ed25519 Signature Scope](docs/DSG_NVIDIA_PRODUCTION_PUBLIC_PROOF_20261030.md): post-promotion exact-digest read-only Workroom E2E, Memory evidence, signature-verification status, reproducibility and exclusions.
 
-**Scope:** This is a sanitized, time-bounded evidence inventory. The 2026-10-30 audit did not verify end-to-end neural execution, current 30B GPU service, or independent execution replay. The Zenodo v1.1.0 DOI above does not automatically cover this newer evidence snapshot.
+**Scope:** This is a sanitized, time-bounded evidence inventory. The earlier pre-promotion audit reported blocked Brain planning, while a later exact-image NVIDIA Nemotron API read-only Workroom E2E passed. This does **not** establish Kaggle Qwen3-30B GPU acceptance, arbitrary mutations, automatic recovery, public third-party E2E replay or a new Zenodo DOI.
 
 ## Related and prior publications
 
