@@ -1,0 +1,109 @@
+{
+  "schema": "dsg-public-evidence-snapshot/v1",
+  "date_utc": "2026-10-30",
+  "classification": "PUBLIC",
+  "public_claim": "Dated evidence inventory; no current neural E2E or independent execution replay claim",
+  "provider_zenodo": [
+    {
+      "record_id": 18212854,
+      "doi": "10.5281/zenodo.18212854",
+      "concept_doi": "10.5281/zenodo.18212853",
+      "published": "2026-01-11",
+      "record_url": "https://zenodo.org/api/records/18212854",
+      "archive_md5": "9b5d3fa54aa1605ed1758704753e8235",
+      "status": "PROVIDER_VERIFIED_METADATA"
+    },
+    {
+      "record_id": 18225586,
+      "doi": "10.5281/zenodo.18225586",
+      "concept_doi": "10.5281/zenodo.18225585",
+      "published": "2026-01-12",
+      "record_url": "https://zenodo.org/api/records/18225586",
+      "archive_proof_md5": "a62f7e0b1561fd2cdb355b16d157bf73",
+      "status": "PROVIDER_VERIFIED_METADATA",
+      "proof_soundness": "NOT_VERIFIED"
+    },
+    {
+      "record_id": 22172533,
+      "doi": "10.5281/zenodo.22172533",
+      "concept_doi": "10.5281/zenodo.22172532",
+      "published": "2026-08-30",
+      "record_url": "https://zenodo.org/api/records/22172533",
+      "archive_md5": "348b023d4af727e1bae0fb2d46ef799f",
+      "status": "PROVIDER_VERIFIED_METADATA"
+    },
+    {
+      "record_id": 22755320,
+      "doi": "10.5281/zenodo.22755320",
+      "concept_doi": "10.5281/zenodo.22172532",
+      "published": "2026-09-14",
+      "record_url": "https://zenodo.org/api/records/22755320",
+      "archive_md5": "1f3b879bd54e8ded7c1411d72deb1522",
+      "status": "PROVIDER_VERIFIED_METADATA"
+    }
+  ],
+  "historical_model_evaluation": {
+    "model": "Qwen/Qwen3-8B",
+    "training_evidence_checked_date_utc": "2026-09-09",
+    "evidence_source": "private authenticated historical training verification log (raw log withheld)",
+    "adapter_sha256": "44a9f90158a0f702acba25bb210dd0d7e1029335567f4e9b2e1ac95549b1aee2",
+    "held_out_worlds": 30,
+    "examples": 181,
+    "action_accuracy": 0.9005524861878453,
+    "valid_candidate_rate": 1,
+    "full_teacher_path_world_pass_rate": 0.5666666666666667,
+    "verdict": "HISTORICAL_VERIFIED",
+    "independently_public_replayable": false,
+    "current_aws_image_binding": "NOT_VERIFIED"
+  },
+  "live_runtime_checks": {
+    "catalog": {
+      "configured_nodes": 19,
+      "configured_routes": 38,
+      "status": "LIVE_VERIFIED_CONFIGURED_ONLY"
+    },
+    "evidence_chain_before": {
+      "valid": true,
+      "records": 523,
+      "status": "LIVE_VERIFIED_CONTROL_PLANE"
+    },
+    "plan_compose": {
+      "verdict": "BOUND",
+      "status": "LIVE_VERIFIED_PLAN_BINDING_ONLY"
+    },
+    "brain_action_plan": {
+      "verdict": "BLOCK",
+      "summary": "Brain provider URL configuration rejected",
+      "provider_result_present": false,
+      "per_action_evidence_present": false,
+      "status": "BLOCKED"
+    },
+    "cinema_readonly_status": {
+      "verdict": "BLOCK",
+      "summary": "Provider action refused",
+      "provider_result_present": false,
+      "per_action_evidence_present": false,
+      "status": "BLOCKED"
+    },
+    "evidence_chain_after": {
+      "valid": true,
+      "records": 523,
+      "status": "LIVE_VERIFIED_CONTROL_PLANE"
+    }
+  },
+  "unresolved": {
+    "brain_30b_live_gpu_e2e": "NOT_VERIFIED",
+    "full_context_32k_inference": "NOT_VERIFIED",
+    "current_neural_to_gate_to_execute_receipt": "NOT_VERIFIED",
+    "independent_execution_observer": "NOT_VERIFIED",
+    "public_negative_authorization_replay": "NOT_VERIFIED",
+    "third_party_reproduction": "NOT_VERIFIED"
+  },
+  "disclosure": {
+    "raw_private_logs_included": false,
+    "secrets_included": false,
+    "production_source_included": false,
+    "provider_account_identifiers_included": false
+  },
+  "human_report": "../DSG_AGENT_V0_PUBLIC_EVIDENCE_20261030.md"
+}
