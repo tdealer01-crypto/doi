@@ -47,6 +47,12 @@ See [Public DSG-Agent-v0 Evidence Snapshot](DSG_AGENT_V0_PUBLIC_EVIDENCE_2026103
 
 Authenticated DSG control-plane test on 2026-10-30: catalog **PASS** (19 configured nodes, 38 routes), evidence chain **PASS** (523 records, valid=true), read-only plan **BOUND**, Brain `action.plan` **BLOCKED** (endpoint configuration), Cinema status **BLOCKED** (provider action refused). Both blocked attempts returned no provider receipt/evidence; current Neural → Gate → Execute → Evidence and independent replay remain **NOT VERIFIED**. Publication omits private operational identifiers and raw logs.
 
+## Follow-up: signed production proof scope (2026-10-30)
+
+After the earlier blocked Brain read-only attempt, exact-source **NVIDIA Nemotron API** production proof was recorded on image `sha256:94115f03476e93a8dbce43cbdcf37951c4a148d3c998ae87683c7185cd7a8f10`. A bounded live Workroom goal completed **read-only browser extraction** and persisted Memory; current control-plane evidence verification returned **532 records, valid=true**, with **20 configured nodes / 39 configured routes**. Source CI/build, owner release and 3,108 passed runtime tests are traced in the [new production proof report](DSG_NVIDIA_PRODUCTION_PUBLIC_PROOF_20261030.md). An Ed25519 post-merge CI signature was independently verified using the private signed payload and production verification key, **but the protected signed payload has not been released for public replay**.
+
+**Do not transfer this result to Qwen3-8B teacher-exact evaluation, Kaggle Qwen3-30B GPU/context, arbitrary action authorization or independent third-party E2E.** Disk headroom and automatic worker restart are separately recorded as unresolved operational follow-up.
+
 ## DGAB reproducibility requirements
 
 A future public-safe DGAB artifact should record: test case ID, specification version, source commit, deployed image digest, runtime/provider identity (redacted), UTC timestamp, plan hash, route, decision and reason, approval scope, provider receipt hash, independent observer result, evidence-chain verification, replay result, and a clear **PASS / FAILED / BLOCKED / NOT VERIFIED** verdict.
