@@ -38,8 +38,19 @@
   "archived_state_at_release": "ZENODO_PENDING",
   "post_publication_confirmation": true,
   "profile_announcement": {
-    "status": "BLOCKED",
-    "reason": "GitHub connector contents write returned 403 Resource not accessible by integration; no successful profile publication claimed."
+    "status": "PUBLISHED_VERIFIED",
+    "profile_url": "https://github.com/tdealer01-crypto",
+    "source_url": "https://github.com/tdealer01-crypto/tdealer01-crypto/blob/main/README.md",
+    "commit_sha": "09479be5c61a9e8ca94c51abfab2746db715502b",
+    "commit_url": "https://github.com/tdealer01-crypto/tdealer01-crypto/commit/09479be5c61a9e8ca94c51abfab2746db715502b",
+    "committed_at_utc": "2026-10-30T07:30:20Z",
+    "content_blob_sha": "34fc8cebdb2e92d6e0dda2467942ecd7262d31c8",
+    "verification_method": "GitHub contents API readback matched the complete submitted README; all previous content was preserved.",
+    "commit_signature_verified_by_github": false,
+    "commit_signature_status": "unsigned",
+    "previous_status": "BLOCKED",
+    "previous_reason": "GitHub connector contents write returned 403 Resource not accessible by integration; no successful profile publication claimed.",
+    "resolution": "Owner added the profile repository to the GitHub App installation; contents write and exact readback then succeeded."
   },
   "public_landing_page": {
     "url": "https://dsg-public-evidence.shipstatic.com",
@@ -54,7 +65,8 @@
     "github_main": "https://github.com/tdealer01-crypto/doi",
     "github_release": "https://github.com/tdealer01-crypto/doi/releases/tag/v1.2.0",
     "zenodo": "https://zenodo.org/records/23796173",
-    "landing_page": "https://dsg-public-evidence.shipstatic.com"
+    "landing_page": "https://dsg-public-evidence.shipstatic.com",
+    "github_profile": "https://github.com/tdealer01-crypto"
   },
   "public_archive_reproduction": {
     "status": "PASS",
