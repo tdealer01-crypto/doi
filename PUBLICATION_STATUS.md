@@ -26,7 +26,7 @@ This publication archives public-safe documentation and a dated empirical eviden
 - [No-credential release-byte verification](docs/VERIFY_RELEASE_V1_2_0.md).
 - [Release notes and public announcement](docs/RELEASE_V1_2_0.md).
 - [Public evidence page — ไทย / English](https://dsg-public-evidence.shipstatic.com), published with no expiry requested.
-- GitHub profile announcement: **BLOCKED**; connector returned `403 Resource not accessible by integration`. No successful profile or other social-network publication is claimed.
+- GitHub profile announcement: **PUBLISHED_VERIFIED** — [profile README](https://github.com/tdealer01-crypto/tdealer01-crypto/blob/main/README.md), commit [`09479be`](https://github.com/tdealer01-crypto/tdealer01-crypto/commit/09479be5c61a9e8ca94c51abfab2746db715502b), committed 2026-10-30T07:30:20Z. GitHub API readback matched the submitted README, with its previous content preserved. The earlier connector `403` was resolved after the owner added this repository to the installation. This profile commit is unsigned; the separately verified archival release signature is unchanged. Other social-network publication is not claimed.
 
 The frozen archive contains the honest pre-ingestion pending status present when its GitHub release was made. This later confirmation records the provider-assigned DOI without changing that release tag or its archived bytes. Cite the DOI for the immutable package; read this status file for post-publication verification.
 
