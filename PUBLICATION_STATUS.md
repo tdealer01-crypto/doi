@@ -2,18 +2,33 @@
 
 Current package: **DSG Spacetime v1.2.0 — Production Evidence and Reproduction Protocol**.
 
-Status: **ZENODO_PENDING — package prepared; new archival DOI not yet verified**.
+Status: **PUBLISHED_VERIFIED — GitHub release and Zenodo archive checked against the exact release commit**.
 
-This version contains public-safe architecture documentation, a research evidence matrix, a scoped NVIDIA Nemotron API Production browser-read/Memory acceptance summary, and a reproduction protocol. Private primary receipts and original signed CI attestations are not included; anonymous public signature replay and independent E2E reproduction remain unavailable.
+| Publication check | Observed result |
+| --- | --- |
+| GitHub Release | [v1.2.0](https://github.com/tdealer01-crypto/doi/releases/tag/v1.2.0), public, not draft/prerelease |
+| Release commit | `1880eb4519e0d1b7cf6b7b598d710d34779647c7` |
+| GitHub commit signature | `verification.verified=true` |
+| Exact-main publication guard | PASS, run `41018811717` |
+| Zenodo version DOI | [10.5281/zenodo.23796173](https://doi.org/10.5281/zenodo.23796173) |
+| Concept DOI | `10.5281/zenodo.22172532` |
+| Provider record | [23796173](https://zenodo.org/records/23796173), version 1.2.0, published 2026-10-30 |
+| Downloaded archive | 66,697 bytes; 24 file blobs all match the exact release Git tree |
+| Archive MD5 | `c4772614bdce84b343404a20b9eb3d5a` (matches provider metadata) |
+| Archive SHA-256 | `ded472103bba0dbf5518f7eaf869bdf5f7c1e10df611be427fc30916ddd4465b` |
+| Verified at | 2026-10-30T07:19:26.963979+00:00 |
 
-- Publication source: PR #15, merged as `02244191d716d8a2438fcb4350c5d02fa1c392f4`.
-- Planned public release tag: `v1.2.0`.
-- New Zenodo version DOI: **not assigned or claimed here**.
-- Version/citation metadata: `.zenodo.json` and `CITATION.cff` identify **1.2.0**.
-- Machine-readable publication state: [`docs/evidence/PUBLICATION_V1_2_0.json`](docs/evidence/PUBLICATION_V1_2_0.json).
+This publication archives public-safe documentation and a dated empirical evidence summary. **Publication/archive verification is not independent Production E2E reproduction.** The original private Ed25519 CI payload remains private and anonymous signature replay is not available.
+
+- Evidence source: PR #15, merge `02244191d716d8a2438fcb4350c5d02fa1c392f4`.
+- Release preparation: PR #16; immutable release tag `v1.2.0`.
+- [Machine-readable publication verification](docs/evidence/PUBLICATION_V1_2_0.json).
+- [No-credential release-byte verification](docs/VERIFY_RELEASE_V1_2_0.md).
 - [Release notes and public announcement](docs/RELEASE_V1_2_0.md).
+- [Public evidence page — ไทย / English](https://dsg-public-evidence.shipstatic.com), published with no expiry requested.
+- GitHub profile announcement: **BLOCKED**; connector returned `403 Resource not accessible by integration`. No successful profile or other social-network publication is claimed.
 
-Publication is complete only after the GitHub release is published and Zenodo's public provider record confirms version, archive bytes/checksum and concept lineage. Publication does not upgrade the evidence verdict.
+The frozen archive contains the honest pre-ingestion pending status present when its GitHub release was made. This later confirmation records the provider-assigned DOI without changing that release tag or its archived bytes. Cite the DOI for the immutable package; read this status file for post-publication verification.
 
 # Verified historical v1.1.0 archive
 

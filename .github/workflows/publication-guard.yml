@@ -124,6 +124,7 @@ jobs:
           python - <<'PY'
           import pathlib, re
           allowed = {
+              '10.5281/zenodo.23796173',  # verified v1.2.0 archive
               '10.5281/zenodo.22755320',
               '10.5281/zenodo.22172533',
               '10.5281/zenodo.22172532',
@@ -154,7 +155,7 @@ jobs:
           print('Verified DOI allowlist gate: PASS')
           PY
 
-      - name: Validate current release state without claiming a pending DOI
+      - name: Validate current verified archival release
         shell: bash
         run: |
           set -eu
@@ -166,16 +167,20 @@ jobs:
           citation = (root / 'CITATION.cff').read_text()
           assert metadata['version'] == state['version'] == '1.2.0'
           assert re.search(r'^version: "1.2.0"$', citation, re.M)
-          assert state['status'] == 'ZENODO_PENDING'
-          assert state['version_doi'] is None
-          assert state['github_release_published'] is False
-          assert state['zenodo_record_verified'] is False
-          assert not re.search(r'^doi:', citation, re.M), 'Pending release must not inherit an old version DOI'
+          assert state['status'] == 'PUBLISHED_VERIFIED'
+          assert state['version_doi'] == '10.5281/zenodo.23796173'
+          assert state['github_release_published'] is True
+          assert state['zenodo_record_verified'] is True
+          assert re.search(r'^doi: "10.5281/zenodo.23796173"$', citation, re.M)
+          assert state['release_commit'] == '1880eb4519e0d1b7cf6b7b598d710d34779647c7'
+          assert state['archive_sha256'] == 'ded472103bba0dbf5518f7eaf869bdf5f7c1e10df611be427fc30916ddd4465b'
+          assert state['archive_file_count'] == 24
+          assert state['archive_matches_exact_github_commit'] is True
           for name in ('README.md', 'PUBLICATION_STATUS.md'):
-              assert 'ZENODO_PENDING' in (root / name).read_text()
+              assert 'PUBLISHED_VERIFIED' in (root / name).read_text()
           assert state['independent_public_e2e'] is False
           assert state['private_attestation_publicly_replayable'] is False
-          print('Current release metadata and honest pending state: PASS')
+          print('Current release metadata and verified archival state: PASS')
           PY_CHECK
 
       - name: Publication guard PASS

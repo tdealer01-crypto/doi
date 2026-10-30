@@ -1,9 +1,9 @@
 cff-version: 1.2.0
-message: "If you use DSG Spacetime in research, evaluation, or engineering work, please cite the public release and its verified archival DOI when available."
+message: "If you use DSG Spacetime in research, evaluation, or engineering work, please cite the archived v1.2.0 release."
 title: "DSG Spacetime"
 type: software
 version: "1.2.0"
-# Version DOI pending verified Zenodo ingestion; historical DOIs are in PUBLICATION_STATUS.md.
+doi: "10.5281/zenodo.23796173"
 date-released: "2026-10-30"
 license: "CC-BY-NC-ND-4.0"
 abstract: >-

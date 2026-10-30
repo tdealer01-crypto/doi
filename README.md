@@ -71,9 +71,9 @@ Individual capabilities — browser operation, source control, cloud, database, 
 
 ## Public release version
 
-The prepared public package is **DSG Spacetime 1.2.0 — Production Evidence and Reproduction Protocol** (2026-10-30).
+The published public archival package is **DSG Spacetime 1.2.0 — Production Evidence and Reproduction Protocol** (2026-10-30).
 
-**Archival state: ZENODO_PENDING.** A new DOI is not claimed until Zenodo ingests the release and its public API is checked. See [publication state](PUBLICATION_STATUS.md) and [release notes](docs/RELEASE_V1_2_0.md).
+**Archival state: PUBLISHED_VERIFIED.** Zenodo record [23796173](https://zenodo.org/records/23796173) confirms version 1.2.0; the downloaded archive checksum and all 24 file blobs match the exact release commit. See [publication state](PUBLICATION_STATUS.md) and [release notes](docs/RELEASE_V1_2_0.md).
 
 Versioning identifies sanitized publication/citation packages. It does not publish or relicense the private production runtime. Earlier version archives remain immutable.
 
@@ -81,12 +81,14 @@ Versioning identifies sanitized publication/citation packages. It does not publi
 
 **Historical status: VERIFIED — Zenodo publication for v1.1.0 completed.**
 
-- v1.2.0 DOI: pending verified ingestion.
+- Version 1.2.0 DOI: **[10.5281/zenodo.23796173](https://doi.org/10.5281/zenodo.23796173)**.
 - Version 1.1.0 DOI: **10.5281/zenodo.22755320**.
 - Previous v1.0.0 DOI: **10.5281/zenodo.22172533**.
 - Concept DOI (all versions): **10.5281/zenodo.22172532**.
 
-The v1.1.0 DOI cites that earlier archive only. Use the concept DOI for the publication series; use the new version DOI only after it is verified and recorded.
+Use **10.5281/zenodo.23796173** to cite this exact evidence archive. The v1.1.0 DOI cites the earlier archive only. Use the concept DOI for the publication series. [Verify the release bytes](docs/VERIFY_RELEASE_V1_2_0.md).
+
+[Open the public evidence page — ไทย / English](https://dsg-public-evidence.shipstatic.com). It links the immutable archive, evidence scope and reproduction steps.
 
 ## Research and public empirical evidence (2026-10-30)
 
@@ -96,7 +98,7 @@ The v1.1.0 DOI cites that earlier archive only. Use the concept DOI for the publ
 - [NVIDIA Production Empirical Evidence and Ed25519 Signature Scope](docs/DSG_NVIDIA_PRODUCTION_PUBLIC_PROOF_20261030.md): post-promotion exact-digest read-only Workroom E2E, Memory evidence, signature-verification status, reproducibility and exclusions.
 - [Public Reproduction Protocol](docs/PUBLIC_REPRODUCTION_PROTOCOL_20261030.md): runnable Zenodo API metadata verification; authorized Ed25519 verification and exact-image read-only E2E acceptance steps.
 
-**Scope:** This is a sanitized, time-bounded evidence inventory. The earlier pre-promotion audit reported blocked Brain planning, while a later exact-image NVIDIA Nemotron API read-only Workroom E2E passed. This does **not** establish Kaggle Qwen3-30B GPU acceptance, arbitrary mutations, automatic recovery, public third-party E2E replay or a new Zenodo DOI.
+**Scope:** This is a sanitized, time-bounded evidence inventory. The earlier pre-promotion audit reported blocked Brain planning, while a later exact-image NVIDIA Nemotron API read-only Workroom E2E passed. This does **not** establish Kaggle Qwen3-30B GPU acceptance, arbitrary mutations, automatic recovery, public third-party E2E replay. The new DOI archives the publication package; it does not upgrade those test results.
 
 ## Related and prior publications
 
@@ -124,4 +126,4 @@ No production source is intentionally included.
 
 ## Current publication state
 
-**v1.2.0: ZENODO_PENDING.** The earlier v1.1.0 and v1.0.0 releases remain verified and archived.
+**v1.2.0: PUBLISHED_VERIFIED — DOI `10.5281/zenodo.23796173`**. The earlier v1.1.0 and v1.0.0 releases remain verified and archived.
