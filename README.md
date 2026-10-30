@@ -91,6 +91,7 @@ Use **10.5281/zenodo.22755320** when citing the exact DSG Spacetime v1.1.0 AI Ag
 - [DSG-Agent-v0 Public Evidence Snapshot](docs/DSG_AGENT_V0_PUBLIC_EVIDENCE_20261030.md): historical Qwen3-8B evaluation, authenticated control-plane tests, observed BLOCKED cases and missing E2E acceptance.
 - [Machine-readable Evidence Manifest](docs/evidence/DSG_AGENT_V0_PUBLIC_EVIDENCE_20261030.json): dated result fields and direct public Zenodo API references.
 - [NVIDIA Production Empirical Evidence and Ed25519 Signature Scope](docs/DSG_NVIDIA_PRODUCTION_PUBLIC_PROOF_20261030.md): post-promotion exact-digest read-only Workroom E2E, Memory evidence, signature-verification status, reproducibility and exclusions.
+- [Public Reproduction Protocol](docs/PUBLIC_REPRODUCTION_PROTOCOL_20261030.md): runnable Zenodo API metadata verification; authorized Ed25519 verification and exact-image read-only E2E acceptance steps.
 
 **Scope:** This is a sanitized, time-bounded evidence inventory. The earlier pre-promotion audit reported blocked Brain planning, while a later exact-image NVIDIA Nemotron API read-only Workroom E2E passed. This does **not** establish Kaggle Qwen3-30B GPU acceptance, arbitrary mutations, automatic recovery, public third-party E2E replay or a new Zenodo DOI.
 
