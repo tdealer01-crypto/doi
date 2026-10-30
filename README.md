@@ -71,19 +71,22 @@ Individual capabilities — browser operation, source control, cloud, database, 
 
 ## Public release version
 
-The current public archival release is **DSG Spacetime 1.1.0**, representing the public-safe architecture and evidence boundary of the DSG AI Agent System. The existing **v1.0.0** archive remains immutable.
+The prepared public package is **DSG Spacetime 1.2.0 — Production Evidence and Reproduction Protocol** (2026-10-30).
 
-Versioning here identifies sanitized publication/citation packages. It is not a claim that the private production runtime has been relicensed or published.
+**Archival state: ZENODO_PENDING.** A new DOI is not claimed until Zenodo ingests the release and its public API is checked. See [publication state](PUBLICATION_STATUS.md) and [release notes](docs/RELEASE_V1_2_0.md).
+
+Versioning identifies sanitized publication/citation packages. It does not publish or relicense the private production runtime. Earlier version archives remain immutable.
 
 ## DOI
 
-**VERIFIED — Zenodo publication for v1.1.0 completed.**
+**Historical status: VERIFIED — Zenodo publication for v1.1.0 completed.**
 
-- Version 1.1.0 DOI: **10.5281/zenodo.22755320**
-- Previous v1.0.0 DOI: **10.5281/zenodo.22172533**
-- Concept DOI (all versions): **10.5281/zenodo.22172532**
+- v1.2.0 DOI: pending verified ingestion.
+- Version 1.1.0 DOI: **10.5281/zenodo.22755320**.
+- Previous v1.0.0 DOI: **10.5281/zenodo.22172533**.
+- Concept DOI (all versions): **10.5281/zenodo.22172532**.
 
-Use **10.5281/zenodo.22755320** when citing the exact DSG Spacetime v1.1.0 AI Agent System release. Use the concept DOI when citing the DSG Spacetime record across versions.
+The v1.1.0 DOI cites that earlier archive only. Use the concept DOI for the publication series; use the new version DOI only after it is verified and recorded.
 
 ## Research and public empirical evidence (2026-10-30)
 
@@ -121,4 +124,4 @@ No production source is intentionally included.
 
 ## Current publication state
 
-**VERIFIED — public v1.1.0 AI Agent System archival release is published on Zenodo and the version DOI is recorded. v1.0.0 remains VERIFIED and archived.**
+**v1.2.0: ZENODO_PENDING.** The earlier v1.1.0 and v1.0.0 releases remain verified and archived.

@@ -1,0 +1,16 @@
+{
+  "schema": "dsg-publication-state/v1",
+  "version": "1.2.0",
+  "date_utc": "2026-10-30",
+  "release_tag": "v1.2.0",
+  "status": "ZENODO_PENDING",
+  "publication_source_merge": "02244191d716d8a2438fcb4350c5d02fa1c392f4",
+  "version_doi": null,
+  "concept_doi": "10.5281/zenodo.22172532",
+  "github_release_published": false,
+  "zenodo_record_verified": false,
+  "independent_public_e2e": false,
+  "private_attestation_publicly_replayable": false,
+  "public_claim": "Scoped NVIDIA API read-only browser/Memory acceptance, supported by access-restricted primary evidence; public metadata reproduction is available.",
+  "private_source_published": false
+}

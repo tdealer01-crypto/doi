@@ -1,6 +1,6 @@
 {
   "title": "DSG Spacetime",
-  "description": "DSG Spacetime is a customer-hosted governed AI-agent system that separates reasoning and workflow orchestration from execution authority. It combines AI planning, Automation Spacetime for workflow coordination, Core Spin for stateful continuation, Governance Spacetime for exact-action authorization, node-to-node capabilities, governed execution, and verifiable evidence/proof while allowing customer systems to remain in their own infrastructure.",
+  "description": "DSG Spacetime is a customer-hosted governed AI-agent system that separates reasoning and workflow orchestration from execution authority. It combines AI planning, Automation Spacetime for workflow coordination, Core Spin for stateful continuation, Governance Spacetime for exact-action authorization, node-to-node capabilities, governed execution, and verifiable evidence/proof while allowing customer systems to remain in their own infrastructure. Version 1.2.0 adds a dated 2026-10-30 public empirical evidence package: research publication provenance, an exact-image NVIDIA Nemotron API read-only Workroom/browser/Memory result, signature-verification scope, a machine-readable evidence manifest, and a public reproduction protocol. Production source ea73ac8d9aeada37c2cfeec158ff0dcda573d589 and OCI digest sha256:94115f03476e93a8dbce43cbdcf37951c4a148d3c998ae87683c7185cd7a8f10 identify the scoped acceptance. Primary execution records and the internally verified Ed25519 CI attestation remain access-restricted. Public independent E2E reproduction, arbitrary desktop mutation, Kaggle Qwen3-30B GPU acceptance, and automatic worker recovery are not established. The archive contains public-safe documentation, not the private production implementation.",
   "creators": [
     {
       "name": "Suparongsuwan, Thanawat",
@@ -22,9 +22,13 @@
     "fail-closed execution",
     "verifiable evidence",
     "auditability",
-    "trustworthy AI"
+    "trustworthy AI",
+    "empirical evidence",
+    "reproducibility",
+    "Ed25519",
+    "NVIDIA Nemotron"
   ],
-  "version": "1.1.0",
+  "version": "1.2.0",
   "license": "cc-by-nc-nd-4.0",
   "upload_type": "software",
   "language": "eng",
