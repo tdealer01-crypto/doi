@@ -1,0 +1,155 @@
+{
+  "schema": "dsg-public-evidence-snapshot/v1",
+  "date_utc": "2026-10-30",
+  "classification": "PUBLIC",
+  "public_claim": "Dated evidence inventory; no current neural E2E or independent execution replay claim",
+  "provider_zenodo": [
+    {
+      "record_id": 18212854,
+      "doi": "10.5281/zenodo.18212854",
+      "concept_doi": "10.5281/zenodo.18212853",
+      "published": "2026-01-11",
+      "record_url": "https://zenodo.org/api/records/18212854",
+      "archive_md5": "9b5d3fa54aa1605ed1758704753e8235",
+      "status": "PROVIDER_VERIFIED_METADATA"
+    },
+    {
+      "record_id": 18225586,
+      "doi": "10.5281/zenodo.18225586",
+      "concept_doi": "10.5281/zenodo.18225585",
+      "published": "2026-01-12",
+      "record_url": "https://zenodo.org/api/records/18225586",
+      "archive_proof_md5": "a62f7e0b1561fd2cdb355b16d157bf73",
+      "status": "PROVIDER_VERIFIED_METADATA",
+      "proof_soundness": "NOT_VERIFIED"
+    },
+    {
+      "record_id": 22172533,
+      "doi": "10.5281/zenodo.22172533",
+      "concept_doi": "10.5281/zenodo.22172532",
+      "published": "2026-08-30",
+      "record_url": "https://zenodo.org/api/records/22172533",
+      "archive_md5": "348b023d4af727e1bae0fb2d46ef799f",
+      "status": "PROVIDER_VERIFIED_METADATA"
+    },
+    {
+      "record_id": 22755320,
+      "doi": "10.5281/zenodo.22755320",
+      "concept_doi": "10.5281/zenodo.22172532",
+      "published": "2026-09-14",
+      "record_url": "https://zenodo.org/api/records/22755320",
+      "archive_md5": "1f3b879bd54e8ded7c1411d72deb1522",
+      "status": "PROVIDER_VERIFIED_METADATA"
+    }
+  ],
+  "historical_model_evaluation": {
+    "model": "Qwen/Qwen3-8B",
+    "training_evidence_checked_date_utc": "2026-09-09",
+    "evidence_source": "private authenticated historical training verification log (raw log withheld)",
+    "adapter_sha256": "44a9f90158a0f702acba25bb210dd0d7e1029335567f4e9b2e1ac95549b1aee2",
+    "held_out_worlds": 30,
+    "examples": 181,
+    "action_accuracy": 0.9005524861878453,
+    "valid_candidate_rate": 1,
+    "full_teacher_path_world_pass_rate": 0.5666666666666667,
+    "verdict": "HISTORICAL_VERIFIED",
+    "independently_public_replayable": false,
+    "current_aws_image_binding": "NOT_VERIFIED"
+  },
+  "live_runtime_checks": {
+    "catalog": {
+      "configured_nodes": 19,
+      "configured_routes": 38,
+      "status": "LIVE_VERIFIED_CONFIGURED_ONLY"
+    },
+    "evidence_chain_before": {
+      "valid": true,
+      "records": 523,
+      "status": "LIVE_VERIFIED_CONTROL_PLANE"
+    },
+    "plan_compose": {
+      "verdict": "BOUND",
+      "status": "LIVE_VERIFIED_PLAN_BINDING_ONLY"
+    },
+    "brain_action_plan": {
+      "verdict": "BLOCK",
+      "summary": "Brain provider URL configuration rejected",
+      "provider_result_present": false,
+      "per_action_evidence_present": false,
+      "status": "BLOCKED"
+    },
+    "cinema_readonly_status": {
+      "verdict": "BLOCK",
+      "summary": "Provider action refused",
+      "provider_result_present": false,
+      "per_action_evidence_present": false,
+      "status": "BLOCKED"
+    },
+    "evidence_chain_after": {
+      "valid": true,
+      "records": 523,
+      "status": "LIVE_VERIFIED_CONTROL_PLANE"
+    }
+  },
+  "unresolved": {
+    "brain_30b_live_gpu_e2e": "NOT_VERIFIED",
+    "full_context_32k_inference": "NOT_VERIFIED",
+    "current_neural_to_gate_to_execute_receipt": "NOT_VERIFIED",
+    "independent_execution_observer": "NOT_VERIFIED",
+    "public_negative_authorization_replay": "NOT_VERIFIED",
+    "third_party_reproduction": "NOT_VERIFIED"
+  },
+  "disclosure": {
+    "raw_private_logs_included": false,
+    "secrets_included": false,
+    "production_source_included": false,
+    "provider_account_identifiers_included": false
+  },
+  "human_report": "../DSG_AGENT_V0_PUBLIC_EVIDENCE_20261030.md",
+  "live_nvidia_workroom_20261030": {
+    "checked_date_utc": "2026-10-30",
+    "classification": "SCOPED_LIVE_E2E_PRIVATE_EVIDENCE",
+    "independent_public_replay": false,
+    "serving_source_sha": "ea73ac8d9aeada37c2cfeec158ff0dcda573d589",
+    "evidence_merge_commit": "d8fe636f3c1c3fd8ddec4ed699eeff49c6952d06",
+    "image_digest": "sha256:94115f03476e93a8dbce43cbdcf37951c4a148d3c998ae87683c7185cd7a8f10",
+    "model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+    "provider": "nvidia-api",
+    "workflow": "NVIDIA bounded proposal -> authorized read-only browser extraction -> durable Memory -> evidence verify",
+    "empirical_result": "VERIFIED_SCOPED_INTERNAL",
+    "live_catalog": {
+      "nodes": 20,
+      "routes": 39
+    },
+    "evidence_chain": {
+      "valid": true,
+      "records": 532
+    },
+    "ci": {
+      "source_run": 41006714978,
+      "image_build_run": 41006714979,
+      "owner_release_run": 41010617597,
+      "postmerge_run": 41015153555,
+      "tests_passed": 3108,
+      "tests_skipped": 2
+    },
+    "signature": {
+      "postmerge_ci": "ED25519_SIGNATURE_VALID_IN_AUDIT",
+      "signer_public_key_sha256": "3a5373195002566c2d1b4626619fd3b7ae98c2a4e9d47d2f0d3174ee084d8c19",
+      "signer_payload_source": "private_ci_attestation_ledger",
+      "publicly_replayable": false,
+      "release_attestation": "PRIVATE_OWNER_RELEASE_LOG_PASS",
+      "github_merge_commit_signature": "VERIFIED_BY_GITHUB"
+    },
+    "limits": {
+      "independent_observer_public": false,
+      "read_only_browser_goal": true,
+      "arbitrary_provider_actions": "NOT_VERIFIED",
+      "google_mfa_e2e": "NOT_VERIFIED",
+      "kaggle_30b_live_gpu": "NOT_VERIFIED",
+      "automatic_worker_reconnect": "NOT_VERIFIED",
+      "remaining_disk_bytes_observed": 1828524032
+    },
+    "public_report": "../DSG_NVIDIA_PRODUCTION_PUBLIC_PROOF_20261030.md"
+  }
+}

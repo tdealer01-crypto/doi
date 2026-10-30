@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://dsg-public-evidence.shipstatic.com/sitemap.xml

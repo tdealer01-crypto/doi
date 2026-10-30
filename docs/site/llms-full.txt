@@ -1,0 +1,276 @@
+# DSG Spacetime v1.2.0 — Public Evidence
+
+> Dated public evidence, immutable Zenodo archive and reproducible archive checks. Anonymous HTTP GET.
+
+## Start
+
+- [Empirical evidence JSON](https://dsg-public-evidence.shipstatic.com/evidence.json)
+- [Publication and archive fingerprints](https://dsg-public-evidence.shipstatic.com/publication.json)
+- [Agent resource index](https://dsg-public-evidence.shipstatic.com/agent-index.json)
+- [Read-only OpenAPI](https://dsg-public-evidence.shipstatic.com/openapi.json)
+
+## Results and limits
+
+The NVIDIA API model is `nvidia/nemotron-3.5-lightning-30b-a3b`. The scoped result covers Workroom planning, governed browser read and persistent Memory. Image: `sha256:94115f03476e93a8dbce43cbdcf37951c4a148d3c998ae87683c7185cd7a8f10`. Built source: `ea73ac8d9aeada37c2cfeec158ff0dcda573d589`.
+
+Primary execution receipts and the original signed Ed25519 CI payload remain private. Independent public Production E2E and anonymous original-signature replay remain unverified. This result does not validate the separate Qwen3-8B or Kaggle Qwen3-30B GPU/32K paths. Automatic worker reconnection and arbitrary desktop mutation are not established.
+
+In empirical JSON, `live_runtime_checks` preserves the earlier pre-promotion snapshot; `live_nvidia_workroom_20261030` contains the later scoped NVIDIA acceptance.
+
+## Verify
+
+Version DOI: [10.5281/zenodo.23796173](https://zenodo.org/records/23796173).
+Archive: 66,697 bytes, 24 file blobs checked against release commit `1880eb4519e0d1b7cf6b7b598d710d34779647c7`.
+Archive SHA-256: `ded472103bba0dbf5518f7eaf869bdf5f7c1e10df611be427fc30916ddd4465b`.
+Archive observation: 2026-10-30T07:19:26.963979+00:00.
+
+- [Production report and signature scope](https://dsg-public-evidence.shipstatic.com/production.md)
+- [Reproduction protocol](https://dsg-public-evidence.shipstatic.com/reproduction.md)
+- [No-credential archive verification](https://dsg-public-evidence.shipstatic.com/verify-archive.md)
+- [Public source and current publication receipt](https://github.com/tdealer01-crypto/doi)
+
+Archive checks are distinct from independent Production execution.
+
+## Access
+
+No login, API key, cookie or JavaScript is required for these static files. CORS is configured for public cross-origin reads. Actual HTTP observations are recorded separately in the repository.
+
+Published material retains CC BY-NC-ND 4.0. Private runtime implementation and protected original attestations are not included.
+
+
+---
+
+Source: https://raw.githubusercontent.com/tdealer01-crypto/doi/v1.2.0/docs/DSG_NVIDIA_PRODUCTION_PUBLIC_PROOF_20261030.md
+
+# DSG ONE — NVIDIA Production Empirical Evidence and Signature Boundaries
+
+**Evidence date:** 2026-10-30 UTC  
+**Classification:** PUBLIC-SAFE DERIVED SUMMARY — not a copy of private operational logs or attestations  
+**Overall claim:** VERIFIED for the **specified read-only NVIDIA Workroom → governed browser read → durable Memory** slice, based on private primary records and an independent serving-control-plane read; **not** independent public E2E replay or proof of arbitrary autonomous tasks.
+
+## Provenance: exact version, not a floating "latest"
+
+| Evidence component | Pinned identifier | Verified scope |
+| --- | --- | --- |
+| Source built into serving image | `ea73ac8d9aeada37c2cfeec158ff0dcda573d589` | Exact-source CI/build lineage |
+| Production OCI image | `sha256:94115f03476e93a8dbce43cbdcf37951c4a148d3c998ae87683c7185cd7a8f10` | Immutable **Spacetime** container image observed healthy |
+| Evidence/checkpoint merge | `d8fe636f3c1c3fd8ddec4ed699eeff49c6952d06` | Later documentation/test merge (PR #871); **not** an image rebuilt from this head |
+| Source CI | GitHub Actions run `41006714978` | SUCCESS for source commit above |
+| Container build | GitHub Actions run `41006714979` | SUCCESS for same source; SHA-256 digest above |
+| Protected owner release | GitHub Actions run `41010617597` | SUCCESS; production release attestation gate passed on specified source and image |
+| Post-merge documentation CI | GitHub Actions run `41015153555` | SUCCESS; **3,108 passed, 2 skipped** Python tests; 85 frontend tests separately observed |
+| Signed CI ledger | Same post-merge run; issued 2026-10-30T06:40:56Z | Ed25519 signed exact post-merge CI payload; signature cryptographically validated during this audit |
+| Live read-only control-plane verification | 2026-10-30, post-promotion | 20 configured Nodes / 39 Routes; evidence chain `valid=true`, `records=532` |
+
+The production repository, GitHub job logs and raw release receipts are private. Their URLs may be accessible to authorized reviewers but are **not public third-party evidence**. This page preserves independently checkable fingerprints and an explicit source/privacy boundary rather than copying raw protected material.
+
+## What was observed in the scoped production acceptance
+
+The pinned source was built and scanned, the same image digest was read back from the serving Production container, and a protected owner release completed. The serving control plane returned the configured NVIDIA Brain route under `action.plan`; provider identity for the bounded test was `nvidia` and model `nvidia/nemotron-3.5-lightning-30b-a3b`. The canonical read-only proposal yielded a real provider-issued inference reference and a locally independently recomputed result hash matching the stored evidence.
+
+A real **read-only browser extraction** goal completed under the Workroom path. Memory start/end receipts were persisted and matched an independent storage readback; associated ledger entries fall within indices 525–531, with the evidence chain reaching **532 valid records**. The independent final readback reported **healthy** container state, preserved peer services, 20 Nodes, 39 Routes and expected image digest. Public health 200 and anonymous MCP 401 were reported by the primary readback.
+
+**Bounded claims only:** this is evidence of one live safe browser-read workflow with a proposed tool and verified Memory persistence. It is **not** proof of unrestricted desktop mutations, Google/MFA sign-in, autonomous workflow recovery, every route, universal fail-closed correctness or model truthfulness. The model was NVIDIA Nemotron over an API, **not** Qwen3-30B on Kaggle. The prior Qwen3-8B trained-adapter benchmark remains a separate historical result.
+
+## Cryptographic evidence — independently checked, with disclosure limits
+
+1. **Image integrity:** production readback matched the immutable OCI `sha256` digest. A matching digest links observed bytes to a content address, but does not itself authenticate a release signer.
+2. **GitHub merge authenticity:** GitHub's commit API returned `verification.verified=true` for PR #871's signed merge commit. This attests to the commit's cryptographic verification by GitHub, not the runtime outcome.
+3. **Ed25519 CI attestation:** private post-merge ledger document has an exact CI payload and `signature_b64`. In this audit the signature was **independently verified** against the corresponding 32-byte production change-control **public verification key**, using the canonical UTF-8 JSON serialization (`sort_keys=True`, `separators=(',', ':')`, `ensure_ascii=False`). Outcome: **SIGNATURE_VALID**. Its payload binds PR #871, merged commit `d8fe636f3c1c3fd8ddec4ed699eeff49c6952d06`, and CI run `41015153555`. The SHA-256 fingerprint of the Ed25519 **public key bytes** was `3a5373195002566c2d1b4626619fd3b7ae98c2a4e9d47d2f0d3174ee084d8c19`.
+4. **Signed release gate:** the protected release log reports `Production release attestation: PASS` and binds source `ea73ac8d9aeada37c2cfeec158ff0dcda573d589` to the same image digest. This is a primary-log verification, not independent public inspection of the release signature.
+5. **Evidence-chain integrity:** serving `verify_evidence` returned `valid=true, records=532`. It checks the runtime's local tamper-evident chain and **does not** independently prove each physical side effect or a separately witnessed provider result.
+
+**Public signature limitation:** the complete Ed25519-signed payload, trusted public key and raw hosted CI ledger have **not** been exported onto this public repository because the original private operational record requires explicit disclosure review. A changed or redacted signed payload cannot preserve its old signature. Thus the **cryptographic signature was independently verified by the auditor but is not yet third-party publicly replayable**. No substitute signature or fabricated public attestation is asserted.
+
+## Reproduction protocol and status
+
+The following are separated by access level, so a reader can reproduce what is actually available:
+
+| Check | Procedure | Publicly reproducible now? |
+| --- | --- | --- |
+| Zenodo DOI/archive provenance | Use the provider API URLs in [research matrix](https://raw.githubusercontent.com/tdealer01-crypto/doi/v1.2.0/docs/RESEARCH_PRIORITY_EVIDENCE_MATRIX.md), compare publication dates, concept/version relations, file checksums | **YES** (metadata; re-download optional) |
+| Public evidence/manifest consistency | Inspect pinned hashes and outcome fields in [machine-readable summary](https://raw.githubusercontent.com/tdealer01-crypto/doi/v1.2.0/docs/evidence/DSG_AGENT_V0_PUBLIC_EVIDENCE_20261030.json) | **YES** for reading/comparing public assertions; **NO** for independent model execution |
+| Source + build + signed release | With authorized private GitHub and production access, inspect Runs `41006714978`, `41006714979`, `41010617597` and serving image readback | **ACCESS-RESTRICTED** |
+| Post-merge signed CI attestation | With authorized access to the original CI ledger and pinned verification key, verify Ed25519 over canonically serialized `payload` and compare PR/commit/run IDs | **ACCESS-RESTRICTED** |
+| Exact NVIDIA governed execution + Memory | On authorized Production tenant, run a new read-only `action.plan` and governed browser extraction, capture independent observer + Memory readback + evidence verification | **NOT YET REPRODUCED BY PUBLIC THIRD PARTY** |
+| Unauthorized mutation, tamper-negative and replay-negative | Run controlled fixture against a disposable tenant with full independent observer and signed negative receipt | **NOT VERIFIED FOR THIS RELEASE** |
+| Kaggle 30B GPU/32K context training/evaluation | Separate held-out evaluation and live GPU inference | **NOT VERIFIED** |
+
+An authorized verifier should use a **new request key** and a **safe read-only test** to avoid replaying production changes. Record exact source and serving-image digests, model/provider identity, plan and decision hashes, provider receipt hash, observer result, persisted Memory hash, signed evidence verdict, and UTC timestamp. Require agreement across independent provider observation and audit logs. A heartbeat, plan-binding success, or internally reported `PASS` is insufficient for independent E2E acceptance.
+
+## Known constraints and negative outcomes
+
+- **Capacity:** root disk measured at **1,828,524,032 available bytes** following image activation. Old images were preserved pending rollback-copy/retention review; no destructive pruning was performed.
+- **Recovery:** one UI job initially stalled and was canceled without provider execution. A bounded **manual same-image UI restart** preserved its identity, image and peer containers; a fresh read-only goal then passed. This is **not evidence of automatic worker reconnection/resume**.
+- **Previous live attempt:** before the exact-source promotion, an earlier authenticated audit found `action.plan` blocked by Brain endpoint configuration. That outcome is preserved in the dated [prior snapshot](https://raw.githubusercontent.com/tdealer01-crypto/doi/v1.2.0/docs/DSG_AGENT_V0_PUBLIC_EVIDENCE_20261030.md); it is superseded for the specified promoted image, not erased.
+- **Attestation disclosure:** no complete public detached-signature/replay bundle for protected Production yet, despite internally verified cryptographic CI evidence.
+
+## Publication boundary
+
+This document is a redacted research/evidence **supplement**, not a new Zenodo release, safety certification, independent peer review or new license grant. No private implementation, private host identifiers, signing secret, provider credential, confidential test code or raw private runtime ledger is included. A future truly public verifiable **signed** package requires a separately owner-approved, non-sensitive canonical payload signed by the authoritative release key (or another explicitly trusted public issuer) plus the matching public verification key and reproducible verifier inputs. It must be checked by an independent verifier before describing it as public-proof PASS.
+
+
+---
+
+Source: https://raw.githubusercontent.com/tdealer01-crypto/doi/v1.2.0/docs/PUBLIC_REPRODUCTION_PROTOCOL_20261030.md
+
+# DSG Public Evidence — Reproduction Protocol (2026-10-30)
+
+**Status:** public metadata verification executable now; cryptographic Production CI replay requires owner-authorized original attestation; live Workroom E2E is not anonymously reproducible.  
+**Scope:** publication and empirical verification; no private source distribution or unsigned proof substitution.
+
+## 1. Public no-credential metadata replay
+
+The following Python 3 standard-library command checks Zenodo's **current provider metadata**, DOI/version identity, publication date, concept relation and advertised archived checksums. It runs from a shell (including Termux with Python) without access to DSG accounts:
+
+```bash
+python3 - <<'PY'
+import json
+import urllib.request
+
+expected = {
+    18212854: ("10.5281/zenodo.18212854", "2026-01-11", "10.5281/zenodo.18212853", "md5:9b5d3fa54aa1605ed1758704753e8235"),
+    18225586: ("10.5281/zenodo.18225586", "2026-01-12", "10.5281/zenodo.18225585", "md5:a62f7e0b1561fd2cdb355b16d157bf73"),
+    22172533: ("10.5281/zenodo.22172533", "2026-08-30", "10.5281/zenodo.22172532", "md5:348b023d4af727e1bae0fb2d46ef799f"),
+    22755320: ("10.5281/zenodo.22755320", "2026-09-14", "10.5281/zenodo.22172532", "md5:1f3b879bd54e8ded7c1411d72deb1522"),
+}
+for record_id, (doi, pubdate, concept, checksum) in expected.items():
+    url = f"https://zenodo.org/api/records/{record_id}"
+    req = urllib.request.Request(url, headers={"User-Agent": "DSG-Public-Verification/1"})
+    with urllib.request.urlopen(req, timeout=20) as response:
+        record = json.load(response)
+    assert record["id"] == record_id, (record_id, "ID_MISMATCH")
+    assert record["doi"] == doi, (record_id, "DOI_MISMATCH")
+    assert record["metadata"]["publication_date"] == pubdate, (record_id, "PUBLICATION_DATE_MISMATCH")
+    assert record["conceptdoi"] == concept, (record_id, "CONCEPT_DOI_MISMATCH")
+    assert any(f.get("checksum") == checksum for f in record.get("files", [])), (record_id, "ARCHIVE_CHECKSUM_METADATA_MISMATCH")
+    print("PROVIDER_METADATA_PASS", record_id, doi, pubdate)
+print("METADATA_TESTS_PASS=4")
+PY
+```
+
+**Meaning:** `METADATA_TESTS_PASS=4` verifies that Zenodo currently advertises the expected metadata and checksums. It does **not** hash the downloaded bytes, prove historical invention priority, establish Z3 proof soundness or verify DSG Production. A separate test can download each exact archive URL and compute its MD5 to cross-check provider-advertised checksums.
+
+## 2. Authorized cryptographic CI-attestation replay
+
+The Production post-merge CI attestation is an Ed25519 signature over the **exact canonical JSON payload**, not a signature over a redacted report. The source verifier canonicalizes with:
+
+```python
+json.dumps(payload, sort_keys=True, separators=(",", ":"), ensure_ascii=False).encode("utf-8")
+```
+
+The authorized verifier obtains the **unmodified** original signed JSON and the pinned **public verification key** through the existing owner-authorized DSG repository/attestation workflow. Neither signing key nor private operational material should be pasted in chat or moved into this public repository.
+
+Verification with `cryptography` installed:
+
+```bash
+# Local file paths point to owner-approved original files, not URLs or secrets in source.
+python3 - "$DSG_SIGNED_CI_DOC" "$DSG_PUBLIC_KEY_FILE" <<'PY'
+import base64, json, pathlib, sys
+from cryptography.hazmat.primitives.asymmetric.ed25519 import Ed25519PublicKey
+
+doc = json.loads(pathlib.Path(sys.argv[1]).read_text(encoding="utf-8"))
+payload = doc["payload"]
+key = base64.b64decode(pathlib.Path(sys.argv[2]).read_text(encoding="utf-8").strip(), validate=True)
+sig = base64.b64decode(doc["signature_b64"], validate=True)
+assert len(key) == 32 and len(sig) == 64
+canonical = json.dumps(payload, sort_keys=True, separators=(",", ":"), ensure_ascii=False).encode("utf-8")
+Ed25519PublicKey.from_public_bytes(key).verify(sig, canonical)
+assert payload["source_sha"] == "d8fe636f3c1c3fd8ddec4ed699eeff49c6952d06"
+assert payload["ci"]["run_id"] == "41015153555"
+assert payload["pull_request"]["number"] == 871
+print("ED25519_CI_SIGNATURE_PASS")
+PY
+```
+
+The verifier must **also** check the verification key's trust-anchor provenance and exact policy digest with the authorized production policy. A valid signature without a trusted key is not an authentic release proof. As a negative test, deliberately change a **copy** of the signed document's payload; `Ed25519PublicKey.verify` must reject the original signature. Do not mutate the original record.
+
+**Public status:** the auditor validated the actual Ed25519 signature on 2026-10-30, but third-party anonymous signature replay remains **BLOCKED BY DISCLOSURE BOUNDARY** because the original signed payload is private. The public verification key fingerprint can be checked against the redacted [production report](https://raw.githubusercontent.com/tdealer01-crypto/doi/v1.2.0/docs/DSG_NVIDIA_PRODUCTION_PUBLIC_PROOF_20261030.md).
+
+## 3. Independent E2E acceptance for an authorized test tenant
+
+Use a dedicated test goal that cannot mutate customer data:
+
+1. Capture UTC time, exact `source_sha`, pinned running image digest, model/provider identity and initial evidence-chain count.
+2. In a permitted Workroom session, request one **read-only** `action.plan` proposal for a browser text extraction. The proposal must carry **no execution authority**.
+3. Execute only the permitted browser-read route through its normal exact-action governed path. Record provider result/receipt and independently observe the browser state/result.
+4. Commit a bounded Memory start/end record, read it back independently and compare state hash and sequence.
+5. Re-verify signed/auditable evidence-chain status; bind outcome to exact plan/decision/result hash and source/image.
+6. Test a deliberately invalid/missing approval **only inside an isolated fixture**, recording BLOCK and independent no-side-effect observation. Do not test unauthorized real customer mutations.
+7. Repeat on a second verifier/tenant, compare proof fields and label discrepancies FAILED/NOT VERIFIED rather than fabricating matching outputs.
+
+**Acceptance:** publish a redacted exact-source evidence bundle only when provider receipt, independent observer, Memory readback, signed verifiable audit chain and negative-case no-side-effect checks all agree. A model response, vendor request ID, plan BOUND or GitHub CI PASS alone is insufficient.
+
+## 4. Status and exceptions
+
+| Test | Status |
+| --- | --- |
+| Zenodo metadata API reproduction | **PUBLICLY REPLAYABLE** |
+| Signed private CI attestation verification | **AUDITOR VERIFIED; ANONYMOUS PUBLIC REPLAY NOT AVAILABLE** |
+| NVIDIA exact-image Workroom browser-read + durable Memory | **SCOPED PROD PASS (PRIVATE PRIMARY RECORDS)** |
+| Independently repeat same E2E on another tenant | **NOT VERIFIED** |
+| Kaggle Qwen3-30B GPU/32K/held-out benchmark | **NOT VERIFIED** |
+| Autonomous worker reconnection after disconnection | **NOT VERIFIED** |
+| Disk-capacity remediation after observed ~1.83 GB free | **NOT VERIFIED** |
+
+The source Production repository remains private. This reproduction protocol has no execution authority, grants no access to signing keys, and does not alter any protected deployment.
+
+
+---
+
+Source: https://raw.githubusercontent.com/tdealer01-crypto/doi/d26821e0e72830d187f281a02f13faef6f71fef5/docs/VERIFY_RELEASE_V1_2_0.md
+
+# Verify the immutable DSG Spacetime v1.2.0 archive
+
+Version DOI: [10.5281/zenodo.23796173](https://doi.org/10.5281/zenodo.23796173). Public record: [23796173](https://zenodo.org/records/23796173).
+
+**Observed result on 2026-10-30:** archive MD5 and SHA-256 matched; all 24 archived file blobs matched the exact GitHub release tree; GitHub verified the release commit signature. The archive is 66,697 bytes.
+
+This no-credential Python 3 check reproduces the publication/archive comparison. It does not execute the private Production runtime or replay its private Ed25519 CI attestation.
+
+```bash
+python3 - <<'PY_VERIFY'
+import hashlib, io, json, urllib.request, zipfile
+
+def get(url):
+    request = urllib.request.Request(url, headers={"User-Agent": "DSG-Public-Archive-Verification/1"})
+    with urllib.request.urlopen(request, timeout=30) as response:
+        return response.read()
+
+commit_sha = "1880eb4519e0d1b7cf6b7b598d710d34779647c7"
+tree_sha = "f78f45e58a934f32e8f61ad43ff0a8565b4dace3"
+record = json.loads(get("https://zenodo.org/api/records/23796173"))
+assert record["doi"] == "10.5281/zenodo.23796173"
+assert record["conceptdoi"] == "10.5281/zenodo.22172532"
+assert record["metadata"]["version"] == "1.2.0"
+assert record["metadata"]["license"]["id"] == "cc-by-nc-nd-4.0"
+file = next(f for f in record["files"] if f["key"] == "tdealer01-crypto/doi-v1.2.0.zip")
+archive = get(file["links"]["self"])
+assert len(archive) == file["size"] == 66697
+assert hashlib.md5(archive).hexdigest() == "c4772614bdce84b343404a20b9eb3d5a"
+assert file["checksum"] == "md5:c4772614bdce84b343404a20b9eb3d5a"
+assert hashlib.sha256(archive).hexdigest() == "ded472103bba0dbf5518f7eaf869bdf5f7c1e10df611be427fc30916ddd4465b"
+repo = "https://api.github.com/repos/tdealer01-crypto/doi"
+tag = json.loads(get(repo + "/git/ref/tags/v1.2.0"))
+assert tag["object"]["sha"] == commit_sha
+commit = json.loads(get(repo + "/commits/" + commit_sha))
+assert commit["commit"]["verification"]["verified"] is True
+assert commit["commit"]["tree"]["sha"] == tree_sha
+tree = json.loads(get(repo + "/git/trees/" + tree_sha + "?recursive=1"))
+assert tree["truncated"] is False
+expected = {f["path"]: f["sha"] for f in tree["tree"] if f["type"] == "blob"}
+with zipfile.ZipFile(io.BytesIO(archive)) as zip_file:
+    prefix = zip_file.namelist()[0].split("/")[0] + "/"
+    files = {name[len(prefix):]: name for name in zip_file.namelist() if not name.endswith("/")}
+    assert set(files) == set(expected) and len(files) == 24
+    for path, name in files.items():
+        data = zip_file.read(name)
+        git_blob = b"blob " + str(len(data)).encode() + bytes([0]) + data
+        assert hashlib.sha1(git_blob).hexdigest() == expected[path], path
+print("PUBLIC_ARCHIVE_REPRODUCTION_PASS: DOI, hashes, signature API status, exact tag and all 24 file blobs")
+PY_VERIFY
+```
+
+The check uses GitHub's public API result for commit signature status; it is not an offline detached-signature verifier. Git blob SHA-1 is used to compare archived file objects to GitHub's signed commit tree, while the complete archive also has a pinned SHA-256.
+
+The immutable archived package contains the honest pending state from before Zenodo assigned its DOI. The later [publication receipt](https://raw.githubusercontent.com/tdealer01-crypto/doi/d26821e0e72830d187f281a02f13faef6f71fef5/docs/evidence/PUBLICATION_V1_2_0.json) records verified ingestion without retagging the release. Public evidence summaries, image digests, local evidence-chain validation and internal signature verification remain distinct from independently observed Production E2E.

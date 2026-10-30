@@ -90,6 +90,8 @@ Use **10.5281/zenodo.23796173** to cite this exact evidence archive. The v1.1.0 
 
 [Open the public evidence page — ไทย / English](https://dsg-public-evidence.shipstatic.com). It links the immutable archive, evidence scope and reproduction steps.
 
+Agents can start at [llms.txt](https://dsg-public-evidence.shipstatic.com/llms.txt), then read [empirical JSON](https://dsg-public-evidence.shipstatic.com/evidence.json), [publication fingerprints](https://dsg-public-evidence.shipstatic.com/publication.json), Markdown reports or the [read-only OpenAPI](https://dsg-public-evidence.shipstatic.com/openapi.json). These public files require no login or browser JavaScript. See [access verification](docs/AGENT_ACCESS_20261030.md).
+
 ## Research and public empirical evidence (2026-10-30)
 
 - [Research Priority & Evidence Matrix](docs/RESEARCH_PRIORITY_EVIDENCE_MATRIX.md): Zenodo DOI provenance, publication dates and proof limits.

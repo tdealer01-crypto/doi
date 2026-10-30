@@ -55,7 +55,7 @@
   "public_landing_page": {
     "url": "https://dsg-public-evidence.shipstatic.com",
     "status": "live",
-    "deployment": "modular-surge-63xvjav.shipstatic.com",
+    "deployment": "liminal-mesh-8fc6tmr.shipstatic.com",
     "expires": null,
     "source_path": "docs/site/index.html",
     "source_scope": "Post-publication navigation page; not part of the frozen 24-file v1.2.0 archive.",
@@ -66,11 +66,32 @@
     "github_release": "https://github.com/tdealer01-crypto/doi/releases/tag/v1.2.0",
     "zenodo": "https://zenodo.org/records/23796173",
     "landing_page": "https://dsg-public-evidence.shipstatic.com",
-    "github_profile": "https://github.com/tdealer01-crypto"
+    "github_profile": "https://github.com/tdealer01-crypto",
+    "agent_entrypoint": "https://dsg-public-evidence.shipstatic.com/llms.txt"
   },
   "public_archive_reproduction": {
     "status": "PASS",
     "method": "Executed the exact standard-library Python command in docs/VERIFY_RELEASE_V1_2_0.md against public Zenodo and GitHub APIs; all 24 file blobs matched.",
     "requires_credentials": false
+  },
+  "agent_access": {
+    "status": "PASS",
+    "verified_at_utc": "2026-10-30T07:39:30.291376+00:00",
+    "entrypoint": "https://dsg-public-evidence.shipstatic.com/llms.txt",
+    "evidence_json": "https://dsg-public-evidence.shipstatic.com/evidence.json",
+    "publication_json": "https://dsg-public-evidence.shipstatic.com/publication.json",
+    "openapi": "https://dsg-public-evidence.shipstatic.com/openapi.json",
+    "authentication_required": false,
+    "cookies_required": false,
+    "client_javascript_required": false,
+    "http_get_paths_verified": 13,
+    "head_verified": true,
+    "cors": "*",
+    "robots_allows_read": true,
+    "independent_external_reader": "Firecrawl: llms.txt -> evidence.json; returned JSON matches the archived empirical evidence.",
+    "reader_compatibility": "Search service open could not access these URLs; universal reader compatibility is not claimed.",
+    "verification_receipt": "docs/evidence/PUBLIC_AGENT_ACCESS_20261030.json",
+    "user_guide": "docs/AGENT_ACCESS_20261030.md",
+    "scope": "Anonymous HTTP documentation reads and metadata discovery, not independent Production execution or private signature replay."
   }
 }
