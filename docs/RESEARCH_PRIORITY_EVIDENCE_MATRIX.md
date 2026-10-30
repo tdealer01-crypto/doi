@@ -53,6 +53,8 @@ After the earlier blocked Brain read-only attempt, exact-source **NVIDIA Nemotro
 
 **Do not transfer this result to Qwen3-8B teacher-exact evaluation, Kaggle Qwen3-30B GPU/context, arbitrary action authorization or independent third-party E2E.** Disk headroom and automatic worker restart are separately recorded as unresolved operational follow-up.
 
+Reproduction instructions for public DOI metadata and the signed-CI trust boundary: [Public Reproduction Protocol](PUBLIC_REPRODUCTION_PROTOCOL_20261030.md).
+
 ## DGAB reproducibility requirements
 
 A future public-safe DGAB artifact should record: test case ID, specification version, source commit, deployed image digest, runtime/provider identity (redacted), UTC timestamp, plan hash, route, decision and reason, approval scope, provider receipt hash, independent observer result, evidence-chain verification, replay result, and a clear **PASS / FAILED / BLOCKED / NOT VERIFIED** verdict.
