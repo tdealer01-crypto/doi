@@ -64,6 +64,12 @@ The following checks were performed against an authenticated serving DSG Spaceti
 
 **Truth boundary:** Returning BLOCK is a concrete negative response but, with `result=null` and `evidence=null`, it does not prove the state of a remote provider. No live 30B Neural → Gate → Execute → Evidence success is claimed here.
 
+## D2. Later Production NVIDIA acceptance — 2026-10-30
+
+**Later verification supersedes the earlier blocked Brain status for the exact promoted image, but not for all other providers or images.** GitHub PR #871 confirms successful owner release and a read-only NVIDIA Nemotron Workroom/Memory/browser goal. This is a **distinct API-hosted model** from the unverified Kaggle/Qwen3-30B path and from the historical trained Qwen3-8B adapter. Pin image `sha256:94115f03476e93a8dbce43cbdcf37951c4a148d3c998ae87683c7185cd7a8f10`, source commit `ea73ac8d9aeada37c2cfeec158ff0dcda573d589` and evidence merge `d8fe636f3c1c3fd8ddec4ed699eeff49c6952d06`. The serving chain returned `valid=true` at **532** records and catalog of **20 Nodes / 39 Routes** on the fresh authenticated audit. An Ed25519 CI attestation for PR #871 was cryptographically verified during the audit, but its original protected payload is not public and external replay remains access-restricted.
+
+See [NVIDIA Production Empirical Evidence and Signature Boundaries](DSG_NVIDIA_PRODUCTION_PUBLIC_PROOF_20261030.md). **Do not conflate** this scoped read-only Production slice with independent public E2E reproduction, Kaggle GPU 32K acceptance, or automatic worker recovery.
+
 ## E. Public reproducibility and next acceptance
 
 | Target | Status | Evidence required for promotion |
