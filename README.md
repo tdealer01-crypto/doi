@@ -85,6 +85,14 @@ Versioning here identifies sanitized publication/citation packages. It is not a 
 
 Use **10.5281/zenodo.22755320** when citing the exact DSG Spacetime v1.1.0 AI Agent System release. Use the concept DOI when citing the DSG Spacetime record across versions.
 
+## Research and public empirical evidence (2026-10-30)
+
+- [Research Priority & Evidence Matrix](docs/RESEARCH_PRIORITY_EVIDENCE_MATRIX.md): Zenodo DOI provenance, publication dates and proof limits.
+- [DSG-Agent-v0 Public Evidence Snapshot](docs/DSG_AGENT_V0_PUBLIC_EVIDENCE_20261030.md): historical Qwen3-8B evaluation, authenticated control-plane tests, observed BLOCKED cases and missing E2E acceptance.
+- [Machine-readable Evidence Manifest](docs/evidence/DSG_AGENT_V0_PUBLIC_EVIDENCE_20261030.json): dated result fields and direct public Zenodo API references.
+
+**Scope:** This is a sanitized, time-bounded evidence inventory. The 2026-10-30 audit did not verify end-to-end neural execution, current 30B GPU service, or independent execution replay. The Zenodo v1.1.0 DOI above does not automatically cover this newer evidence snapshot.
+
 ## Related and prior publications
 
 Earlier owner-supplied Zenodo publications that may form part of the research lineage are recorded separately in [`docs/RELATED_PUBLICATIONS.md`](docs/RELATED_PUBLICATIONS.md).
