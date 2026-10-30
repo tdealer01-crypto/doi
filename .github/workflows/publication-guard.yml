@@ -129,6 +129,9 @@ jobs:
               '10.5281/zenodo.22172533',
               '10.5281/zenodo.22172532',
               '10.5281/zenodo.18212854',
+              '10.5281/zenodo.18212853',  # verified UDG concept DOI
+              '10.5281/zenodo.18225586',  # verified formal-proof version DOI
+              '10.5281/zenodo.18225585',  # verified formal-proof concept DOI
           }
           pattern = re.compile(r'10\.[0-9]{4,9}/[-._;()/:A-Za-z0-9]+')
           found = set()
