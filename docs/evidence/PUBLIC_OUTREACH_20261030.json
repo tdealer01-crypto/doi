@@ -1,0 +1,32 @@
+{
+  "schema": "dsg-public-outreach/v1",
+  "date_utc": "2026-10-30",
+  "purpose": "Public evidence publication and invitation to reproduce the available checks.",
+  "github": {
+    "status": "PUBLISHED",
+    "url": "https://github.com/tdealer01-crypto/doi/issues/20",
+    "issue_number": 20,
+    "created_at_utc": "2026-10-30T07:52:07Z"
+  },
+  "linkedin": {
+    "status": "AUTH_REQUIRED",
+    "profile_observed": "https://www.linkedin.com/posts/thanawat-suparongsuwan_aigovernance-agentops-runtimeevidence-activity-7459325829110636546-Pxtt",
+    "draft_path": "docs/outreach/20261030/LINKEDIN_POST_TH.md",
+    "remote_post_url": null,
+    "remote_post_created": false
+  },
+  "dev": {
+    "status": "TECHNICAL_DRAFT_ONLY_AUTH_AND_REVIEW_REQUIRED",
+    "profile_observed": "https://dev.to/tdealer01crypto",
+    "draft_path": "docs/outreach/20261030/ARCHIVE_VERIFICATION_DEV_DRAFT.md",
+    "remote_post_url": null,
+    "remote_draft_created": false,
+    "policy_url": "https://dev.to/guidelines-for-ai-assisted-articles-on-dev/",
+    "boundary": "No AI-assisted business promotion; a technical case study requires editorial review and AI disclosure before publication."
+  },
+  "claims": {
+    "independent_public_production_e2e": false,
+    "original_private_ci_attestation_publicly_replayable": false
+  },
+  "published_evidence_doi": "10.5281/zenodo.23796173"
+}
