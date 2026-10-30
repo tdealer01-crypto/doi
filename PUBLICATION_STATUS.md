@@ -28,6 +28,8 @@ This publication archives public-safe documentation and a dated empirical eviden
 - [Public evidence page — ไทย / English](https://dsg-public-evidence.shipstatic.com), published with no expiry requested.
 - GitHub profile announcement: **PUBLISHED_VERIFIED** — [profile README](https://github.com/tdealer01-crypto/tdealer01-crypto/blob/main/README.md), commit [`09479be`](https://github.com/tdealer01-crypto/tdealer01-crypto/commit/09479be5c61a9e8ca94c51abfab2746db715502b), committed 2026-10-30T07:30:20Z. GitHub API readback matched the submitted README, with its previous content preserved. The earlier connector `403` was resolved after the owner added this repository to the installation. This profile commit is unsigned; the separately verified archival release signature is unchanged. Other social-network publication is not claimed.
 
+- Public agent access: **PASS** — anonymous [llms.txt](https://dsg-public-evidence.shipstatic.com/llms.txt), [empirical JSON](https://dsg-public-evidence.shipstatic.com/evidence.json), Markdown and OpenAPI; all 13 GET resources and HEAD evidence read passed. Stable-domain responses allow cross-origin reads and indexing. Firecrawl followed the discovery index to the JSON and returned the same archived public evidence. [Verification receipt](docs/evidence/PUBLIC_AGENT_ACCESS_20261030.json).
+
 The frozen archive contains the honest pre-ingestion pending status present when its GitHub release was made. This later confirmation records the provider-assigned DOI without changing that release tag or its archived bytes. Cite the DOI for the immutable package; read this status file for post-publication verification.
 
 # Verified historical v1.1.0 archive

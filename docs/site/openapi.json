@@ -1,0 +1,171 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "DSG Public Evidence Read API",
+    "version": "1.0.0",
+    "description": "Anonymous static documentation reads for publication 1.2.0. No execution endpoint."
+  },
+  "servers": [
+    {
+      "url": "https://dsg-public-evidence.shipstatic.com"
+    }
+  ],
+  "security": [],
+  "paths": {
+    "/evidence.json": {
+      "get": {
+        "operationId": "get_evidence_json",
+        "summary": "Read public evidence.json",
+        "security": [],
+        "responses": {
+          "200": {
+            "description": "Public static resource",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": true
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/publication.json": {
+      "get": {
+        "operationId": "get_publication_json",
+        "summary": "Read public publication.json",
+        "security": [],
+        "responses": {
+          "200": {
+            "description": "Public static resource",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": true
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/agent-index.json": {
+      "get": {
+        "operationId": "get_agent_index_json",
+        "summary": "Read public agent-index.json",
+        "security": [],
+        "responses": {
+          "200": {
+            "description": "Public static resource",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": true
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/llms.txt": {
+      "get": {
+        "operationId": "get_llms_txt",
+        "summary": "Read public llms.txt",
+        "security": [],
+        "responses": {
+          "200": {
+            "description": "Public static resource",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/index.md": {
+      "get": {
+        "operationId": "get_index_md",
+        "summary": "Read public index.md",
+        "security": [],
+        "responses": {
+          "200": {
+            "description": "Public static resource",
+            "content": {
+              "text/markdown": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/production.md": {
+      "get": {
+        "operationId": "get_production_md",
+        "summary": "Read public production.md",
+        "security": [],
+        "responses": {
+          "200": {
+            "description": "Public static resource",
+            "content": {
+              "text/markdown": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/reproduction.md": {
+      "get": {
+        "operationId": "get_reproduction_md",
+        "summary": "Read public reproduction.md",
+        "security": [],
+        "responses": {
+          "200": {
+            "description": "Public static resource",
+            "content": {
+              "text/markdown": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/verify-archive.md": {
+      "get": {
+        "operationId": "get_verify_archive_md",
+        "summary": "Read public verify-archive.md",
+        "security": [],
+        "responses": {
+          "200": {
+            "description": "Public static resource",
+            "content": {
+              "text/markdown": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

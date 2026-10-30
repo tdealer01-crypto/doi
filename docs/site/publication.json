@@ -1,0 +1,49 @@
+{
+  "schema": "dsg-publication-agent-view/v1",
+  "version": "1.2.0",
+  "evidence_date_utc": "2026-10-30",
+  "source": {
+    "url": "https://raw.githubusercontent.com/tdealer01-crypto/doi/d26821e0e72830d187f281a02f13faef6f71fef5/docs/evidence/PUBLICATION_V1_2_0.json",
+    "github_git_blob_sha": "40401de04123b656c678c30c87dcedb7f55fb757",
+    "source_commit": "d26821e0e72830d187f281a02f13faef6f71fef5"
+  },
+  "publication_status": "PUBLISHED_VERIFIED",
+  "version_doi": "10.5281/zenodo.23796173",
+  "concept_doi": "10.5281/zenodo.22172532",
+  "zenodo_record_url": "https://zenodo.org/records/23796173",
+  "zenodo_api_url": "https://zenodo.org/api/records/23796173",
+  "github_release_url": "https://github.com/tdealer01-crypto/doi/releases/tag/v1.2.0",
+  "archive": {
+    "url": "https://zenodo.org/api/records/23796173/files/tdealer01-crypto/doi-v1.2.0.zip/content",
+    "bytes": 66697,
+    "file_count": 24,
+    "md5": "c4772614bdce84b343404a20b9eb3d5a",
+    "sha256": "ded472103bba0dbf5518f7eaf869bdf5f7c1e10df611be427fc30916ddd4465b",
+    "release_commit": "1880eb4519e0d1b7cf6b7b598d710d34779647c7",
+    "release_tree_sha": "f78f45e58a934f32e8f61ad43ff0a8565b4dace3",
+    "verified_at_utc": "2026-10-30T07:19:26.963979+00:00",
+    "all_file_blobs_matched_exact_release": true
+  },
+  "signature_scope": {
+    "archival_release_commit_verified_by_github": true,
+    "original_private_ed25519_payload_publicly_replayable": false
+  },
+  "independent_public_production_e2e": false,
+  "profile_announcement": {
+    "status": "PUBLISHED_VERIFIED",
+    "profile_url": "https://github.com/tdealer01-crypto",
+    "source_url": "https://github.com/tdealer01-crypto/tdealer01-crypto/blob/main/README.md",
+    "commit_sha": "09479be5c61a9e8ca94c51abfab2746db715502b",
+    "commit_url": "https://github.com/tdealer01-crypto/tdealer01-crypto/commit/09479be5c61a9e8ca94c51abfab2746db715502b",
+    "committed_at_utc": "2026-10-30T07:30:20Z",
+    "content_blob_sha": "34fc8cebdb2e92d6e0dda2467942ecd7262d31c8",
+    "verification_method": "GitHub contents API readback matched the complete submitted README; all previous content was preserved.",
+    "commit_signature_verified_by_github": false,
+    "commit_signature_status": "unsigned",
+    "previous_status": "BLOCKED",
+    "previous_reason": "GitHub connector contents write returned 403 Resource not accessible by integration; no successful profile publication claimed.",
+    "resolution": "Owner added the profile repository to the GitHub App installation; contents write and exact readback then succeeded."
+  },
+  "license": "CC-BY-NC-ND-4.0",
+  "caveat": "Publication/archive verification is distinct from independent public Production E2E."
+}

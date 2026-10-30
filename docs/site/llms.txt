@@ -1,0 +1,27 @@
+# DSG Spacetime Public Evidence
+
+> Public-safe v1.2.0 evidence, archive fingerprints and reproduction instructions. Anonymous HTTP GET; no login, API key, cookie or JavaScript required.
+
+The scoped NVIDIA Workroom/browser/Memory result is supported by private primary records. Independent public Production E2E and original private Ed25519 signature replay remain unverified. Earlier and later snapshots in empirical JSON remain separate.
+
+## Overview
+
+- [Overview](https://dsg-public-evidence.shipstatic.com/index.md): Exact model/image identifiers, checks and limitations.
+- [Agent resource index](https://dsg-public-evidence.shipstatic.com/agent-index.json): Links and access metadata.
+- [OpenAPI](https://dsg-public-evidence.shipstatic.com/openapi.json): Static read-only GET resources.
+
+## Machine-readable evidence
+
+- [Empirical evidence](https://dsg-public-evidence.shipstatic.com/evidence.json): Later NVIDIA result is in live_nvidia_workroom_20261030.
+- [Publication fingerprints](https://dsg-public-evidence.shipstatic.com/publication.json): DOI, archive hashes and signature scope.
+
+## Reproduction
+
+- [Production report](https://dsg-public-evidence.shipstatic.com/production.md): Scoped result and evidence boundaries.
+- [Reproduction protocol](https://dsg-public-evidence.shipstatic.com/reproduction.md): Public and authorized checks.
+- [Archive verification](https://dsg-public-evidence.shipstatic.com/verify-archive.md): Python standard-library command; no credentials.
+- [Zenodo API](https://zenodo.org/api/records/23796173): Primary archival provider metadata.
+
+## Optional
+
+- [Full reading packet](https://dsg-public-evidence.shipstatic.com/llms-full.txt): Overview plus evidence and reproduction documents.

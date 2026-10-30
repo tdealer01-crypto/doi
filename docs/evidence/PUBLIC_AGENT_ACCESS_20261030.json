@@ -1,0 +1,192 @@
+{
+  "schema": "dsg-public-agent-access-verification/v1",
+  "verified_at_utc": "2026-10-30T07:39:30.291376+00:00",
+  "origin": "https://dsg-public-evidence.shipstatic.com",
+  "deployment": "liminal-mesh-8fc6tmr.shipstatic.com",
+  "expires": null,
+  "status": "PASS",
+  "endpoints": [
+    {
+      "path": "/",
+      "url": "https://dsg-public-evidence.shipstatic.com/",
+      "http_status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "cors": "*",
+      "x_robots_tag": "index, follow",
+      "bytes": 14098,
+      "sha256": "c62305809d469098a7cf61e2fc803b68fcc2f6e856145edf8dff38548baecac4",
+      "matches_source_except_final_newline": true,
+      "cookie_or_authorization_header_sent": false
+    },
+    {
+      "path": "/evidence.json",
+      "url": "https://dsg-public-evidence.shipstatic.com/evidence.json",
+      "http_status": 200,
+      "content_type": "application/json; charset=utf-8",
+      "cors": "*",
+      "x_robots_tag": "index, follow",
+      "bytes": 5665,
+      "sha256": "3ef24cd51f976ec39f3331d46b0bd1c6bd2c7018bd02512f5a3a4354ed36d482",
+      "matches_source_except_final_newline": true,
+      "cookie_or_authorization_header_sent": false
+    },
+    {
+      "path": "/production.md",
+      "url": "https://dsg-public-evidence.shipstatic.com/production.md",
+      "http_status": 200,
+      "content_type": "text/markdown; charset=utf-8",
+      "cors": "*",
+      "x_robots_tag": "index, follow",
+      "bytes": 10251,
+      "sha256": "dab9a21ece7a0b901a026f29ebfeb44915e66b97caedfd46860630943760f0bb",
+      "matches_source_except_final_newline": true,
+      "cookie_or_authorization_header_sent": false
+    },
+    {
+      "path": "/reproduction.md",
+      "url": "https://dsg-public-evidence.shipstatic.com/reproduction.md",
+      "http_status": 200,
+      "content_type": "text/markdown; charset=utf-8",
+      "cors": "*",
+      "x_robots_tag": "index, follow",
+      "bytes": 7384,
+      "sha256": "e66f511117535821c4fdb3ad63e9cdc778f08f4f21d6d7c599f56c11435ad098",
+      "matches_source_except_final_newline": true,
+      "cookie_or_authorization_header_sent": false
+    },
+    {
+      "path": "/verify-archive.md",
+      "url": "https://dsg-public-evidence.shipstatic.com/verify-archive.md",
+      "http_status": 200,
+      "content_type": "text/markdown; charset=utf-8",
+      "cors": "*",
+      "x_robots_tag": "index, follow",
+      "bytes": 3728,
+      "sha256": "1c52dba4743826064b9a91975c12be44614d04b43be3413f4fc19018defa96a0",
+      "matches_source_except_final_newline": true,
+      "cookie_or_authorization_header_sent": false
+    },
+    {
+      "path": "/publication.json",
+      "url": "https://dsg-public-evidence.shipstatic.com/publication.json",
+      "http_status": 200,
+      "content_type": "application/json; charset=utf-8",
+      "cors": "*",
+      "x_robots_tag": "index, follow",
+      "bytes": 2689,
+      "sha256": "56ba44721c4c816709b265274ed28ebe73426ca45fd30d270cc22482e79e7e98",
+      "matches_source_except_final_newline": true,
+      "cookie_or_authorization_header_sent": false
+    },
+    {
+      "path": "/agent-index.json",
+      "url": "https://dsg-public-evidence.shipstatic.com/agent-index.json",
+      "http_status": 200,
+      "content_type": "application/json; charset=utf-8",
+      "cors": "*",
+      "x_robots_tag": "index, follow",
+      "bytes": 1565,
+      "sha256": "4625ad6b6b0751d3470840d74cbf5979480a811b29cded414055271ae8b8e6a4",
+      "matches_source_except_final_newline": true,
+      "cookie_or_authorization_header_sent": false
+    },
+    {
+      "path": "/index.md",
+      "url": "https://dsg-public-evidence.shipstatic.com/index.md",
+      "http_status": 200,
+      "content_type": "text/markdown; charset=utf-8",
+      "cors": "*",
+      "x_robots_tag": "index, follow",
+      "bytes": 2467,
+      "sha256": "74552dcbf17efe09379667c54f87d92c58a50e9efc4e9b204aaaff92d412d1c4",
+      "matches_source_except_final_newline": true,
+      "cookie_or_authorization_header_sent": false
+    },
+    {
+      "path": "/llms.txt",
+      "url": "https://dsg-public-evidence.shipstatic.com/llms.txt",
+      "http_status": 200,
+      "content_type": "text/plain; charset=utf-8",
+      "cors": "*",
+      "x_robots_tag": "index, follow",
+      "bytes": 1726,
+      "sha256": "79a7267ebd7c3b8165a0c0d28230c42a954c5475d5a1cd86246458848c1bcd97",
+      "matches_source_except_final_newline": true,
+      "cookie_or_authorization_header_sent": false
+    },
+    {
+      "path": "/llms-full.txt",
+      "url": "https://dsg-public-evidence.shipstatic.com/llms-full.txt",
+      "http_status": 200,
+      "content_type": "text/plain; charset=utf-8",
+      "cors": "*",
+      "x_robots_tag": "index, follow",
+      "bytes": 23851,
+      "sha256": "4ce5d7dd75045e92a5488bdee3d2a98c3778a32304c59539a476e3d2553117a3",
+      "matches_source_except_final_newline": true,
+      "cookie_or_authorization_header_sent": false
+    },
+    {
+      "path": "/openapi.json",
+      "url": "https://dsg-public-evidence.shipstatic.com/openapi.json",
+      "http_status": 200,
+      "content_type": "application/json; charset=utf-8",
+      "cors": "*",
+      "x_robots_tag": "index, follow",
+      "bytes": 4144,
+      "sha256": "d9a3b64f70e913209ad6bc3a1c3cb4ef44c33cabb08cd98e7b7e02985cd7d019",
+      "matches_source_except_final_newline": true,
+      "cookie_or_authorization_header_sent": false
+    },
+    {
+      "path": "/robots.txt",
+      "url": "https://dsg-public-evidence.shipstatic.com/robots.txt",
+      "http_status": 200,
+      "content_type": "text/plain; charset=utf-8",
+      "cors": "*",
+      "x_robots_tag": "index, follow",
+      "bytes": 88,
+      "sha256": "641d8755293cf39281ae9c7e523326090589a9a02bd4973f91584a23446e2d42",
+      "matches_source_except_final_newline": true,
+      "cookie_or_authorization_header_sent": false
+    },
+    {
+      "path": "/sitemap.xml",
+      "url": "https://dsg-public-evidence.shipstatic.com/sitemap.xml",
+      "http_status": 200,
+      "content_type": "application/xml; charset=utf-8",
+      "cors": "*",
+      "x_robots_tag": "index, follow",
+      "bytes": 638,
+      "sha256": "5f878bd0337e7c9de338d1f93c95c1d788637f3834815ca60f13757624074dce",
+      "matches_source_except_final_newline": true,
+      "cookie_or_authorization_header_sent": false
+    }
+  ],
+  "get_endpoints_passed": 13,
+  "head_evidence_json": "PASS",
+  "robots_allows_agent_evidence_read": true,
+  "llms_to_json_discovery": "PASS",
+  "truth_boundary_fields_preserved": true,
+  "scope": "Anonymous HTTP documentation reads and metadata discovery, not independent Production execution or private signature replay.",
+  "external_reader": {
+    "provider": "Firecrawl",
+    "entrypoint": "https://dsg-public-evidence.shipstatic.com/llms.txt",
+    "entrypoint_http_status": 200,
+    "followed_resource": "https://dsg-public-evidence.shipstatic.com/evidence.json",
+    "resource_http_status": 200,
+    "parsed_json_equals_archived_public_evidence": true,
+    "observed_model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+    "observed_image_digest": "sha256:94115f03476e93a8dbce43cbdcf37951c4a148d3c998ae87683c7185cd7a8f10",
+    "observed_public_signature_replayable": false,
+    "observed_independent_public_replay": false,
+    "verdict": "PASS"
+  },
+  "reader_compatibility_limitations": [
+    {
+      "reader": "Search service open",
+      "result": "NOT_VERIFIED",
+      "detail": "The tool returned not accessible for these URLs; direct HTTP and Firecrawl reads succeeded. Universal reader compatibility is not claimed."
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "schema": "dsg-public-evidence-agent-index/v1",
+  "title": "DSG Spacetime public evidence",
+  "canonical_origin": "https://dsg-public-evidence.shipstatic.com",
+  "access": {
+    "authentication_required": false,
+    "read_methods": [
+      "GET",
+      "HEAD"
+    ],
+    "browser_javascript_required": false,
+    "cookies_required": false
+  },
+  "resources": {
+    "overview": "https://dsg-public-evidence.shipstatic.com/index.md",
+    "llms": "https://dsg-public-evidence.shipstatic.com/llms.txt",
+    "evidence": "https://dsg-public-evidence.shipstatic.com/evidence.json",
+    "publication": "https://dsg-public-evidence.shipstatic.com/publication.json",
+    "production": "https://dsg-public-evidence.shipstatic.com/production.md",
+    "reproduction": "https://dsg-public-evidence.shipstatic.com/reproduction.md",
+    "archive_verification": "https://dsg-public-evidence.shipstatic.com/verify-archive.md",
+    "openapi": "https://dsg-public-evidence.shipstatic.com/openapi.json"
+  },
+  "evidence_source": {
+    "github_ref": "v1.2.0",
+    "path": "docs/evidence/DSG_AGENT_V0_PUBLIC_EVIDENCE_20261030.json",
+    "github_git_blob_sha": "92503b0424f26e8adea746c501675983c190678c"
+  },
+  "interpretation": {
+    "nvidia_scoped_result_path": "live_nvidia_workroom_20261030",
+    "earlier_pre_promotion_checks_path": "live_runtime_checks",
+    "independent_public_production_e2e": false,
+    "original_private_ci_signature_publicly_replayable": false
+  },
+  "authority": "Public documentation reads; no production execution endpoint is defined by this website."
+}
