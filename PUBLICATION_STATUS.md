@@ -1,5 +1,22 @@
 # Publication Status
 
+Current package: **DSG Spacetime v1.2.0 — Production Evidence and Reproduction Protocol**.
+
+Status: **ZENODO_PENDING — package prepared; new archival DOI not yet verified**.
+
+This version contains public-safe architecture documentation, a research evidence matrix, a scoped NVIDIA Nemotron API Production browser-read/Memory acceptance summary, and a reproduction protocol. Private primary receipts and original signed CI attestations are not included; anonymous public signature replay and independent E2E reproduction remain unavailable.
+
+- Publication source: PR #15, merged as `02244191d716d8a2438fcb4350c5d02fa1c392f4`.
+- Planned public release tag: `v1.2.0`.
+- New Zenodo version DOI: **not assigned or claimed here**.
+- Version/citation metadata: `.zenodo.json` and `CITATION.cff` identify **1.2.0**.
+- Machine-readable publication state: [`docs/evidence/PUBLICATION_V1_2_0.json`](docs/evidence/PUBLICATION_V1_2_0.json).
+- [Release notes and public announcement](docs/RELEASE_V1_2_0.md).
+
+Publication is complete only after the GitHub release is published and Zenodo's public provider record confirms version, archive bytes/checksum and concept lineage. Publication does not upgrade the evidence verdict.
+
+# Verified historical v1.1.0 archive
+
 Status: **VERIFIED — DSG SPACETIME v1.1.0 AI AGENT SYSTEM DOI PUBLISHED**
 
 Release: **DSG Spacetime v1.1.0**
@@ -46,3 +63,4 @@ Use **10.5281/zenodo.22172533** only when citing the previous v1.0.0 archival re
 ## Boundary
 
 This verification is for the sanitized public publication/citation package. It does not publish, relicense or expose private DSG implementation, private algorithms, prompts, secrets, customer data or private repository history.
+
