@@ -20,6 +20,8 @@ DSG ONE's existing production website ship workflow completed **SUCCESS** after 
 
 The website release does **not** imply whole-system Workroom/Agent E2E passed, and v1.3.0 is still **NOT PUBLISHED**.
 
+**Independent public current-serving replay:** **PASS** on 2 November 2026: the published Python verifier was downloaded from a pinned public commit and run in a third-party environment without DSG credentials, confirming the exact website SHA/digest and all nine public documentation routes. The original private release log and whole-system E2E are **not** independently replayed. [Evidence and exact command](docs/DSG_ONE_WEBSITE_SHIP_PROOF_20261102.md).
+
 ## Publication boundary
 
 This repository intentionally contains **public-safe material only**. It does **not** contain the proprietary production implementation, private algorithms, solver internals, policy/security internals, private tests, secrets, credentials, customer data, or sensitive deployment details.
