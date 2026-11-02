@@ -40,8 +40,8 @@ def main():
     require(manifest["scope"] == "WEBSITE_RELEASE_ONLY", "SCOPE_MISMATCH")
     require(manifest["boundaries"]["v130_release_published"] is False, "FALSE_V130_RELEASE_CLAIM")
     require(manifest["boundaries"]["workroom_claim_checkpoint_resume_proved"] is False, "FALSE_WORKROOM_CLAIM")
-    require(manifest["public_replay"]["independent_external_run_recorded"] is False,
-            "UNSUPPORTED_EXTERNAL_REPLAY_CLAIM")
+    require(manifest["public_replay"]["private_ci_replayed_anonymously"] is False,
+            "UNSUPPORTED_PRIVATE_CI_REPLAY_CLAIM")
 
     status = load_json(get(BASE + "/api/agent/status"), "agent/status")
     deployment = status.get("deployment") or {}
