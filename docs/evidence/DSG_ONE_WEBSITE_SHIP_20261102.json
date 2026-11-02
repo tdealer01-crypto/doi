@@ -1,0 +1,71 @@
+{
+  "schema": "dsg-public-website-ship-evidence/v1",
+  "classification": "PUBLIC_SAFE_SANITIZED_OWNER_OBSERVATION",
+  "observed_date_utc": "2026-11-02",
+  "last_release_workflow_log_utc": "2026-11-02T16:50:00Z",
+  "product": "DSG ONE",
+  "scope": "WEBSITE_RELEASE_ONLY",
+  "verdict": "PASS_OWNER_AUTHENTICATED_EVIDENCE",
+  "verified_source_sha": "ccee11e6220af294da39353192622d99844de1b5",
+  "verified_ecr_image_digest": "sha256:e375163cc279ce39f03acfbf1f5220354f21ee99e56f5dc1fad9b918f99a6320",
+  "production_base_url": "https://dsg.pics",
+  "owner_release": {
+    "source_repository_visibility": "PRIVATE",
+    "run_id": 41481778354,
+    "successful_attempt_job_id": 125413476223,
+    "run_url": "https://github.com/tdealer01-crypto/DSG-Private-Production-Runtime/actions/runs/41481778354",
+    "public_anonymous_log_access": false,
+    "job_conclusion": "success",
+    "observed_log_markers": [
+      "RELEASE_SOURCE_AND_CI=PASS",
+      "RELEASE_PREFLIGHT=PASS",
+      "DSG_ONE_RELEASE=DEPLOYED",
+      "DSG_ONE_PUBLIC_SERVING=VERIFIED_COMPLETED",
+      "DSG_ONE_ACTIVE_METADATA=PASS",
+      "PUBLIC_DOCS_SERVING=PASS"
+    ]
+  },
+  "owner_aws_readback": {
+    "method": "AWS SSM GetParameters and ECR DescribeImages, authenticated read-only",
+    "ssm_source_sha_matches": true,
+    "ssm_digest_matches_ecr_digest": true,
+    "public_anonymous_readback_available": false
+  },
+  "public_replay": {
+    "classification": "LIVE_CURRENT_SERVING_CHECK_NOT_HISTORIC_PRIVATE_CI_REPLAY",
+    "independent_external_run_recorded": false,
+    "requires_credentials": false,
+    "runner": "Python 3 standard library",
+    "script": "docs/verify_dsg_one_website_ship.py",
+    "expected_http_200_paths": [
+      "/capabilities",
+      "/architecture",
+      "/verification",
+      "/releases",
+      "/llms.txt",
+      "/api/public/capabilities.json",
+      "/openapi-public-capabilities.json",
+      "/sitemap.xml",
+      "/robots.txt"
+    ],
+    "expected_capability_snapshot": {
+      "observedDate": "2026-11-01",
+      "nodes": 20,
+      "routes": 39,
+      "e2eWholeSystem": "NOT_VERIFIED"
+    }
+  },
+  "boundaries": {
+    "v130_release_published": false,
+    "v130_doi": null,
+    "agent_v0_end_to_end_completed_public_proof": false,
+    "workroom_claim_checkpoint_resume_proved": false,
+    "independent_live_production_replay": false,
+    "public_signed_oidc_or_deploy_attestation_published": false
+  },
+  "last_verified_public_archive": {
+    "version": "1.2.0",
+    "doi": "10.5281/zenodo.23796173"
+  },
+  "private_data_disclosure": "No original private logs, tokens, IAM policy, infrastructure identifiers, customer data, or signing keys are published."
+}
