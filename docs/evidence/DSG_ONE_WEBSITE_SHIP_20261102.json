@@ -33,7 +33,7 @@
   },
   "public_replay": {
     "classification": "LIVE_CURRENT_SERVING_CHECK_NOT_HISTORIC_PRIVATE_CI_REPLAY",
-    "independent_external_run_recorded": false,
+    "independent_external_run_recorded": true,
     "requires_credentials": false,
     "runner": "Python 3 standard library",
     "script": "docs/verify_dsg_one_website_ship.py",
@@ -67,6 +67,32 @@
       "digest_bound": true,
       "scope": "single live public status endpoint only; not all nine paths, private OIDC/CI, or Workroom E2E",
       "status": "PASS"
+    },
+    "private_ci_replayed_anonymously": false,
+    "external_full_live_website_replay": {
+      "observation": "Independent no-credential execution of the published Python 3 verifier and matching manifest on a third-party environment",
+      "status": "PASS",
+      "exit_code": 0,
+      "observation_time_utc": "2026-11-02T17:00:57Z",
+      "publicly_retrieved_source_commit": "aeccf89a097d6187a375cd47f4163ba74bac4116",
+      "source_manifest_and_script_from_same_commit": true,
+      "runner": "Firecrawl Python ephemeral session",
+      "verified_routes": [
+        "/api/agent/status",
+        "/capabilities",
+        "/architecture",
+        "/verification",
+        "/releases",
+        "/llms.txt",
+        "/api/public/capabilities.json",
+        "/openapi-public-capabilities.json",
+        "/sitemap.xml",
+        "/robots.txt"
+      ],
+      "reported_stdout_marker": "PUBLIC_WEBSITE_CURRENT_SERVING_REPLAY=PASS",
+      "verified_source_sha": "ccee11e6220af294da39353192622d99844de1b5",
+      "verified_image_digest": "sha256:e375163cc279ce39f03acfbf1f5220354f21ee99e56f5dc1fad9b918f99a6320",
+      "scope_limit": "Current public serving exact source/digest and public discovery URLs; not historical AWS OIDC deployment attestation or Agent/Workroom E2E"
     }
   },
   "boundaries": {
