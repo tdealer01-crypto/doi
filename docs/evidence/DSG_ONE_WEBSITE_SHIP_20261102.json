@@ -53,6 +53,20 @@
       "nodes": 20,
       "routes": 39,
       "e2eWholeSystem": "NOT_VERIFIED"
+    },
+    "external_unauthenticated_status_endpoint_observation": {
+      "method": "third-party HTTPS public fetch (no DSG/AWS credentials)",
+      "provider": "Firecrawl",
+      "url": "https://dsg.pics/api/agent/status",
+      "http_status": 200,
+      "site_reported_timestamp_utc": "2026-11-02T16:59:29.404Z",
+      "observed_at_utc": "2026-11-02T16:59:48Z",
+      "source_sha_matches": true,
+      "image_digest_matches": true,
+      "source_bound": true,
+      "digest_bound": true,
+      "scope": "single live public status endpoint only; not all nine paths, private OIDC/CI, or Workroom E2E",
+      "status": "PASS"
     }
   },
   "boundaries": {
