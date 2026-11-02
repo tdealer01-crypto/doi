@@ -51,6 +51,12 @@
       "status": "PASS",
       "evidence_access": "OWNER_AUTHENTICATED_WITH_PUBLIC_SANITIZED_PROOF",
       "scope": "Exact source/digest website deployment and public page verification only; no whole-system agent/workroom E2E"
+    },
+    {
+      "area": "public-website-independent-live-replay",
+      "status": "PASS",
+      "evidence_access": "PUBLIC_WITH_REPRODUCTION_SCRIPT",
+      "scope": "Anonymous third-party Python check of current website source/digest and nine public URLs; not private CI replay"
     }
   ],
   "last_verified_immutable_archive": {
@@ -71,10 +77,21 @@
     "completed_job_id": 125413476223,
     "workflow_run_id": 41481778354,
     "private_ci_logs_publicly_accessible": false,
-    "independent_public_production_probe_executed": false,
+    "independent_public_production_probe_executed": true,
     "public_replay_script": "docs/verify_dsg_one_website_ship.py",
     "public_proof": "docs/DSG_ONE_WEBSITE_SHIP_PROOF_20261102.md",
     "exact_scope_manifest": "docs/evidence/DSG_ONE_WEBSITE_SHIP_20261102.json",
-    "public_ci_authentication_and_deploy_proof_replayable": false
+    "public_ci_authentication_and_deploy_proof_replayable": false,
+    "independent_public_current_serving_replay": {
+      "status": "PASS",
+      "date_utc": "2026-11-02",
+      "runner": "third-party Python 3 no-credential HTTP check",
+      "exit_code": 0,
+      "verified_public_endpoint_count": 10,
+      "exact_sha_digest_matched": true,
+      "published_script_and_manifest_same_commit": "aeccf89a097d6187a375cd47f4163ba74bac4116",
+      "historical_private_oidc_deploy_attestation_replayed": false,
+      "workroom_agent_e2e_completed": false
+    }
   }
 }
