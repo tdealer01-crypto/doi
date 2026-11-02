@@ -6,6 +6,12 @@ This repository is the public citation and archival surface for **DSG Spacetime*
 
 DSG Spacetime is a customer-hosted governed AI-agent system. It separates AI reasoning and workflow composition from execution authority, so agents can operate with high autonomy while exact actions remain bounded by explicit capabilities, approvals, policy and verifiable evidence.
 
+## v1.3.0 status and evidence update — 2 November 2026 (NOT A RELEASE)
+
+**Public documentation candidate:** [status TH/EN](docs/STATUS_V1_3_0_20261102.md) · [machine-readable JSON](docs/evidence/STATUS_V1_3_0_20261102.json) · [repeatable public check](docs/VERIFY_STATUS_V1_3_0.md).
+
+This is a dated, sanitized status report, **not** a published v1.3.0 GitHub Release, Zenodo DOI, independent Production E2E proof or certification. **v1.2.0 remains the latest verified immutable archive.** Full Workroom completion and live user-facing browser/Native acceptance remain **NOT VERIFIED**.
+
 ## Publication boundary
 
 This repository intentionally contains **public-safe material only**. It does **not** contain the proprietary production implementation, private algorithms, solver internals, policy/security internals, private tests, secrets, credentials, customer data, or sensitive deployment details.
