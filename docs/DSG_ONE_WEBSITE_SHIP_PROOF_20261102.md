@@ -14,7 +14,7 @@
 | ECR image digest / production metadata digest | `sha256:e375163cc279ce39f03acfbf1f5220354f21ee99e56f5dc1fad9b918f99a6320` |
 | GitHub Actions run / successful job | [Run 41481778354](https://github.com/tdealer01-crypto/DSG-Private-Production-Runtime/actions/runs/41481778354) / job `125413476223` |
 | Source of CI, AWS and deploy claims | Authenticated private job log and read-only AWS SSM/ECR metadata observations |
-| Independent, anonymous live replay in this report's preparation | **NOT EXECUTED** (external DNS/network inaccessible to report author) |
+| Independent, anonymous CURRENT PUBLIC WEBSITE replay | **PASS** — full no-login Python verifier executed on third-party environment, 2026-11-02T17:00:57Z |
 
 **Access limitation:** The Actions link targets a **private** repository. Anonymous readers cannot independently retrieve its original job logs. The abbreviated markers below are sanitized owner-observed facts, **not** a cryptographically signed or publicly downloadable original CI attestation.
 
@@ -33,6 +33,14 @@
 ## External no-login public status readback — PASS (separate observation)
 
 At approximately 2026-11-02T16:59:48Z, a fresh third-party public HTTP fetch (Firecrawl; no DSG/AWS credentials) requested `https://dsg.pics/api/agent/status` and received **HTTP 200**. The response's own `ts` field was `2026-11-02T16:59:29.404Z`; its `version`, `deployment.buildSourceSha`, `deployment.expectedSourceSha` and `deployment.imageDigest` matched the exact identifiers above; `sourceBound` and `digestBound` were both true. This is a *fresh external current-serving read*, **not** replay of historical private OIDC/CI or a full external nine-URL check. The manifest records this distinct observation. A verifier can independently fetch the same endpoint; timestamps and future deployment identities may differ.
+
+## Independent full public-site replay — PASS / ผลรันทดสอบซ้ำภายนอก
+
+**New primary observation (2 Nov 2026):** At approximately `2026-11-02T17:00:57Z`, the publicly published Python 3 script and evidence manifest were downloaded together from **public Git commit `aeccf89a097d6187a375cd47f4163ba74bac4116`** and executed in a third-party Firecrawl Python session without DSG or AWS credentials.
+
+**Actual execution result:** `exit_code=0`; `PASS /api/agent/status exact source + digest`, all nine documented public URLs **PASS**, `PUBLIC_WEBSITE_CURRENT_SERVING_REPLAY=PASS`. The stdout also explicitly states `PRIVATE_OIDC_AND_DEPLOY_ATTESTATION=NOT_PUBLICLY_REPLAYED` and `WORKROOM_AGENT_V1_3_E2E=NOT_VERIFIED`.
+
+This confirms **a real anonymous current-serving rerun**, stronger than instructions-only publication. It does **not** independently reproduce the protected historical GitHub/AWS OIDC handshake or demonstrate same-job Agent/Workroom completion. This observation is recorded as a separate external run in the [manifest](evidence/DSG_ONE_WEBSITE_SHIP_20261102.json), without upgrading any whole-system claims.
 
 ## Independent repeat: verify the current public serving / วิธีรันตรวจซ้ำได้เอง
 
@@ -65,7 +73,7 @@ To preserve reproducibility over time, pin the public repository's commit (shown
 | Owner-authenticated source-bound website build and deployment | **PASS — private primary evidence** |
 | Owner-authenticated AWS SSM metadata equals ECR digest | **PASS — private readback** |
 | Website version/digest and public pages checked in the release job | **PASS — owner workflow** |
-| Public unauthenticated rerun instructions and script available | **PUBLISHED; external rerun result not yet recorded** |
+| Public unauthenticated current-website rerun | **PASS — 10 endpoints (status + 9 public paths), third-party Python, exit 0** |
 | Publicly downloadable original signed OIDC/CI attestation | **NOT AVAILABLE** |
 | Same-job Workroom goal → claim → checkpoint → resume → visible completion | **NOT VERIFIED** |
 | Agent-v0 / Cinema / Native end-to-end user task | **NOT VERIFIED as whole-system acceptance** |
