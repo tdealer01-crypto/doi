@@ -92,7 +92,24 @@
       "reported_stdout_marker": "PUBLIC_WEBSITE_CURRENT_SERVING_REPLAY=PASS",
       "verified_source_sha": "ccee11e6220af294da39353192622d99844de1b5",
       "verified_image_digest": "sha256:e375163cc279ce39f03acfbf1f5220354f21ee99e56f5dc1fad9b918f99a6320",
-      "scope_limit": "Current public serving exact source/digest and public discovery URLs; not historical AWS OIDC deployment attestation or Agent/Workroom E2E"
+      "scope_limit": "Current public serving exact source/digest and public discovery URLs; not historical AWS OIDC deployment attestation or Agent/Workroom E2E",
+      "latest_pinned_public_replay": {
+        "public_source_commit": "1a7729bdc63477752f991ea470ddb704595f44ee",
+        "verified_at_utc": "2026-11-02T17:03:22Z",
+        "execution_platform": "third-party ephemeral Python 3",
+        "command": "python3 docs/verify_dsg_one_website_ship.py",
+        "positive_exit_code": 0,
+        "positive_stdout_marker": "PUBLIC_WEBSITE_CURRENT_SERVING_REPLAY=PASS",
+        "exact_source_sha_and_digest_matched": true,
+        "checked_http_endpoints": 10,
+        "tamper_negative_case": {
+          "simulation": "modify local copy of evidence manifest verified_source_sha to 40 zeros; never change original public repository",
+          "exit_code": 1,
+          "stderr_marker": "ValueError: MANIFEST_SOURCE_MISMATCH",
+          "result": "EXPECTED_FAIL_CLOSED"
+        },
+        "scope": "External current website check, not private CI/AWS OIDC or full Workroom Agent E2E"
+      }
     }
   },
   "boundaries": {
