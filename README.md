@@ -12,6 +12,14 @@ DSG Spacetime is a customer-hosted governed AI-agent system. It separates AI rea
 
 This is a dated, sanitized status report, **not** a published v1.3.0 GitHub Release, Zenodo DOI, independent Production E2E proof or certification. **v1.2.0 remains the latest verified immutable archive.** Full Workroom completion and live user-facing browser/Native acceptance remain **NOT VERIFIED**.
 
+## Verified website ship — 2 November 2026 (separate from the v1.3.0 release)
+
+DSG ONE's existing production website ship workflow completed **SUCCESS** after OIDC remediation, pinned to source `ccee11e6220af294da39353192622d99844de1b5` and image digest `sha256:e375163cc279ce39f03acfbf1f5220354f21ee99e56f5dc1fad9b918f99a6320`. Authenticated deployment checks passed. No anonymous third-party replay of private CI is claimed.
+
+**[Read the sanitized website proof (TH/EN)](docs/DSG_ONE_WEBSITE_SHIP_PROOF_20261102.md)** · **[Machine-readable manifest](docs/evidence/DSG_ONE_WEBSITE_SHIP_20261102.json)** · **[No-login Python 3 live-serving verifier](docs/verify_dsg_one_website_ship.py)**
+
+The website release does **not** imply whole-system Workroom/Agent E2E passed, and v1.3.0 is still **NOT PUBLISHED**.
+
 ## Publication boundary
 
 This repository intentionally contains **public-safe material only**. It does **not** contain the proprietary production implementation, private algorithms, solver internals, policy/security internals, private tests, secrets, credentials, customer data, or sensitive deployment details.
