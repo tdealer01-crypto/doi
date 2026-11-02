@@ -1,5 +1,11 @@
 # Publication Status
 
+## Production website ship proof — 2 November 2026
+
+**Owner-observed website RELEASE PASS; externally repeatable live-serving procedure PUBLISHED but not independently executed here.** Exact pinned source SHA: `ccee11e6220af294da39353192622d99844de1b5`. Exact image digest: `sha256:e375163cc279ce39f03acfbf1f5220354f21ee99e56f5dc1fad9b918f99a6320`. [Private workflow run 41481778354](https://github.com/tdealer01-crypto/DSG-Private-Production-Runtime/actions/runs/41481778354) completed successfully on retry job `125413476223`; owner-authenticated AWS SSM/ECR readback matched. Public proof: [report](docs/DSG_ONE_WEBSITE_SHIP_PROOF_20261102.md) · [JSON](docs/evidence/DSG_ONE_WEBSITE_SHIP_20261102.json) · [independent Python public-site probe](docs/verify_dsg_one_website_ship.py).
+
+**Not a v1.3.0 release:** private OIDC/CI attestation cannot be replayed anonymously, Workroom Claim→Checkpoint→Resume is NOT VERIFIED, and no v1.3.0 DOI has been issued here. The immutable historical v1.2.0 publication remains unchanged.
+
 ## v1.3.0 documentation candidate — 2 November 2026
 
 **v1.3.0 VERSION RELEASE NOT PUBLISHED.** This public status update is documented in [status](docs/STATUS_V1_3_0_20261102.md), [JSON](docs/evidence/STATUS_V1_3_0_20261102.json), and [reproduction instructions](docs/VERIFY_STATUS_V1_3_0.md). It is not a new version DOI or independent runtime E2E proof. The independently replayable historical **v1.2.0** archive below is unchanged.
