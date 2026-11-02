@@ -1,5 +1,9 @@
 # Publication Status
 
+## v1.3.0 documentation candidate — 2 November 2026
+
+**v1.3.0 VERSION RELEASE NOT PUBLISHED.** This public status update is documented in [status](docs/STATUS_V1_3_0_20261102.md), [JSON](docs/evidence/STATUS_V1_3_0_20261102.json), and [reproduction instructions](docs/VERIFY_STATUS_V1_3_0.md). It is not a new version DOI or independent runtime E2E proof. The independently replayable historical **v1.2.0** archive below is unchanged.
+
 Current package: **DSG Spacetime v1.2.0 — Production Evidence and Reproduction Protocol**.
 
 Status: **PUBLISHED_VERIFIED — GitHub release and Zenodo archive checked against the exact release commit**.
