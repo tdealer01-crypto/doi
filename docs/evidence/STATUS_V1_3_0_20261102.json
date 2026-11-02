@@ -45,6 +45,12 @@
       "status": "NOT_VERIFIED",
       "evidence_access": "NO_PUBLIC_PRIMARY_RECEIPTS",
       "scope": "Anonymous end-to-end replay not available"
+    },
+    {
+      "area": "website-release-2026-11-02",
+      "status": "PASS",
+      "evidence_access": "OWNER_AUTHENTICATED_WITH_PUBLIC_SANITIZED_PROOF",
+      "scope": "Exact source/digest website deployment and public page verification only; no whole-system agent/workroom E2E"
     }
   ],
   "last_verified_immutable_archive": {
@@ -56,5 +62,19 @@
     "sha256": "ded472103bba0dbf5518f7eaf869bdf5f7c1e10df611be427fc30916ddd4465b"
   },
   "claim_boundary": "v1.2.0 publication-byte verification is public; v1.3.0 live Production E2E is not publicly independently verified",
-  "reproduction_instructions": "docs/VERIFY_STATUS_V1_3_0.md"
+  "reproduction_instructions": "docs/VERIFY_STATUS_V1_3_0.md",
+  "website_release_20261102": {
+    "scope": "WEBSITE_RELEASE_ONLY",
+    "status": "PASS_OWNER_AUTHENTICATED",
+    "source_sha": "ccee11e6220af294da39353192622d99844de1b5",
+    "image_digest": "sha256:e375163cc279ce39f03acfbf1f5220354f21ee99e56f5dc1fad9b918f99a6320",
+    "completed_job_id": 125413476223,
+    "workflow_run_id": 41481778354,
+    "private_ci_logs_publicly_accessible": false,
+    "independent_public_production_probe_executed": false,
+    "public_replay_script": "docs/verify_dsg_one_website_ship.py",
+    "public_proof": "docs/DSG_ONE_WEBSITE_SHIP_PROOF_20261102.md",
+    "exact_scope_manifest": "docs/evidence/DSG_ONE_WEBSITE_SHIP_20261102.json",
+    "public_ci_authentication_and_deploy_proof_replayable": false
+  }
 }
