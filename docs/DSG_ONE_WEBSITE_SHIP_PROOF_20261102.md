@@ -42,6 +42,12 @@ At approximately 2026-11-02T16:59:48Z, a fresh third-party public HTTP fetch (Fi
 
 This confirms **a real anonymous current-serving rerun**, stronger than instructions-only publication. It does **not** independently reproduce the protected historical GitHub/AWS OIDC handshake or demonstrate same-job Agent/Workroom completion. This observation is recorded as a separate external run in the [manifest](evidence/DSG_ONE_WEBSITE_SHIP_20261102.json), without upgrading any whole-system claims.
 
+### Rechecked pinned public source + fail-closed negative case
+
+A second external run fetched the script and manifest at public commit **`1a7729bdc63477752f991ea470ddb704595f44ee`**. The unmodified test exited **0**, printed `PUBLIC_WEBSITE_CURRENT_SERVING_REPLAY=PASS`, and passed the exact status SHA/digest plus nine public paths (10 HTTP endpoints total).
+
+A deliberate local-only alteration of the downloaded manifest's `verified_source_sha` to forty zeros, **without touching the public repository or production**, caused the exact same verifier to exit **1** with `ValueError: MANIFEST_SOURCE_MISMATCH`. This confirms the verifier refuses inconsistent local proof data; it does not prove cryptographic authenticity of the private original GitHub/AWS logs.
+
 ## Independent repeat: verify the current public serving / วิธีรันตรวจซ้ำได้เอง
 
 You need **Python 3 and internet access only**; no AWS or DSG login and no third-party packages. Use the public [machine-readable snapshot](evidence/DSG_ONE_WEBSITE_SHIP_20261102.json) and the [verification script](verify_dsg_one_website_ship.py):
