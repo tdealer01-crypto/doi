@@ -30,6 +30,10 @@
 - **Second readback after completion:** Authenticated AWS `GetParameters` and ECR `DescribeImages` returned the same SHA and image digest. A match of private AWS metadata is **not** independently repeatable without authorized AWS read access.
 - GitHub job `125413476223` finished with `conclusion=success`, including public-serving and metadata steps.
 
+## External no-login public status readback — PASS (separate observation)
+
+At approximately 2026-11-02T16:59:48Z, a fresh third-party public HTTP fetch (Firecrawl; no DSG/AWS credentials) requested `https://dsg.pics/api/agent/status` and received **HTTP 200**. The response's own `ts` field was `2026-11-02T16:59:29.404Z`; its `version`, `deployment.buildSourceSha`, `deployment.expectedSourceSha` and `deployment.imageDigest` matched the exact identifiers above; `sourceBound` and `digestBound` were both true. This is a *fresh external current-serving read*, **not** replay of historical private OIDC/CI or a full external nine-URL check. The manifest records this distinct observation. A verifier can independently fetch the same endpoint; timestamps and future deployment identities may differ.
+
 ## Independent repeat: verify the current public serving / วิธีรันตรวจซ้ำได้เอง
 
 You need **Python 3 and internet access only**; no AWS or DSG login and no third-party packages. Use the public [machine-readable snapshot](evidence/DSG_ONE_WEBSITE_SHIP_20261102.json) and the [verification script](verify_dsg_one_website_ship.py):
